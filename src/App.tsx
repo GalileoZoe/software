@@ -1,25 +1,61 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { FeedProvider } from './context/FeedContext';
+
+import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { SessionProvider } from './context/SessionContext';
+import { Footer } from './components/Layout/Footer';
+import { Layout } from './components/Layout/Layout';
+import { NavBar } from './components/Layout/NavBar';
+import { AuthProvider } from './context/AuthContext';
+import { ServiceProvider } from './context/ServiceContext';
+
+
+const Apps = () => {
+  const { theme } = useTheme();
+
+  const AppTheme = () => {
+    switch (theme) {
+      case 0:
+        return 'AppWhite';
+      case 1:
+        return 'AppBlack';
+      case 2:
+        return 'AppRed';
+      default:
+        return 'App'; 
+    }
+  };
+
+  return (
+    <div className={AppTheme()}>
+      <header className="App-header">
+        <NavBar />
+        <main className="main-content">
+          <div className="body">
+            <Layout />
+          </div>
+        </main>
+        <Footer />
+      </header>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+    <SessionProvider>
+    <ThemeProvider>
+      <FeedProvider>
+        <ServiceProvider>
+        <Apps />
+        </ServiceProvider>
+      </FeedProvider>
+    </ThemeProvider>
+    </SessionProvider>
+    </AuthProvider>
   );
 }
 

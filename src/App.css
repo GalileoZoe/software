@@ -1,10 +1,20 @@
-.App {
-  text-align: center;
+/* /////// App //////// */
+
+.App-header {
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +23,1374 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+
+
+/* App Themes  */
+
+.App {
+  text-align: center;
+  overflow: hidden;
+}
+
+.AppBlack {
+  background-color: #f7e5e5;
+  background-image: radial-gradient(circle at center center, #2c2727, #2b2727),
+    repeating-radial-gradient(circle at center center, #1d1c1c, #3b3939, 1900px, transparent 200px, transparent 200px);
+  background-blend-mode: color-burn;
+  display: flexbox;
+  white-space: pre-line;
+}
+
+.AppRed {
+  background-color: #f7e5e5;
+  opacity: 0.9;
+  background-image: radial-gradient(circle at center center, #ff6060, #ff585898),
+    repeating-radial-gradient(circle at center center, #fd5959, #FE0420e1, 1900px, transparent 800px, transparent 400px);
+  background-blend-mode: color-burn;
+  display: flexbox;
+  white-space: pre-line;
+}
+
+.AppWhite {
+  background-color: whitesmoke;
+  opacity: 0.9;
+  display: flexbox;
+  white-space: pre-line;
+}
+
+/* .AppWhite:hover {
+    background-color: #f7e5e5;
+    opacity: 0.9;
+    background-image: radial-gradient(circle at center center, #f8a7a7, #f7e5e5), 
+    repeating-radial-gradient(circle at center center, #f74444, #f58f8f, 600px, transparent 720px, transparent 200px);
+    background-blend-mode:color-burn;
+    }
+   */
+
+
+
+
+
+/* /////// Animation /////// */
+
+/* Animation for fading in from top to bottom */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInFromTop 1.5s ease-out forwards;
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Start slightly above the initial position */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* End at the final position */
+  }
+}
+
+
+/* /////// Components /////// */
+
+
+/*  Button  */
+
+.button {
+  background-color: #FE0420;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 1s ease-in-out;
+}
+
+.button:hover {
+  background-color: #FE0420;
+  color: 'transparent';
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+.buttonblack {
+  background-color: #FE0420;
+  color: black;
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 1s ease-in-out;
+}
+
+.buttonblack:hover {
+  background-color: #FE0420;
+  color: 'transparent';
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+@media(max-width:700px){
+.button {
+  background-color: #FE0420;
+  color: #fff;
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 1s ease-in-out;
+}
+
+.button:hover {
+  background-color: #FE0420;
+  color: 'transparent';
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+}
+
+
+
+/*  Card  */
+
+.description {
+  font-size: 1.2em;
+  color: #555;
+  /* Color del texto descriptivo */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Espacio entre las tarjetas */
+}
+
+.card {
+  background-color: #FE0420;
+  border:none;
+  /* Borde suave */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  padding: 1em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  width: 300px;
+  /* Ancho de las tarjetas */
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: whitesmoke ;
+  /* Color del título de la tarjeta */
+}
+
+.card p {
+  color: whitesmoke;
+  /* Color del texto de la tarjeta */
+}
+
+.cardblack {
+  background-color: #FE0420;
+  border:none;
+  /* Borde suave */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  padding: 1em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  width: 300px;
+  /* Ancho de las tarjetas */
+}
+
+.cardblack h2 {
+  margin-bottom: 10px;
+  color: black ;
+  /* Color del título de la tarjeta */
+}
+
+.cardblack p {
+  color: black;
+  /* Color del texto de la tarjeta */
+}
+
+
+
+
+/*  Circle  */
+
+.center {
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'center';
+  align-items: 'center';
+}
+
+/*  Circle  */
+
+.circle {
+  background-color: #FE0420;
+  height: 0.3em;
+  width: 0.3em;
+  border: white 2px;
+
+}
+
+
+
+
+/* Gallery */
+
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.imagewrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.imagecontainer {
+  position: relative;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.label {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo negro semitransparente */
+  color: white;
+  font-size: 2em;
+  padding: 0.5em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.navbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.navbutton:first-of-type {
+  left: 10px;
+}
+
+.navbutton:last-of-type {
+  right: 10px;
+}
+
+
+.navbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1em;
+}
+
+.navbutton:hover {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #FE0420;
+  cursor: pointer;
+  align-self: center;
+}
+
+.navbuttonblack {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #151515;
+  cursor: pointer;
+  align-self: center;
+  font-size: 1em;
+}
+
+.navbuttonblack:hover {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #FE0420;
+  cursor: pointer;
+  align-self: center;
+}
+
+.navbuttonblack:focus {
+  outline: none;
+}
+
+.navbuttonblack:nth-child(2) {
+  left: 10px;
+}
+
+.navbuttonblack:nth-child(3) {
+  right: 10px;
+}
+
+.navbutton:focus {
+  outline: none;
+}
+
+.navbutton:nth-child(2) {
+  left: 10px;
+}
+
+.navbutton:nth-child(3) {
+  right: 10px;
+}
+
+
+/* Table */
+
+.table {
+  border-collapse: 'collapse';
+  width: '90%';
+}
+
+.tablemargin {
+  max-height: '400px';
+  overflow-y: 'auto';
+}
+
+.tableheader {
+  color: #FE0420;
+  text-align: center;
+  font-size: 1em;
+}
+
+.tableheader:hover {
+  color: #FE0420;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Text */
+
+.text {
+  color: black;
+  text-align: center;
+  transition: all 0.8s ease-in-out;
+  font-size: 2em;
+}
+
+.text:hover {
+  text-align: center;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.textss {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.textss:hover {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.texts {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+}
+
+.texts:hover {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.textblack {
+  color: #000;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+}
+
+.textblack:hover {
+  color: #000;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+.textgreen {
+  color: #32cd32;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+}
+
+.textgreen:hover {
+  color: #32cd32;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+.textgreens {
+  color: #32cd32;
+  font-weight: 100;
+  text-align: center;
+  font-size: 0.6em;
+}
+
+.textgreens:hover {
+  color: #32cd32;
+  font-weight: 100;
+  text-align: center;
+  font-size: 0.6em;
+  cursor: pointer;
+}
+.textred {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+}
+
+.textred:hover {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+.textwhite {
+  color: snow;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+}
+
+.textwhite:hover {
+  color: snow;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.textblue {
+  color: #0044ff;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+}
+
+.textblue:hover {
+  color: #0044ff;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.textblacks {
+  color: #000;
+  font-weight: 100;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.textblacks:hover {
+  color: #000;
+  font-weight: 100;
+  text-align: center;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+
+/*  Paragraph  */
+.paragraph {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1.4em;
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+
+/*  Image  */
+.img {
+  width: 280px;
+  height: auto;
+}
+
+.imgs {
+  width: 4em;
+  height: auto;
+}
+
+/*  Icons  */
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.8s ease-in-out;
+  color: #FE0420;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon:hover {
+  width: 1.5em;
+  height: 1.5em;
+  transform: scale(1.1);
+  color: #FE0420;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconblack {
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.8s ease-in-out;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconblack:hover {
+  width: 1.5em;
+  height: 1.5em;
+  transform: scale(1.1);
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconx {
+  width: 4em;
+  height: 4em;
+  transition: all 0.8s ease-in-out;
+  color: #FE0420;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconx:hover {
+  width: 4em;
+  height: 4em;
+  transform: scale(1.1);
+  color: #FE0420;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icondelete {
+  width: 1.2em;
+  height: 1.2em;
+  transition: all 0.8s ease-in-out;
+  color: #FE0420;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icondelete:hover {
+  width: 1.2em;
+  height: 1.2em;
+  transform: scale(1.1);
+  color: #FE0420;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icongreen {
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.8s ease-in-out;
+  color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icongreen:hover {
+  width: 1.2em;
+  height: 1.2em;
+  transform: scale(1.1);
+  color: #32cd32;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconwhite {
+  width: 1.2em;
+  height: 1.2em;
+  transition: all 0.8s ease-in-out;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconwhite:hover {
+  width: 1.2em;
+  height: 1.2em;
+  transform: scale(1.1);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconfile {
+  width: 1.2em;
+  height: 1.2em;
+  transition: all 0.8s ease-in-out;
+  color: #ffd000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconfile:hover {
+  width: 1.2em;
+  height: 1.2em;
+  transform: scale(1.1);
+  color: #ffd000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconupdate {
+  width: 1.2em;
+  height: 1.2em;
+  transition: all 0.8s ease-in-out;
+  color: #0044ff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconupdate:hover {
+  width: 1.2em;
+  height: 1.2em;
+  transform: scale(1.1);
+  color: #0044ff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconred {
+  width: 1.8;
+  height: 1.8;
+  transition: all 0.8s ease-in-out;
+  color: snow;
+  text-align: center;
+}
+
+.iconred:hover {
+  width: 1.8;
+  height: 1.8;
+  transform: scale(1.1);
+  color: snow;
+  text-align: center;
+}
+
+
+/*  Item  */
+.item {
+  list-style: none;
+  color: #FE0420;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.item:hover {
+  color: #FE0420;
+}
+
+
+/*  Logo  */
+
+.logo {
+  width: auto;
+  height: 5em;
+}
+@media (max-width: 700px) {
+  .logo {
+    width: 2em;
+    height: 2em;
+  }
+}
+
+.logotype {
+  width: auto;
+  height: 5em;
+}
+@media (max-width: 700px) {
+  .logotype {
+    width: auto;
+    height: 3em;
+  }
+}
+
+.marginvertical{
+  margin-top: 6em;
+}
+
+/*  Map  */
+.map {
+  width: 600px;
+  height: 180px;
+  border: #FE0420 solid 2px;
+  border-radius: 10px;
+}
+
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  /* Opcional, para agregar margen vertical */
+}
+
+/*  Form  */
+
+.form {
+  background-color: transparent;
+  border-radius: 10px;
+  border: solid 2px #FE0420;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  color: white;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px #FE0420;
+  height: auto;
+  width: auto;
+}
+
+.inputred {
+  border-radius: 20px;
+  background-color: transparent;
+  border: solid #FE0420;
+  color: #FE0420;
+  height: auto;
+  width: auto;
+}
+.inputred::placeholder {
+
+  color: #FE0420;
+
+}
+
+.inputredlogin {
+  border-radius: 20px;
+  background-color: transparent;
+  border: solid #FE0420;
+  color: #FE0420;
+  height: auto;
+  width: auto;
+  padding: 10px;
+}
+.inputredlogin::placeholder {
+
+  color: #FE0420;
+
+}
+
+.inputs {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px #FE0420;
+  height: auto;
+  width: 3em;
+}
+
+
+
+/*  Section  */
+
+.section {
+  justify-content: 'center';
+  align-items: 'center';
+  flex-direction: 'column';
+  gap: '20px';
+  background-size: 'cover';
+  background-position: 'center';
+  height: '100vh';
+  width: '100vw';
+  text-align: center;
+
+}
+
+
+
+/*  Title  */
+
+.title {
+  color: #FE0420;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+}
+
+.title:hover {
+  color: #920e0e;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.titleblack {
+  color: black;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+}
+
+.title:hover {
+  color: black;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.titles {
+  color: #FE0420;
+  font-weight: 100;
+  font-size: 1em;
+  text-align: center;
+}
+
+.titles:hover {
+  color: #920e0e;
+  font-weight: 100;
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.titleRed {
+  color: whitesmoke;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+}
+
+
+.titleRed:hover {
+  color: #FE0420;
+  font-weight: 100;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* /////// Layout /////// */
+
+/*  Footer  */
+
+.footer {
+  width: 100%;
+  height: 2em;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Asegura que esté sobre otros elementos */
+}
+
+
+.footerlogo img {
+  height: 3em;
+}
+
+.footeritems {
+  list-style: none;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footeritem {
+  list-style: none;
+  margin-left: 20px;
+  color: #FE0420;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.footeritem:hover {
+  color: #FE0420;
+}
+
+.footeritemred {
+  list-style: none;
+  margin-left: 20px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.footeritemred:hover {
+  color: #ff8080;
+}
+
+
+/*  NavBar */
+
+.navbar {
+  width: 100%;
+  height: 2em;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1em 0em 1em 0em;
+}
+
+.navbarblack {
+  width: 100%;
+  height: 2em;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1em 0em 1em 0em;
+}
+
+.navbartransparent {
+  width: 100%;
+  height: 2em;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1em 0em 1em 0em;
+}
+
+.navbarlogo img {
+  height: 2em;
+  padding-left: 10px;
+}
+
+@media(max-width:700px){
+.navbarlogo img {
+  height: 2em;
+  padding-left: 10px;
+}
+}
+
+.navbaritems {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbaritem {
+  margin-left: 20px;
+  color: #FE0420;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 1em;
+  transition: color 0.8s ease;
+}
+
+.navbaritem:hover {
+  color: #720c0c;
+
+}
+
+
+.navbaritemblack {
+  margin-left: 20px;
+  color: #151515;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbaritemblack {
+  margin-left: 20px;
+  color: #151515;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbaritemwhite {
+  margin-left: 20px;
+  color: #FE0420;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbaritemred {
+  margin-left: 20px;
+  color: '#FE0420';
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1em;
+  background-color:'transparent';
+  transition: color 0.3s ease;
+}
+
+.navbaritemred:hover {
+  color: #fd5959;
+}
+
+
+/*  Slider  */
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los elementos se envuelvan en la siguiente línea si es necesario */
+  gap: 15px;
+  /* Espaciado entre los elementos */
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+  list-style-type: none;
+  /* Quita los puntos de la lista */
+  padding: 0;
+  /* Quita el padding de la lista */
+}
+
+.slider li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centra el contenido dentro del <li> */
+  text-align: center;
+  /* Centra el texto */
+  cursor: pointer;
+  /* Cambia el cursor cuando pasa sobre el <li> */
+  padding: 10px;
+  /* Espaciado interno opcional */
+}
+
+/*  Window  */
+
+.window {
+  background-color: #fd59591c;
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  z-index: 100; /* Asegura que esté sobre otros elementos */
+}
+
+.windowdetail{
+    background: '#ffffff';
+    border-radius: 15px;
+    padding: 30px;
+    width: 500px;
+    max-width: 95%;
+    position: 'relative';
+    overflow-y: 'auto';
+    max-height: 90vh;
+}
+
+.windowbutton {
+  background-color: #FE0420;
+  color: #fd5959;
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 1s ease-in-out;
+}
+
+.windowbutton:hover {
+  background-color: #FE0420;
+  color: #fd5959;
+  font-weight: 100;
+  font-size: 1em;
+  border: none;
+  width: max-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+
+.navbaritems {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbaritems li a {
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FE0420;
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbaritems {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color:#000000d7;
+    border: 1px solid #FE0420;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+
+  .navbaritems.show {
+    display: flex;
+  }
+  .navbaritemswhite {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color:#ffffffd7;
+    border: 1px solid #FE0420;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+
+  .navbaritemswhite.show {
+    display: flex;
+  }
+
+    .slider {
+      display: flex;
+      flex-direction: column;
+      overflow-y:scroll; /* Solo habilita el desplazamiento vertical */
+      overflow-x:hidden; /* Solo habilita el desplazamiento vertical */
+      max-height: 200vh; /* Limita la altura para hacerla desplazable */
+      width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .cards-container{
+      display: flex;
+      flex-direction: column;
+      overflow-y:scroll; /* Solo habilita el desplazamiento vertical */
+      overflow-x:hidden; /* Solo habilita el desplazamiento vertical */
+      max-height: 200vh; /* Limita la altura para hacerla desplazable */
+      width: 100%; /* Asegura que ocupe todo el ancho */
+      text-align: center;
+      align-items: center;
+    }
+  
+    .item {
+      margin: 10px 0; /* Espaciado entre los íconos */
+      text-align: center;
+      width: 100%; /* Asegura que cada ícono ocupe todo el ancho */
+    }
+
+    .window{
+      width: 300px;
+    }
+
+    .map{
+      width: 300px;
+    }
+    .table {
+      width: 100%;
+      display: block;
+      overflow-x: auto; /* Permite el desplazamiento horizontal */
+      white-space: nowrap; /* Evita que el contenido se envuelva */
+  }
+
+  .table th, .table td {
+      padding: 8px; /* Reducir el espacio de las celdas */
+      font-size: 14px; /* Reducir el tamaño de la fuente */
+  }
+
+  /* Ocultar algunas columnas que no son esenciales en pantallas pequeñas */
+  .table th:nth-child(5), .table td:nth-child(5),
+  .table th:nth-child(7), .table td:nth-child(7),
+  .table th:nth-child(9), .table td:nth-child(9),
+  .table th:nth-child(11), .table td:nth-child(11),
+  .table th:nth-child(12), .table td:nth-child(12),
+  .table th:nth-child(13), .table td:nth-child(13),
+  .table th:nth-child(14), .table td:nth-child(14),
+  .table th:nth-child(15), .table td:nth-child(15) {
+      display: none; /* Ocultar columnas no esenciales */
+  }
+
+  .table th, .table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  /* Ajuste de íconos */
+  .icon {
+      font-size: 16px;
+  }
+
+  .navbar{
+    background-color: whitesmoke;
+  }
+
+  .input-group {
+    flex-direction: row;
+}
+
+.inputred {
+    width: calc(50% - 10px);
+}
+
+  }
+
