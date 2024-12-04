@@ -21,16 +21,16 @@ export const Feed: React.FC = () => {
 
   // Arreglo de imágenes de fondo
   const bgImages = [
-   
-
-    // require('../../assets/bg-03.png'),
     require('../../assets/bg-08.png'),
+    require('../../assets/bg-19.png'),
     require('../../assets/bg-13.png'),
+    require('../../assets/bg-12.png'),
     require('../../assets/bg-00.png'),
+    require('../../assets/bg-16.png'),
     require('../../assets/bg-10.png'),
-   
-
-
+    require('../../assets/bg-11.png'),
+    require('../../assets/bg-15.png'),
+  
   ];
 
   // Estado para manejar el índice de imagen de fondo
@@ -40,7 +40,7 @@ export const Feed: React.FC = () => {
     const interval = setInterval(() => {
       setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
       setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
-    }, 2000);
+    }, 3000);
 
     // Cleanup al desmontar el componente
     return () => clearInterval(interval);
@@ -48,7 +48,7 @@ export const Feed: React.FC = () => {
 
   return (
     <section
-      onScroll={()=>changeFeed(2)}
+    onScroll={window.innerWidth > 700 ? () => changeFeed(2) : undefined}
       className='section'
       style={{
         position: 'relative',
@@ -74,7 +74,7 @@ export const Feed: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(7, 7, 7, 0.7)', // Capa oscura con opacidad
+          backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
           zIndex: 1, // Mantiene la capa detrás del contenido
         }}
       />

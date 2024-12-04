@@ -59,7 +59,7 @@ export const Location: React.FC = () => {
 
     <section
     className='section'
-    onScroll={()=>changeFeed(11)}
+    onScroll={window.innerWidth > 700 ? () => changeFeed(11) : undefined}
     style={{
       position: 'relative',
       backgroundImage: `url(${bgImages[bgIndex]})`,

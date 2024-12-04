@@ -12,7 +12,7 @@ export const NavBar: React.FC = () => {
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   return (
-    <nav className={feed === 1 || theme === 1 ? 'navbartransparent' : 'navbar'}>
+    <nav className={'navbartransparent'}>
       <div className='navbarlogo'>
         <a onClick={() => changeFeed(1)} >
           <img

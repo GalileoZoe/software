@@ -42,7 +42,7 @@ export const Tech = () => {
         // require('../../assets/bg-08.png'),
         // require('../../assets/bg-09.png'),
         // require('../../assets/bg-13.png'),
-        require('../../assets/bg-13.png'),
+        require('../../assets/bg-12.png'),
         // require('../../assets/bg-10.png'),
 
 
@@ -68,7 +68,7 @@ export const Tech = () => {
 
         <section
             className='section'
-            onScroll={()=>changeFeed(6)}
+            onScroll={window.innerWidth > 700 ? () => changeFeed(6) : undefined}
             style={{
                 position: 'relative',
                 backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -96,8 +96,8 @@ export const Tech = () => {
                 }}
             >
 
-                <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
-                    Contacto | Desarrollo de Software | Galileo  Zoe
+                <h1 className='title fade-in-element' style={{ color: 'transparent' }}  onScroll={()=>changeFeed(5)}>
+                    Contacto | Desarrollo de Software | Galileo  Zoe 
                 </h1>
 
                 <p className={'text'}>Tecnologías</p>
@@ -111,35 +111,35 @@ export const Tech = () => {
                 <div className='marginvertical'></div>
 
 
-                <ul className='slider'>
+                <ul className='slider' onScroll={()=>changeFeed(5)}>
 
-                    <li className='item fade-in-element' title='Llamada' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Llamada' >
                         <a className='item' href='tel:7298906600'><FaPhone size={25} /><p>Teléfono</p></a>
 
                     </li>
-                    <li className='item fade-in-element' title='Mensaje' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Mensaje' >
                         <a className='item' href='sms:527298906600'> <FaComment size={25} /> <p>Mensaje</p></a>
 
                     </li>
-                    <li className='item fade-in-element' title='Correo Electrónico' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Correo Electrónico' >
                         <a className='item' href='mailto:al222210067@gmail.com'><FaEnvelope size={25} /> <p>Correo Electrónico</p></a>
 
                     </li>
-                    <li className='item fade-in-element' title='WhatsApp' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='WhatsApp' >
                         <a className='item' href='https://wa.me/527298906600'> <FaWhatsapp size={25} /><p>WhatsApp</p></a>
                     </li>
-                    <li className='item fade-in-element' title='Facebook' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Facebook' >
                         <a className='item' href='https://www.facebook.com/profile.php?id=61565903937768'> <FaFacebook size={25} /><p>FaceBook</p></a>
 
                     </li>
-                    <li className='item fade-in-element' title='TikTok' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='TikTok' >
                         <a className='item' ><FaTiktok size={25} /> <p>TikTok</p></a>
 
                     </li>
-                    <li className='item fade-in-element' title='Ubicación' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Ubicación' >
                         <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMapPin size={25} /><p>Ubicación</p></a>
                     </li>
-                    <li className='item fade-in-element' title='Software' >
+                    <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Software' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>SITIO WEB</p></a>
                     </li>
                 </ul>

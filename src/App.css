@@ -229,8 +229,8 @@
   padding: 1em;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   /* Sombra suave */
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   /* Ancho de las tarjetas */
 }
 
@@ -799,12 +799,6 @@
 .logo {
   width: auto;
   height: 5em;
-}
-@media (max-width: 700px) {
-  .logo {
-    width: 2em;
-    height: 2em;
-  }
 }
 
 .logotype {

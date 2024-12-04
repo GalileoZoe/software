@@ -102,7 +102,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
 
    // Arreglo de imágenes de fondo
    const bgImages = [
-    require('../../assets/bg-01.png'),
+    require('../../assets/bg-13.png'),
   ];
 
   // Estado para manejar el índice de imagen de fondo
@@ -124,7 +124,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
 
     <section
       className='section'
-      onScroll={()=>changeFeed(4)}
+      onScroll={window.innerWidth > 700 ? () => changeFeed(4) : undefined}
       style={{
         position: 'relative',
         backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -149,7 +149,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
           top: 0,
           left: 0,
           width: '100%',
-          height: '100%',
+          height: 'auto',
           backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
           zIndex: 1, // Mantiene la capa detrás del contenido
         }}
@@ -170,75 +170,75 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
 
 
         {service===0 ? <div>
-          <ul className='slider'>
-          <li className='item fade-in-element' title='Software Personalizado | Software Customizado | Software Hecho a Medida' onClick={() => changeService(1)}>
+          <ul className='slider' onScroll={()=>changeFeed(4)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Software Personalizado | Software Customizado | Software Hecho a Medida' onClick={() => changeService(1)}>
               <FaCode />
               <p>Software {'\n'} Personalizado</p>
             </li>
-          <li className='item fade-in-element' title='Bases de Datos' onClick={() => changeService(2)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Bases de Datos' onClick={() => changeService(2)}>
               <FaDatabase />
               <p>Base de Datos</p>
             </li>
-              <li className='item fade-in-element' title='API´s RestFull ' onClick={() => changeService(4)}>
+              <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='API´s RestFull ' onClick={() => changeService(4)}>
               <FaProjectDiagram />
               <p>API´s</p>
             </li>
-          <li className='item fade-in-element' title='Aplicaciones Móviles' onClick={() => changeService(2)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Aplicaciones Móviles' onClick={() => changeService(2)}>
               <FaMobile />
               <p>APPS</p>
             </li>
    
-          <li className='item fade-in-element' title='Aplicaciones Web | Páginas Web | Sitios Web' onClick={() => changeService(3)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Aplicaciones Web | Páginas Web | Sitios Web' onClick={() => changeService(3)}>
               <FaGlobe />
               <p>Sitios Web</p>
             </li>
-            <li className='item fade-in-element' title='Mantenimiento Preventivo y Correctivo de Software y Hardware' onClick={() => changeService(7)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Mantenimiento Preventivo y Correctivo de Software y Hardware' onClick={() => changeService(7)}>
               <FaLaptopCode />
               <p>Mantenimiento</p>
             </li>
          
           
-            <li className='item fade-in-element' title='Instalaci´´on de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(8)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Instalaci´´on de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(8)}>
               <FaVideo />
               <p>Seguridad</p>
             </li>
-            <li className='item fade-in-element' title='IoT | Internet de las Cosas' onClick={() => changeService(5)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='IoT | Internet de las Cosas' onClick={() => changeService(5)}>
               <FaRobot />
               <p>IOT</p>
             </li>
        
-            <li className='item fade-in-element' title='Diseño, Desarrollo, Implementación y Mantenimiento de Videojuegos' onClick={() => changeService(9)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño, Desarrollo, Implementación y Mantenimiento de Videojuegos' onClick={() => changeService(9)}>
               <FaGamepad />
               <p>VideoJuegos</p>
             </li>
-            <li className='item fade-in-element' title='Despliegue y Mantenimiento de Aplicaciones Back-End y Front-End' onClick={() => changeService(10)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Despliegue y Mantenimiento de Aplicaciones Back-End y Front-End' onClick={() => changeService(10)}>
               <FaServer />
               <p>Deploy</p>
             </li>
-            <li className='item fade-in-element' title='Diseño y Dirección de Proyectos.' onClick={() => changeService(15)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño y Dirección de Proyectos.' onClick={() => changeService(15)}>
               <FaUsers />
               <p>Dirección {'\n'}
                 de Proyectos</p>
             </li>
          
-            <li className='item fade-in-element' title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(6)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(6)}>
               <FaImages />
               <p>Diseño{'\n'} Gráfico</p>
             </li>
            
-            <li className='item fade-in-element' title='Ciberseguridad | Infrestructura de Redes | Integración de Sistemas de Red' onClick={() => changeService(11)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Ciberseguridad | Infrestructura de Redes | Integración de Sistemas de Red' onClick={() => changeService(11)}>
             <FaWifi />
               <p>Redes {'\n'} Digitales</p>
             </li>
-            <li className='item fade-in-element' title='Marketing Dígital | Publicidad | Difusión | Redes Sociales' onClick={() => changeService(12)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Marketing Dígital | Publicidad | Difusión | Redes Sociales' onClick={() => changeService(12)}>
               <FaHeart />
               <p>Marketing {'\n'} Dígital</p>
             </li>
-            <li className='item fade-in-element' title='Redes Sociales | Communnity Managger' onClick={() => changeService(12)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Redes Sociales | Communnity Managger' onClick={() => changeService(12)}>
               <FaThumbsUp />
               <p>Redes {'\n'} Sociales</p>
             </li>
-            <li className='item fade-in-element' title='Gestión de Servicios en la Nube' onClick={() => changeService(14)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Gestión de Servicios en la Nube' onClick={() => changeService(14)}>
               <FaCloud />
               <p>Servicios {'\n'}en la Nube</p>
             </li>

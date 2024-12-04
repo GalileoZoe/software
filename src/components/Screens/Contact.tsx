@@ -23,17 +23,6 @@ export const Contact = () => {
     // <FaCode className='icon' />,
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-    }, 2000);
-
-    // Cleanup al desmontar el componente
-    return () => clearInterval(interval);
-  }, [icons.length]);
-
-
-
     // Arreglo de imágenes de fondo
     const bgImages = [
    
@@ -44,9 +33,7 @@ export const Contact = () => {
       // require('../../assets/bg-13.png'),
       require('../../assets/bg-00.png'),
       // require('../../assets/bg-10.png'),
-     
-  
-  
+      
     ];
   
     // Estado para manejar el índice de imagen de fondo
@@ -56,7 +43,7 @@ export const Contact = () => {
       const interval = setInterval(() => {
         setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
         setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
-      }, 2000);
+      });
   
       // Cleanup al desmontar el componente
       return () => clearInterval(interval);
@@ -68,7 +55,7 @@ export const Contact = () => {
 
     <section     
     className='section'
-    onScroll={()=>changeFeed(5)}
+    onScroll={window.innerWidth > 700 ? () => changeFeed(5) : undefined}
     style={{
       position: 'relative',
       backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -84,6 +71,7 @@ export const Contact = () => {
     }}>
 
       <div
+      onScroll={()=>changeFeed(3)}
              style={{
               position: 'absolute',
               top: 0,
@@ -96,7 +84,7 @@ export const Contact = () => {
             }}
       >
 
-      <h1 className='title fade-in-element' style={{color:'transparent'}} >
+      <h1 className='title fade-in-element' style={{color:'transparent'}} onScroll={()=>changeFeed(5)}>
        Contacto | Desarrollo de Software | Galileo  Zoe
         </h1>
 
@@ -104,7 +92,7 @@ export const Contact = () => {
 
    
         <div className='item'>
-        <img className='img' src={require('../../assets/galileozoe-02.png')} />
+        <img className='img' src={require('../../assets/galileozoe-02.png')} onScroll={()=>changeFeed(5)} />
         {/* <p>24 horas</p> */}
       </div>
 
@@ -113,35 +101,35 @@ export const Contact = () => {
 
 
 
-        <ul className='slider'>
+        <ul className='slider' onScroll={()=>changeFeed(5)}>
 
-          <li className='item fade-in-element' title='Llamada' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Llamada' >
             <a className='item' href='tel:7298906600'><FaPhone size={25} /><p>Teléfono</p></a>
             
           </li>
-          <li className='item fade-in-element' title='Mensaje' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Mensaje' >
           <a className='item' href='sms:527298906600'> <FaComment size={25} /> <p>Mensaje</p></a> 
            
           </li>
-          <li className='item fade-in-element' title='Correo Electrónico' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Correo Electrónico' >
            <a className='item' href='mailto:al222210067@gmail.com'><FaEnvelope size={25} /> <p>Correo Electrónico</p></a> 
            
           </li>
-          <li className='item fade-in-element' title='WhatsApp' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='WhatsApp' >
            <a className='item' href='https://wa.me/527298906600'> <FaWhatsapp size={25} /><p>WhatsApp</p></a>
           </li>
-          <li className='item fade-in-element' title='Facebook' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Facebook' >
            <a className='item' href='https://www.facebook.com/profile.php?id=61565903937768'> <FaFacebook size={25} /><p>FaceBook</p></a>
             
           </li>
-          <li className='item fade-in-element' title='TikTok' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='TikTok' >
             <a className='item' ><FaTiktok size={25} /> <p>TikTok</p></a>
            
           </li>
-          <li className='item fade-in-element' title='Ubicación' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Ubicación' >
            <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMapPin size={25} /><p>Ubicación</p></a>
           </li>
-          <li className='item fade-in-element' title='Software' >
+          <li className='item fade-in-element' onScroll={()=>changeFeed(5)} title='Software' >
             <a className='item' href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>SITIO WEB</p></a>
           </li>
         </ul>
@@ -149,14 +137,14 @@ export const Contact = () => {
         <div className='marginvertical'></div>
 
     
-        <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
+        <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)} onScroll={()=>changeFeed(5)}>
           {icons[iconIndex]}
           <p className={theme===0?'button':'buttonblack'}>Contacto</p>
         </a>
 
             <div className='marginvertical'></div>
 
-            <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
+            <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)} onScroll={()=>changeFeed(5)}>
           {icons[iconIndex]}
           <p className={theme===0?'button':'buttonblack'}>Contacto</p>
         </a>

@@ -20,7 +20,7 @@ export const Help = () => {
 
     // Arreglo de imágenes de fondo
     const bgImages = [
-        require('../../assets/bg-15.png'),
+        require('../../assets/bg-18.png'),
 
     ];
 
@@ -31,7 +31,7 @@ export const Help = () => {
         const interval = setInterval(() => {
             setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
             setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
-        }, 2000);
+        });
 
         // Cleanup al desmontar el componente
         return () => clearInterval(interval);
@@ -40,7 +40,7 @@ export const Help = () => {
     return (
         <section
             className='section'
-            onScroll={()=>changeFeed(1)}
+            onScroll={window.innerWidth > 700 ? () => changeFeed(1) : undefined}
             style={{
                 position: 'relative',
                 backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -74,10 +74,10 @@ export const Help = () => {
 
 
                 <h1 className='text'>Ayuda</h1>
-                <div className='item'>
+                {/* <div className='item'>
                     <img className='img' src={require('../../assets/galileozoe-02.png')} />
                     <p>24 horas</p>
-                </div>
+                </div> */}
 
 
                 <p className='paragraph'>Gracias por formar parte de   </p>
@@ -89,7 +89,9 @@ export const Help = () => {
 
                 <br />
                 <p className='paragraph'>Tu apoyo contribuye a la conservación y recuperación de nuestros ecosistemas naturales.   </p>
-
+                <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
+                    <p className='button'>Más Información </p>
+                </a>
                 <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
                     <p className='text'>Quiero Ayudar </p>
                     <FaHeart className={'button'} />
