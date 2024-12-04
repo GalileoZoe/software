@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
-import { useSession } from '../../context/SessionContext';
 import { useTheme } from '../../context/ThemeContext';
 
 
 export const NavBar: React.FC = () => {
   const { feed, changeFeed } = useFeed();
-  const { session } = useSession();
   const { theme } = useTheme();
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -27,10 +25,10 @@ export const NavBar: React.FC = () => {
         ☰
       </button>
       <ul className={`navbaritems ${theme === 1 ? '' : 'navbaritemswhite'} ${isMenuOpen ? 'show' : ''}`}>
-        {feed !== 1 && (
           <li>
             <a
               className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
+            style={feed === 1 ? { color:'white'} : undefined}
               onClick={() => {
                 changeFeed(1);
                 setMenuOpen(false);
@@ -39,11 +37,10 @@ export const NavBar: React.FC = () => {
               Inicio
             </a>
           </li>
-        )}
         <li>
           <a
             className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
-            style={feed === 2 ? { color:`${theme===0?'black':'white'}`} : undefined}
+            style={feed === 2 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(2);
               setMenuOpen(false);
@@ -55,7 +52,7 @@ export const NavBar: React.FC = () => {
         <li>
           <a
             className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
-            style={feed === 3 ? { color:`${theme===0?'black':'white'}`} : undefined}
+            style={feed === 3 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(3);
               setMenuOpen(false);
@@ -64,36 +61,22 @@ export const NavBar: React.FC = () => {
             Servicios
           </a>
         </li>
-        {session === 1 && (
-          <li>
-            <a
-              className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
-            style={feed === 7 ? { color:`${theme===0?'black':'white'}`} : undefined}
-              onClick={() => {
-                changeFeed(7);
-                setMenuOpen(false);
-              }}
-            >
-              Usuarios
-            </a>
-          </li>
-        )}
         <li>
           <a
-            className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
-            style={feed === 5 ? { color:`${theme===0?'black':'white'}`} : undefined}
+            className={'navbaritem'}
+            style={feed === 4 ? { color:'white'} : undefined}
             onClick={() => {
-              changeFeed(5);
+              changeFeed(4);
               setMenuOpen(false);
             }}
           >
-            Ubicación
+            Tecnologías
           </a>
         </li>
         <li>
           <a
             className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
-            style={feed === 6 ? { color:`${theme===0?'black':'white'}`} : undefined}
+            style={feed === 6 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(6);
               setMenuOpen(false);
@@ -105,7 +88,20 @@ export const NavBar: React.FC = () => {
         <li>
           <a
             className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
-            style={feed === 11 ? { color:`${theme===0?'black':'white'}`} : undefined}
+            style={feed === 5 ? { color:'white'} : undefined}
+            onClick={() => {
+              changeFeed(5);
+              setMenuOpen(false);
+            }}
+          >
+            Ubicación
+          </a>
+        </li>
+
+        <li>
+          <a
+            className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
+            style={feed === 11 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(11);
               setMenuOpen(false);

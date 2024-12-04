@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import { FaAppleAlt, FaBroadcastTower, FaCloud, FaCode, FaCog, FaComment, FaDatabase, FaDeskpro, FaDesktop, FaEnvelope, FaExchangeAlt, FaFacebook, FaFutbol, FaGamepad, FaGlobe, FaHandshake, FaHeart, FaIgloo, FaImage, FaImages, FaLaptopCode, FaMobile, FaMobileAlt, FaMusic, FaNetworkWired, FaPaintBrush, FaPeopleArrows, FaPeopleCarry, FaPhone, FaProjectDiagram, FaRobot, FaServer, FaUser, FaUserFriends, FaUserMd, FaUsers, FaVideo, FaWhatsapp, FaWifi } from 'react-icons/fa';
+import { FaAppleAlt, FaBroadcastTower, FaCloud, FaCode, FaCog, FaComment, FaDatabase, FaDeskpro, FaDesktop, FaEnvelope, FaExchangeAlt, FaFacebook, FaFutbol, FaGamepad, FaGlobe, FaHandshake, FaHeart, FaIgloo, FaImage, FaImages, FaLaptopCode, FaMobile, FaMobileAlt, FaMusic, FaNetworkWired, FaPaintBrush, FaPeopleArrows, FaPeopleCarry, FaPhone, FaProjectDiagram, FaRobot, FaServer, FaThumbsUp, FaUser, FaUserFriends, FaUserMd, FaUsers, FaVideo, FaWhatsapp, FaWifi } from 'react-icons/fa';
 import { Window } from '../Components/Window';
 import { useService } from '../../context/ServiceContext';
 
@@ -17,26 +17,27 @@ export const Services = () => {
     switch (service) {
       case 1:
         return <Window
-          tittle='Temazcal'
-          description='Favorece al proceso de desintoxicación y beneficia a la salud física y mental de los usuarios. ¡ Servicio abierto al público !.'
+          tittle='Software personalizado'
+          description='Desarrollo de Sistemas de Software Adaptados a las necesidades específicas de tu negocio u organización.
+           Implementación de sistemas robustos acccesiebles agilicen los procesos  .'
           button='Más Información'
         />;
       case 2:
         return <Window
-          tittle='Psicología'
-          description='Atención Psicológica Profesional. Sesiones individuales, grupales y familiares.'
+          tittle='Aplicaciones Móviles'
+          description='de aplicaciones móviles para la gestion y manejo de procesoscomo venta, transporte, producción, etc.'
           button='Más Información'
         />;
       case 3:
         return <Window
-          tittle='Nutrición'
-          description='Dieta basada en alimentos frescos y naturales que ayudan en el proceso de desintoxicación del cuerpo, mejoran la salud física y brindan mayor energía; manteniendo un mejor estado de ánimo.'
+          tittle='Sitios Web'
+          description='Immplementación de páginas web personalizadas que permitan gestionar los procesos de tu empresa y conectar con tus clientes'
           button='Más Información'
         />;
       case 4:
         return <Window
-          tittle='Sesiones AL-ANON'
-          description='Estrategias para saber como lidiar con personas con conductas adictivas.'
+          tittle='API´S'
+          description='Despliegue de API´S RestFull y Applicaciones Back-End escalables  que permiten el acceso seguro y eficiente a la Base de Dtos  '
           button='Más Información'
         />;
       case 5:
@@ -99,95 +100,171 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
   }, [icons.length]);
 
 
+   // Arreglo de imágenes de fondo
+   const bgImages = [
+    require('../../assets/bg-01.png'),
+  ];
+
+  // Estado para manejar el índice de imagen de fondo
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
+      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
+    }, 2000);
+
+    // Cleanup al desmontar el componente
+    return () => clearInterval(interval);
+  }, [icons.length, bgImages.length]);
+
+
+
   return (
 
-    <section className='section'>
+    <section
+      className='section'
+      onScroll={()=>changeFeed(4)}
+      style={{
+        position: 'relative',
+        backgroundImage: `url(${bgImages[bgIndex]})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100vw', // 100% del ancho de la ventana
+        height: '100vh', // 100% del alto de la ventana
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center', // Alinea el texto horizontalmente
+        backgroundColor:'whitesmoke',
+      }}
 
-      <div>
+    >
+      
+
+
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
+          zIndex: 1, // Mantiene la capa detrás del contenido
+        }}
+      >
 
         
       <h1 className='title fade-in-element' style={{color:'transparent'}} >
-       Servicios | Centro de Rehabilitación | Tierra Prometida
+       Servicios | Desarrollo de Software | Galileo Zoe
         </h1>
 
-        <h1 className={theme===2?'titleRed':'title'}>Servicios</h1>
+          <div className="fade-in-element">
+        <p className='text'>Servicios</p>
         <img className='img' src={require('../../assets/galileozoe-02.png')} />
-        <p className='item'>24 horas</p>
+        {/* <p className='item'>24 horas</p> */}
+        </div>
+
+        <div className='marginVertical'></div>
+
 
         {service===0 ? <div>
           <ul className='slider'>
-          <li className='item fade-in-element' title='Activación Física' onClick={() => changeService(7)}>
-              <FaCode className={theme === 2 ? 'iconred' : 'icon'} />
+          <li className='item fade-in-element' title='Software Personalizado | Software Customizado | Software Hecho a Medida' onClick={() => changeService(1)}>
+              <FaCode />
               <p>Software {'\n'} Personalizado</p>
             </li>
-          <li className='item fade-in-element' title='ArteTerapia' onClick={() => changeService(8)}>
-              <FaMobile className={theme === 2 ? 'iconred' : 'icon'} />
-              <p>APPS</p>
+          <li className='item fade-in-element' title='Bases de Datos' onClick={() => changeService(2)}>
+              <FaDatabase />
+              <p>Base de Datos</p>
             </li>
-          <li className='item fade-in-element' title='ArteTerapia' onClick={() => changeService(8)}>
-              <FaGlobe className={theme === 2 ? 'iconred' : 'icon'} />
-              <p>Sitios Web</p>
-            </li>
-            <li className='item fade-in-element' title='Psicología' onClick={() => changeService(2)}>
-              <FaProjectDiagram className={theme === 2 ? 'iconred' : 'icon'} />
+              <li className='item fade-in-element' title='API´s RestFull ' onClick={() => changeService(4)}>
+              <FaProjectDiagram />
               <p>API´s</p>
             </li>
-            <li className='item fade-in-element' title='Activación Física' onClick={() => changeService(7)}>
-              <FaLaptopCode className={theme === 2 ? 'iconred' : 'icon'} />
-              <p>Mantenimineto</p>
+          <li className='item fade-in-element' title='Aplicaciones Móviles' onClick={() => changeService(2)}>
+              <FaMobile />
+              <p>APPS</p>
             </li>
-            <li className='item fade-in-element' title='ArteTerapia' onClick={() => changeService(8)}>
-              <FaVideo className={theme === 2 ? 'iconred' : 'icon'} />
+   
+          <li className='item fade-in-element' title='Aplicaciones Web | Páginas Web | Sitios Web' onClick={() => changeService(3)}>
+              <FaGlobe />
+              <p>Sitios Web</p>
+            </li>
+            <li className='item fade-in-element' title='Mantenimiento Preventivo y Correctivo de Software y Hardware' onClick={() => changeService(7)}>
+              <FaLaptopCode />
+              <p>Mantenimiento</p>
+            </li>
+         
+          
+            <li className='item fade-in-element' title='Instalaci´´on de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(8)}>
+              <FaVideo />
               <p>Seguridad</p>
             </li>
+            <li className='item fade-in-element' title='IoT | Internet de las Cosas' onClick={() => changeService(5)}>
+              <FaRobot />
+              <p>IOT</p>
+            </li>
        
-            <li className='item fade-in-element' title='Eventos Culturales' onClick={() => changeService(9)}>
-              <FaGamepad className={theme === 2 ? 'iconred' : 'icon'} />
+            <li className='item fade-in-element' title='Diseño, Desarrollo, Implementación y Mantenimiento de Videojuegos' onClick={() => changeService(9)}>
+              <FaGamepad />
               <p>VideoJuegos</p>
             </li>
-            <li className='item fade-in-element' title='ArteTerapia' onClick={() => changeService(8)}>
-            <FaWifi className={theme === 2 ? 'iconred' : 'icon'} />
-              <p>Redes {'\n'} Digitales</p>
-            </li>
-        
-            <li className='item fade-in-element' title='Eventos Culturales' onClick={() => changeService(9)}>
-              <FaServer className={theme === 2 ? 'iconred' : 'icon'} />
+            <li className='item fade-in-element' title='Despliegue y Mantenimiento de Aplicaciones Back-End y Front-End' onClick={() => changeService(10)}>
+              <FaServer />
               <p>Deploy</p>
             </li>
-            <li className='item fade-in-element' title='Desintoxicación' onClick={() => changeService(5)}>
-              <FaHeart className={theme === 2 ? 'iconred' : 'icon'} />
-              <p>Marketing {'\n'} Dígital</p>
-            </li>
-            <li className='item fade-in-element' title='Eventos Culturales' onClick={() => changeService(9)}>
-              <FaCloud className={theme === 2 ? 'iconred' : 'icon'} />
-              <p>Servicios {'\n'}en la Nube</p>
-            </li>
-            <li className='item fade-in-element' title='Desarrollo Humano' onClick={() => changeService(6)}>
-              <FaUsers className={theme === 2 ? 'iconred' : 'icon'} />
+            <li className='item fade-in-element' title='Diseño y Dirección de Proyectos.' onClick={() => changeService(15)}>
+              <FaUsers />
               <p>Dirección {'\n'}
                 de Proyectos</p>
             </li>
-            <li className='item fade-in-element' title='AL-ANON' onClick={() => changeService(4)}>
-              <FaImages className={theme === 2 ? 'iconred' : 'icon'} />
-              <p>Diseño {'\n'} Gráfico</p>
+         
+            <li className='item fade-in-element' title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(6)}>
+              <FaImages />
+              <p>Diseño{'\n'} Gráfico</p>
             </li>
+           
+            <li className='item fade-in-element' title='Ciberseguridad | Infrestructura de Redes | Integración de Sistemas de Red' onClick={() => changeService(11)}>
+            <FaWifi />
+              <p>Redes {'\n'} Digitales</p>
+            </li>
+            <li className='item fade-in-element' title='Marketing Dígital | Publicidad | Difusión | Redes Sociales' onClick={() => changeService(12)}>
+              <FaHeart />
+              <p>Marketing {'\n'} Dígital</p>
+            </li>
+            <li className='item fade-in-element' title='Redes Sociales | Communnity Managger' onClick={() => changeService(12)}>
+              <FaThumbsUp />
+              <p>Redes {'\n'} Sociales</p>
+            </li>
+            <li className='item fade-in-element' title='Gestión de Servicios en la Nube' onClick={() => changeService(14)}>
+              <FaCloud />
+              <p>Servicios {'\n'}en la Nube</p>
+            </li>
+        
+        
           </ul>
         </div> :
           <div>
-            <br />
 
             <Services />
           </div>}
-        <br />
-        <br />
+
         <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
           {icons[iconIndex]}
-          <p className={theme===0?'button':'buttonblack'}>Contáctanos</p>
+          <p className={'button'}>Contacto</p>
         </a>
 
             <div className='marginvertical'></div>
 
+            <a className=' fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
+          {icons[iconIndex]}
+          <p className={theme===0?'button':'buttonblack'}>Contacto</p>
+        </a>
+
       </div>
+
     </section>
   )
 }

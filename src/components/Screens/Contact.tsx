@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import {  FaCode,  FaComment,  FaEnvelope, FaFacebook,  FaMapPin,FaPhone,  FaTiktok, FaWhatsapp } from 'react-icons/fa';
+import {  FaCode,  FaComment,  FaEnvelope, FaFacebook,  FaGlobe,  FaMapPin,FaPhone,  FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 export const Contact = () => {
 
@@ -33,77 +33,136 @@ export const Contact = () => {
   }, [icons.length]);
 
 
+
+    // Arreglo de imágenes de fondo
+    const bgImages = [
+   
+      // require('../../assets/bg-06.png'),
+      // require('../../assets/bg-07.png'),
+      // require('../../assets/bg-08.png'),
+      // require('../../assets/bg-09.png'),
+      // require('../../assets/bg-13.png'),
+      require('../../assets/bg-00.png'),
+      // require('../../assets/bg-10.png'),
+     
+  
+  
+    ];
+  
+    // Estado para manejar el índice de imagen de fondo
+    const [bgIndex, setBgIndex] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
+        setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
+      }, 2000);
+  
+      // Cleanup al desmontar el componente
+      return () => clearInterval(interval);
+    }, [icons.length, bgImages.length]);
+  
+
+
   return (
 
-    <section className='section'>
+    <section     
+    className='section'
+    onScroll={()=>changeFeed(5)}
+    style={{
+      position: 'relative',
+      backgroundImage: `url(${bgImages[bgIndex]})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      width: '100vw', // 100% del ancho de la ventana
+      height: '100vh', // 100% del alto de la ventana
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center', // Alinea el texto horizontalmente
+      backgroundColor:'whitesmoke',
+    }}>
 
-      <div>
+      <div
+             style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              minHeight:'100%',
+              height: 'auto',
+              backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
+              zIndex: 1, // Mantiene la capa detrás del contenido
+            }}
+      >
 
       <h1 className='title fade-in-element' style={{color:'transparent'}} >
-       Contacto | Centro de Rehabilitación | Tierra Prometida
+       Contacto | Desarrollo de Software | Galileo  Zoe
         </h1>
 
-        <h1 className={theme===2 ? 'titleRed' : 'title'}>Contacto</h1>
+        <p className={'text'}>Contacto</p>
 
    
         <div className='item'>
         <img className='img' src={require('../../assets/galileozoe-02.png')} />
-        <p>24 horas</p>
+        {/* <p>24 horas</p> */}
       </div>
 
-        <br />
-        <br />
-        <br />
+      <div className='marginvertical'></div>
+      <div className='marginvertical'></div>
+
+
 
         <ul className='slider'>
 
           <li className='item fade-in-element' title='Llamada' >
-            <a href='tel:7281136945'><FaPhone className={theme === 2 ? 'iconred' : 'icon'} /></a>
-            <p>Teléfono</p>
+            <a className='item' href='tel:7298906600'><FaPhone size={25} /><p>Teléfono</p></a>
+            
           </li>
           <li className='item fade-in-element' title='Mensaje' >
-          <a href='sms:529624304734'> <FaComment className={theme === 2 ? 'iconred' : 'icon'} /></a> 
-            <p>Mensaje</p>
+          <a className='item' href='sms:527298906600'> <FaComment size={25} /> <p>Mensaje</p></a> 
+           
           </li>
           <li className='item fade-in-element' title='Correo Electrónico' >
-           <a href='mailto:tierraprometida24h@gmail.com'><FaEnvelope className={theme === 2 ? 'iconred' : 'icon'} /></a> 
-            <p>Correo Electrónico</p>
+           <a className='item' href='mailto:al222210067@gmail.com'><FaEnvelope size={25} /> <p>Correo Electrónico</p></a> 
+           
           </li>
           <li className='item fade-in-element' title='WhatsApp' >
-           <a href='https://wa.me/529624304734'> <FaWhatsapp className={theme === 2 ? 'iconred' : 'icon'} /></a>
-            <p>WhatsApp</p>
+           <a className='item' href='https://wa.me/527298906600'> <FaWhatsapp size={25} /><p>WhatsApp</p></a>
           </li>
           <li className='item fade-in-element' title='Facebook' >
-           <a href='https://www.facebook.com/profile.php?id=61565903937768'> <FaFacebook className={theme === 2 ? 'iconred' : 'icon'} /></a>
-            <p>FaceBook</p>
+           <a className='item' href='https://www.facebook.com/profile.php?id=61565903937768'> <FaFacebook size={25} /><p>FaceBook</p></a>
+            
           </li>
           <li className='item fade-in-element' title='TikTok' >
-            <FaTiktok className={theme === 2 ? 'iconred' : 'icon'} />
-            <p>TikTok</p>
+            <a className='item' ><FaTiktok size={25} /> <p>TikTok</p></a>
+           
           </li>
           <li className='item fade-in-element' title='Ubicación' >
-           <a href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMapPin className={theme === 2 ? 'iconred' : 'icon'} /></a>
-            <p>Ubicación</p>
+           <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMapPin size={25} /><p>Ubicación</p></a>
           </li>
           <li className='item fade-in-element' title='Software' >
-            <FaCode className={theme === 2 ? 'iconred' : 'icon'} />
-            <p>Software</p>
+            <a className='item' href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>SITIO WEB</p></a>
           </li>
-          {/* <li className='item fade-in-element' title='Eventos Culturales' onClick={() => changeTheme(theme === 1 ? 0 : 1)}>
-            <FaMusic className={theme === 2 ? 'iconred' : 'icon'} />
-            <p>Eventos Culturales</p>
-          </li> */}
         </ul>
 
-        <br />
+        <div className='marginvertical'></div>
+
     
         <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
-          <p className={theme===0?'button':'buttonblack'}>Contáctanos</p>
+          {icons[iconIndex]}
+          <p className={theme===0?'button':'buttonblack'}>Contacto</p>
         </a>
+
+            <div className='marginvertical'></div>
+
+            <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
+          {icons[iconIndex]}
+          <p className={theme===0?'button':'buttonblack'}>Contacto</p>
+        </a>
+
    
       </div>
-
-      <div className='marginvertical'></div>
 
     </section>
   )

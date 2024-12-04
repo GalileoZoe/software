@@ -22,10 +22,9 @@ export const Feed: React.FC = () => {
   // Arreglo de imágenes de fondo
   const bgImages = [
    
-    require('../../assets/bg-06.png'),
-    require('../../assets/bg-07.png'),
+
+    // require('../../assets/bg-03.png'),
     require('../../assets/bg-08.png'),
-    require('../../assets/bg-09.png'),
     require('../../assets/bg-13.png'),
     require('../../assets/bg-00.png'),
     require('../../assets/bg-10.png'),
@@ -49,7 +48,8 @@ export const Feed: React.FC = () => {
 
   return (
     <section
-      className='feed'
+      onScroll={()=>changeFeed(2)}
+      className='section'
       style={{
         position: 'relative',
         backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -74,7 +74,7 @@ export const Feed: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(7, 7, 7, 0.5)', // Capa oscura con opacidad
+          backgroundColor: 'rgba(7, 7, 7, 0.7)', // Capa oscura con opacidad
           zIndex: 1, // Mantiene la capa detrás del contenido
         }}
       />
@@ -85,36 +85,42 @@ export const Feed: React.FC = () => {
          Desarrollo de Software | Galileo Zoe 
         </h1>
 
-        <br />
+        <div className='marginvertical'></div>
 
-        <a onClick={()=>changeFeed(6)}>
+
+     
           <img
             className='logotype'
             src={require('../../assets/galileozoe-02.png')}
-            alt='Logo Tierra Prometida'
+            alt='Logo Galileo Zoe'
           />
+
+
           {/* <p className='item fade-in-element'>24 horas</p> */}
 
-          <p className='text fade-in-element' style={{ color: '#fff' }}>'Creamos el Futuro.'</p>
+          <p className='text fade-in-element'>'Creando el Futuro'</p>
 
           <div className='center fade-in-element'>
             <img
               className='logo'
               src={require('../../assets/gz-00.png')}
-              alt='Logo Tierra Prometida'
+              alt='Logo Galileo Zoe'
             />
 
-            <h2 className='paragraph' style={{ color: '#fff' }}>Conectamos ideas. Creamos el futuro.</h2>
+            <h2 className='paragraph' style={{ color: '#fff' }}>Programando Sueños. Creando el futuro.</h2>
 
-            <br />
+        <div className='marginvertical'></div>
+
 
             <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
               {icons[iconIndex]}
 
-              <p className={theme===0?'button':'buttonblack'}>Contáctame</p>
+              <p className={'button'}>Contacto</p>
             </a>
           </div>
-        </a>
+      
+
+        <div className='marginvertical'></div>
       </div>
     </section>
   );

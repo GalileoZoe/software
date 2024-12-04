@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../../App.css';
 import { useTheme } from '../../context/ThemeContext';
-import { useSession } from '../../context/SessionContext';
 import { FaRegUser, FaSignInAlt, FaStore, FaToggleOff, FaToggleOn, FaUser, FaWifi } from 'react-icons/fa';
 import { useFeed } from '../../context/FeedContext';
 import { AuthContext } from '../../context/AuthContext';
@@ -9,7 +8,6 @@ import { AuthContext } from '../../context/AuthContext';
 
 export const Footer: React.FC = () => {
     const { theme, changeTheme } = useTheme();
-    const { session, changeSession } = useSession();
     const { changeFeed } = useFeed();
     const { authState, logout } = useContext(AuthContext);
     
@@ -40,18 +38,18 @@ export const Footer: React.FC = () => {
                     title='Modo Oscuro'
                     onClick={theme ===0 ? () => changeTheme(1) : () => changeTheme(0)}
                 >
-                    {theme === 0 ? <FaToggleOff /> : <FaToggleOn />}
+                    {theme === 0 ? <FaToggleOff className='icon' /> : <FaToggleOn className='icon' />}
                 </li>
-                <li
+                {/* <li
                     className={theme === 2 ? 'footeritemred' : 'footeritem'}
                     title='Iniciar Sesión'
                     onClick={() => changeFeed(0)}
                 >
-                    {session === 0 ? <FaRegUser /> : <FaUser />}
+                    {session === 0 ? <FaRegUser className={theme === 2 ? 'iconred' : 'icon'} /> : <FaUser className={theme === 2 ? 'iconred' : 'icon'} />}
                 </li>
                 {session === 1 ? (
                     <li className={theme === 2 ? 'footeritemred' : 'footeritem'} title='Tienda' onClick={() => changeFeed(10)}>
-                        <FaStore />
+                        <FaStore className={theme === 2 ? 'iconred' : 'icon'} />
                     </li>
                 ) : null}
                 {authState.isLoggenIn ? (
@@ -64,16 +62,16 @@ export const Footer: React.FC = () => {
                             changeFeed(1);
                         }}
                     >
-                        <FaSignInAlt />
+                        <FaSignInAlt className={theme === 2 ? 'iconred' : 'icon'} />
                     </li>
-                ) : null}
+                ) : null} */}
                 {isOnline ? (
                     <li className={theme === 2 ? 'footeritemred' : 'footeritem'}>
-                        <FaWifi  />
+                        <FaWifi className='icongreen' />
                     </li>
                 ) : (
                     <li className={theme === 2 ? 'footeritemred' : 'footeritem'} title={isOnline ? 'Conectado' : 'Sin Conexión'}>
-                        <FaWifi />
+                        <FaWifi className='icon' />
                     </li>
                 )}
             </ul>

@@ -1,10 +1,7 @@
 import React from 'react';
 import './App.css';
-
 import { FeedProvider } from './context/FeedContext';
-
 import { ThemeProvider, useTheme } from './context/ThemeContext';
-import { SessionProvider } from './context/SessionContext';
 import { Footer } from './components/Layout/Footer';
 import { Layout } from './components/Layout/Layout';
 import { NavBar } from './components/Layout/NavBar';
@@ -46,7 +43,6 @@ const Apps = () => {
 function App() {
   return (
     <AuthProvider>
-    <SessionProvider>
     <ThemeProvider>
       <FeedProvider>
         <ServiceProvider>
@@ -54,7 +50,6 @@ function App() {
         </ServiceProvider>
       </FeedProvider>
     </ThemeProvider>
-    </SessionProvider>
     </AuthProvider>
   );
 }

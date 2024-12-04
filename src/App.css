@@ -63,7 +63,7 @@
 }
 
 .AppWhite {
-  background-color: whitesmoke;
+  background-color: #FFEBED;
   opacity: 0.9;
   display: flexbox;
   white-space: pre-line;
@@ -88,7 +88,7 @@
 .fade-in-element {
   opacity: 0;
   transform: translateY(-20px);
-  animation: fadeInFromTop 1.5s ease-out forwards;
+  animation: fadeInFromTop 2s ease-out forwards;
 }
 
 @keyframes fadeInFromTop {
@@ -113,8 +113,8 @@
 
 .button {
   background-color: #FE0420;
-  color: #fff;
-  font-weight: 100;
+  color: #b8b8b8;
+  
   font-size: 1em;
   border: none;
   width: max-content;
@@ -129,7 +129,7 @@
 .button:hover {
   background-color: #FE0420;
   color: 'transparent';
-  font-weight: 100;
+  
   font-size: 1em;
   border: none;
   width: max-content;
@@ -174,7 +174,7 @@
 @media(max-width:700px){
 .button {
   background-color: #FE0420;
-  color: #fff;
+  color: #cecece;
   font-weight: 100;
   font-size: 1em;
   border: none;
@@ -224,23 +224,24 @@
   background-color: #FE0420;
   border:none;
   /* Borde suave */
-  border-radius: 8px;
+  border-radius: 200px;
   /* Bordes redondeados */
   padding: 1em;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   /* Sombra suave */
-  width: 300px;
+  width: 200px;
+  height: 200px;
   /* Ancho de las tarjetas */
 }
 
 .card h2 {
   margin-bottom: 10px;
-  color: whitesmoke ;
+  color: #FFEBED ;
   /* Color del título de la tarjeta */
 }
 
 .card p {
-  color: whitesmoke;
+  color: #FFEBED;
   /* Color del texto de la tarjeta */
 }
 
@@ -357,7 +358,7 @@
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: whitesmoke;
+  color: #FFEBED;
   cursor: pointer;
   align-self: center;
   font-size: 1em;
@@ -450,10 +451,11 @@
 /* Text */
 
 .text {
-  color: black;
+  color: whitesmoke;
   text-align: center;
   transition: all 0.8s ease-in-out;
   font-size: 2em;
+  font-weight: 600;
 }
 
 .text:hover {
@@ -463,30 +465,30 @@
 }
 
 .textss {
-  color: #FE0420;
-  font-weight: 100;
+  color: #FFEBED;
+  /* font-weight: 100; */
   text-align: center;
   font-size: 0.7em;
 }
 
 .textss:hover {
   color: #FE0420;
-  font-weight: 100;
+  /* font-weight: 100; */
   text-align: center;
   font-size: 0.7em;
   cursor: pointer;
 }
 
 .texts {
-  color: #FE0420;
-  font-weight: 100;
+  color: #FFEBED;
+  /* font-weight: 100; */
   text-align: center;
   font-size: 1em;
 }
 
 .texts:hover {
-  color: #FE0420;
-  font-weight: 100;
+  color: #FFEBED;
+  /* font-weight: 100; */
   text-align: center;
   font-size: 1em;
   cursor: pointer;
@@ -494,7 +496,7 @@
 
 .textblack {
   color: #000;
-  font-weight: 100;
+  /* font-weight: 100; */
   text-align: center;
   font-size: 1em;
 }
@@ -596,8 +598,8 @@
 
 /*  Paragraph  */
 .paragraph {
-  color: #FE0420;
-  font-weight: 100;
+  color: whitesmoke;
+  font-weight: 600;
   text-align: center;
   font-size: 1.4em;
   transition: color 0.5s ease;
@@ -608,7 +610,6 @@
 /*  Image  */
 .img {
   width: 280px;
-  height: auto;
 }
 
 .imgs {
@@ -628,8 +629,6 @@
 }
 
 .icon:hover {
-  width: 1.5em;
-  height: 1.5em;
   transform: scale(1.1);
   color: #FE0420;
   text-align: center;
@@ -782,7 +781,7 @@
 /*  Item  */
 .item {
   list-style: none;
-  color: #FE0420;
+  color: #FFEBED;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.5s ease;
@@ -822,13 +821,25 @@
 .marginvertical{
   margin-top: 6em;
 }
+.marginVertical{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
 
 /*  Map  */
 .map {
   width: 600px;
   height: 180px;
+  border: #FFEBED solid 2px;
+    transition: transform 1s ease-in-out;
+  /* border-radius: 10px; */
+}
+.map:hover {
+  width: 600px;
+  height: 180px;
   border: #FE0420 solid 2px;
-  border-radius: 10px;
+    transform: scale(1.5);
+  /* border-radius: 10px; */
 }
 
 
@@ -837,6 +848,17 @@
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+    transform: scale(1.5);
+}
+
+
+.map-container:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+    transition: transform 1s ease-in-out;
+
   /* Opcional, para agregar margen vertical */
 }
 
@@ -911,7 +933,8 @@
   height: '100vh';
   width: '100vw';
   text-align: center;
-
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 
@@ -932,6 +955,14 @@
   text-align: center;
   cursor: pointer;
 }
+.titlewhite {
+  color: #FFEBED;
+  font-weight: 100;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
 
 .titleblack {
   color: black;
@@ -941,7 +972,7 @@
 }
 
 .title:hover {
-  color: black;
+  color:#ff001e;
   font-weight: 100;
   font-size: 2em;
   text-align: center;
@@ -964,7 +995,7 @@
 }
 
 .titleRed {
-  color: whitesmoke;
+  color: #FFEBED;
   font-weight: 100;
   font-size: 2em;
   text-align: center;
@@ -1032,7 +1063,7 @@
 .footeritemred {
   list-style: none;
   margin-left: 20px;
-  color: whitesmoke;
+  color: #FFEBED;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -1114,12 +1145,13 @@
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 20px;
-  font-size: 1em;
+  font-size: 1.1em;
   transition: color 0.8s ease;
+  font-weight:750;
 }
 
 .navbaritem:hover {
-  color: #720c0c;
+  color: whitesmoke;
 
 }
 
@@ -1381,7 +1413,7 @@
   }
 
   .navbar{
-    background-color: whitesmoke;
+    background-color: #FFEBED;
   }
 
   .input-group {

@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import { useTheme } from '../../context/ThemeContext';
 import { FaMap, FaMapPin } from 'react-icons/fa';
+import { useFeed } from '../../context/FeedContext';
 
 export const Location: React.FC = () => {
+  const { changeFeed } = useFeed();
   const { theme } = useTheme();
 
 
   const [iconIndex, setIconIndex] = useState(0);
 
   const icons = [
-    <FaMap className='icon' />,
-    <FaMapPin className='icon' />,
+    <FaMap className='fade-in-element icon' />,
+    <FaMapPin className='fade-in-element icon' />,
 
   ];
 
@@ -24,20 +26,78 @@ export const Location: React.FC = () => {
     return () => clearInterval(interval);
   }, [icons.length]);
 
+
+  const bgImages = [
+   
+    // require('../../assets/bg-06.png'),
+    // require('../../assets/bg-07.png'),
+    // require('../../assets/bg-08.png'),
+    // require('../../assets/bg-09.png'),
+    require('../../assets/bg-16.png'),
+    // require('../../assets/bg-00.png'),
+    // require('../../assets/bg-10.png'),
+   
+
+
+  ];
+
+  // Estado para manejar el índice de imagen de fondo
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
+      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
+    }, 2000);
+
+    // Cleanup al desmontar el componente
+    return () => clearInterval(interval);
+  }, [icons.length, bgImages.length]);
+
+
   return (
-    <div className='section'>
+
+    <section
+    className='section'
+    onScroll={()=>changeFeed(11)}
+    style={{
+      position: 'relative',
+      backgroundImage: `url(${bgImages[bgIndex]})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      width: '100vw', // 100% del ancho de la ventana
+      height: '100vh', // 100% del alto de la ventana
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center', // Alinea el texto horizontalmente
+      backgroundColor:'whitesmoke',
+    }}>
+    <div
+           style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
+            zIndex: 1, // Mantiene la capa detrás del contenido
+          }}
+    >
 
       
 <h1 className='title fade-in-element' style={{color:'transparent'}} >
        Ubicación | Desarrollo de Software | Galileo Zoe
         </h1>
 
-      <h1 className={theme===2 ? 'titleRed' : 'title'}>Ubicación</h1>
 
-      <div className='item'>
-      <img className='img' src={require('../../assets/galileozoe-02.png')} />
-        <p>24 horas</p>
-      </div>
+
+      <div className="fade-in-element">    
+          <p className='text'>Ubicación</p>
+        <img className='img' src={require('../../assets/galileozoe-02.png')} />    
+        {/* <p className='item'>24 horas</p> */}
+        </div>
+     
 
       <div className='map-container fade-in-element'>
         <iframe
@@ -47,12 +107,18 @@ export const Location: React.FC = () => {
       </div>
 
       <div>
-        <p className='paragraph fade-in-element' >Calle Guadalupe Victoria 13, Dolores, 52010 Colonia Álvaro Obregón Tlalmimilolpan, México.</p>
+        <p className='titlewhite fade-in-element'>Avenida Libertad S/N, Colonia Álvaro Obregón, Lerma, México. 52010 .</p>
       </div>
-      <a className='icon fade-in-element' title='Contacto' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'>
+      <a className='icon fade-in-element' title='Ubicación' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'>
         {icons[iconIndex]}
-        <p className={theme===0?'button':'buttonblack'}>Como Llegar</p>
+        <p className={`fade-in-element ${theme===0?'button':'buttonblack'}`}>Como Llegar</p>
+      </a>
+      <div className='marginvertical'></div>
+      <a className='icon fade-in-element' title='Ubicación' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'>
+        {icons[iconIndex]}
+        <p className={`fade-in-element ${theme===0?'button':'buttonblack'}`}>Como Llegar</p>
       </a>
     </div>
+    </section>
   );
 };
