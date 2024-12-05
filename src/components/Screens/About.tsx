@@ -29,24 +29,17 @@ export const About = () => {
     }, [icons.length]);
 
     const changeRender = () => {
-        {render===0?
-        setRender(1):
-        setRender(0)
-    }
+        {
+            render === 0 ?
+            setRender(1) :
+            setRender(0)
+        }
     }
 
     // Arreglo de imágenes de fondo
     const bgImages = [
 
-        // require('../../assets/bg-06.png'),
-        // require('../../assets/bg-07.png'),
-        // require('../../assets/bg-08.png'),
-        // require('../../assets/bg-09.png'),
-        // require('../../assets/bg-13.png'),
         require('../../assets/bg-10.png'),
-        // require('../../assets/bg-10.png'),
-
-
 
     ];
 
@@ -56,8 +49,7 @@ export const About = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-            setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
-        });
+        },2000);
 
         // Cleanup al desmontar el componente
         return () => clearInterval(interval);
@@ -105,11 +97,11 @@ export const About = () => {
 
                 </div>
 
-                    <p className='texts'>Desarrollo de Software Multiplataforma</p>
-        
+                <p className='texts'>Desarrollo de Software Multiplataforma</p>
 
-                <div className='cards-container' onScroll={()=>changeFeed(3)}>
-                    <div className={'card'} onScroll={()=>changeFeed(3)}>
+
+                <div className='cards-container' onScroll={() => changeFeed(3)}>
+                    <div className={'card'} onScroll={() => changeFeed(3)}>
                         <h2 className='title'>Misión</h2>
                         <p>Implememtar herramientas tecnológicas de vanguardia que empoderen a las industrias, les permitan
                             aumentar su alcance, conectar con su público objetivo,  y ofrecer una mejor expereincia a sus clientes. .</p>
@@ -117,22 +109,22 @@ export const About = () => {
                             <p>Desarrollar soluciónes de software y hardware para abordar las distintas .</p>
                         }
                     </div>
-                    <div className={'card'} onScroll={()=>changeFeed(3)} >
+                    <div className={'card'} onScroll={() => changeFeed(3)} >
                         <h2 className='title'>Visión</h2>
                         <p>Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
                             hardware, software, tecnologías de la información y asociados.</p>
 
-                            
-                <a onClick={() => changeRender()} className='fade-in-element' title='Contacto'>
-                    <FaInfoCircle className='paragraph' />
-                    <p className={'paragraph'}>Más Información</p>
-                </a>
 
-                            {render === 1 &&
+                        <a onClick={() => changeRender()} className='fade-in-element' title='Contacto'>
+                            <FaInfoCircle className='paragraph' />
+                            <p className={'paragraph'}>Más Información</p>
+                        </a>
+
+                        {render === 1 &&
                             <p>Desarrollar soluciónes de software y hardware para abordar las distintas .</p>
                         }
                     </div>
-                    <div className={'card'} onScroll={()=>changeFeed(3)}>
+                    <div className={'card'} onScroll={() => changeFeed(3)}>
                         <h2 className='title'>Valores</h2>
                         <p>Innovación{'\n'} Respeto {'\n'} Compañerismo .</p>
                         {render === 1 &&

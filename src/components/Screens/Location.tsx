@@ -12,8 +12,9 @@ export const Location: React.FC = () => {
   const [iconIndex, setIconIndex] = useState(0);
 
   const icons = [
-    <FaMap className='fade-in-element icon' />,
-    <FaMapPin className='fade-in-element icon' />,
+
+    <FaMap className='icon' />,
+    <FaMapPin className='icon' />,
 
   ];
 
@@ -28,31 +29,20 @@ export const Location: React.FC = () => {
 
 
   const bgImages = [
-   
-    // require('../../assets/bg-06.png'),
-    // require('../../assets/bg-07.png'),
-    // require('../../assets/bg-08.png'),
-    // require('../../assets/bg-09.png'),
     require('../../assets/bg-16.png'),
-    // require('../../assets/bg-00.png'),
-    // require('../../assets/bg-10.png'),
-   
-
-
   ];
 
   // Estado para manejar el índice de imagen de fondo
-  const [bgIndex, setBgIndex] = useState(0);
+  const [bgIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
     }, 2000);
 
     // Cleanup al desmontar el componente
     return () => clearInterval(interval);
-  }, [icons.length, bgImages.length]);
+  }, [icons.length]);
 
 
   return (

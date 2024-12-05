@@ -25,29 +25,21 @@ export const Contact = () => {
 
     // Arreglo de imágenes de fondo
     const bgImages = [
-   
-      // require('../../assets/bg-06.png'),
-      // require('../../assets/bg-07.png'),
-      // require('../../assets/bg-08.png'),
-      // require('../../assets/bg-09.png'),
-      // require('../../assets/bg-13.png'),
       require('../../assets/bg-00.png'),
-      // require('../../assets/bg-10.png'),
-      
     ];
   
     // Estado para manejar el índice de imagen de fondo
-    const [bgIndex, setBgIndex] = useState(0);
+    const [bgIndex] = useState(0);
   
+ 
     useEffect(() => {
       const interval = setInterval(() => {
-        setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-        setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
-      });
-  
+          setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
+      }, 2000);
+
       // Cleanup al desmontar el componente
       return () => clearInterval(interval);
-    }, [icons.length, bgImages.length]);
+    }, [icons.length]);
   
 
 
@@ -144,9 +136,9 @@ export const Contact = () => {
 
             <div className='marginvertical'></div>
 
-            <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)} onScroll={()=>changeFeed(5)}>
+            <a className='icon fade-in-element' title='Contacto' href='https://wa.me/527298906600' onScroll={()=>changeFeed(5)}>
           {icons[iconIndex]}
-          <p className={theme===0?'button':'buttonblack'}>Contacto</p>
+          <a href='https://wa.me/527298906600' className={'button'}>Contacto</a>
         </a>
 
    

@@ -113,9 +113,9 @@
 
 .button {
   background-color: #FE0420;
-  color: #b8b8b8;
-  
-  font-size: 1em;
+  color: #424242;
+  font-weight: 700;
+  font-size: 1.1em;
   border: none;
   width: max-content;
   margin: auto;
@@ -129,8 +129,6 @@
 .button:hover {
   background-color: #FE0420;
   color: 'transparent';
-  
-  font-size: 1em;
   border: none;
   width: max-content;
   margin: auto;

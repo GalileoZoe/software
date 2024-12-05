@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useFeed } from '../../context/FeedContext';
 import { FaPhone, FaFacebook, FaWhatsapp, FaComment, FaEnvelope } from 'react-icons/fa';
 
-export const Feed: React.FC = () => {
+export const Profile: React.FC = () => {
   const { changeFeed } = useFeed();
 
   const [iconIndex, setIconIndex] = useState(0);
@@ -41,7 +41,7 @@ export const Feed: React.FC = () => {
 
   return (
     <section
-      onScroll={window.innerWidth > 700 ? () => changeFeed(6) : undefined}
+      onScroll={window.innerWidth > 700 ? () => changeFeed(2) : undefined}
       className='section'
       style={{
         position: 'relative',

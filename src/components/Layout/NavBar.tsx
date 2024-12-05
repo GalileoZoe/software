@@ -27,7 +27,7 @@ export const NavBar: React.FC = () => {
       <ul className={`navbaritems ${theme === 1 ? '' : 'navbaritemswhite'} ${isMenuOpen ? 'show' : ''}`}>
           <li>
             <a
-              className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
+              className={'navbaritem'}
             style={feed === 1 ? { color:'white'} : undefined}
               onClick={() => {
                 changeFeed(1);
@@ -39,7 +39,19 @@ export const NavBar: React.FC = () => {
           </li>
         <li>
           <a
-            className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
+            className={'navbaritem'}
+            style={feed === 6 ? { color:'white'} : undefined}
+            onClick={() => {
+              changeFeed(6);
+              setMenuOpen(false);
+            }}
+          >
+          Sobre Mí
+          </a>
+        </li>
+        <li>
+          <a
+            className={'navbaritem'}
             style={feed === 2 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(2);
@@ -51,7 +63,7 @@ export const NavBar: React.FC = () => {
         </li>
         <li>
           <a
-            className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
+            className={'navbaritem'}
             style={feed === 3 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(3);
@@ -75,32 +87,20 @@ export const NavBar: React.FC = () => {
         </li>
         <li>
           <a
-            className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
-            style={feed === 6 ? { color:'white'} : undefined}
-            onClick={() => {
-              changeFeed(6);
-              setMenuOpen(false);
-            }}
-          >
-            Contacto
-          </a>
-        </li>
-        <li>
-          <a
-            className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
+            className={'navbaritem'}
             style={feed === 5 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(5);
               setMenuOpen(false);
             }}
           >
-            Ubicación
+            Contacto
           </a>
         </li>
 
         <li>
           <a
-            className={theme === 2 ? 'navbaritemred' : 'navbaritem'}
+            className={'navbaritem'}
             style={feed === 11 ? { color:'white'} : undefined}
             onClick={() => {
               changeFeed(11);

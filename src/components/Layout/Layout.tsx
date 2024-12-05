@@ -10,6 +10,7 @@ import { Feed } from '../Screens/Feed';
 import { Tech } from '../Screens/Tech';
 import { Help } from '../Screens/Help';
 import { Error } from '../Screens/Error';
+import { Profile } from '../Screens/Profile';
 
 export const Layout: React.FC = () => {
     const { feed, changeFeed } = useFeed();
@@ -35,12 +36,9 @@ export const Layout: React.FC = () => {
         case 4:
             return <Tech />;
         case 5:
-            return <Location />;
-        case 6:
             return <Contact />;
-
-        // case 10:
-        //     return <Store />;
+        case 6:
+            return <Profile/>;
         case 11:
             return <Help />;
         default:

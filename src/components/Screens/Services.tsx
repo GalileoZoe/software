@@ -106,12 +106,11 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
   ];
 
   // Estado para manejar el índice de imagen de fondo
-  const [bgIndex, setBgIndex] = useState(0);
+  const [bgIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
     }, 2000);
 
     // Cleanup al desmontar el componente
@@ -161,7 +160,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
         </h1>
 
           <div className="fade-in-element">
-        <p className='text'>Servicios</p>
+        {/* <p className='text'>Servicios</p> */}
         <img className='img' src={require('../../assets/galileozoe-02.png')} />
         {/* <p className='item'>24 horas</p> */}
         </div>
@@ -170,6 +169,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
 
 
         {service===0 ? <div>
+          <p className="navbaritem">Software</p>
           <ul className='slider' onScroll={()=>changeFeed(4)}>
           <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Software Personalizado | Software Customizado | Software Hecho a Medida' onClick={() => changeService(1)}>
               <FaCode />
@@ -196,17 +196,16 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
               <FaLaptopCode />
               <p>Mantenimiento</p>
             </li>
-         
-          
+
             <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Instalaci´´on de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(8)}>
               <FaVideo />
               <p>Seguridad</p>
             </li>
+            
             <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='IoT | Internet de las Cosas' onClick={() => changeService(5)}>
               <FaRobot />
               <p>IOT</p>
             </li>
-       
             <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño, Desarrollo, Implementación y Mantenimiento de Videojuegos' onClick={() => changeService(9)}>
               <FaGamepad />
               <p>VideoJuegos</p>
@@ -221,7 +220,15 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
                 de Proyectos</p>
             </li>
          
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(6)}>
+         
+        
+        
+          </ul>
+
+          <p className="navbaritem">Publicidad</p>
+          <ul className='slider' onScroll={()=>changeFeed(4)}>
+          
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(6)}>
               <FaImages />
               <p>Diseño{'\n'} Gráfico</p>
             </li>
@@ -242,8 +249,6 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
               <FaCloud />
               <p>Servicios {'\n'}en la Nube</p>
             </li>
-        
-        
           </ul>
         </div> :
           <div>
