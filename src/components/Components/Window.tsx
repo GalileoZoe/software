@@ -1,6 +1,6 @@
 import React from 'react'
 import { useService } from '../../context/ServiceContext'
-import { FaAppleAlt,  FaFutbol, FaHeart, FaInfo, FaMusic, FaPaintBrush, FaSpa, FaUser, FaUserMd, FaUsers, FaWindowClose } from 'react-icons/fa';
+import { FaAppleAlt,  FaFutbol, FaGlobe, FaHeart, FaInfo, FaMusic, FaPaintBrush, FaSpa, FaUser, FaUserMd, FaUsers, FaWindowClose } from 'react-icons/fa';
 
 interface WindowProps {
   action?: () => void,
@@ -25,7 +25,7 @@ export const Window: React.FC<WindowProps> = ({ action, button, href, tittle, de
       case 2:
         return  <FaUserMd className='icon' onClick={() => changeService(0)} />;
       case 3:
-        return  <FaAppleAlt className='icon' onClick={() => changeService(0)} />;
+        return  <FaGlobe className='icon' onClick={() => changeService(0)} />;
       case 4:
         return  <FaUsers className='icon' onClick={() => changeService(0)} />;
       case 5:

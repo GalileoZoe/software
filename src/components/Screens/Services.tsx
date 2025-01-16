@@ -31,7 +31,7 @@ export const Services = () => {
       case 3:
         return <Window
           tittle='Sitios Web'
-          description='Immplementación de páginas web personalizadas que permitan gestionar los procesos de tu empresa y conectar con tus clientes'
+          description='Immplementación de páginas web personalizadas que permiten gestionar los procesos de tu empresa y conectar con tus clientes'
           button='Más Información'
         />;
       case 4:
@@ -122,9 +122,9 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
   return (
 
     <section
-      className='section'
-      onScroll={window.innerWidth > 700 ? () => changeFeed(4) : undefined}
-      style={{
+    className='section'
+    onScroll={window.innerWidth > 700 ? () => changeFeed(4) : undefined}
+    style={{
         position: 'relative',
         backgroundImage: `url(${bgImages[bgIndex]})`,
         backgroundSize: 'cover',
@@ -135,24 +135,21 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center', // Alinea el texto horizontalmente
-        backgroundColor:'whitesmoke',
-      }}
+        backgroundColor: 'whitesmoke',
+    }}>
 
-    >
-      
-
-
-      <div
+    <div
         style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: 'auto',
-          backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
-          zIndex: 1, // Mantiene la capa detrás del contenido
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            minHeight: '100vh',
+            height: 'auto',
+            backgroundColor: 'rgba(7, 7, 7, 0.95)',
+            zIndex: 1, // Mantiene la capa detrás del contenido
         }}
-      >
+    >
 
         
       <h1 className='title fade-in-element' style={{color:'transparent'}} >
@@ -160,8 +157,8 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
         </h1>
 
           <div className="fade-in-element">
-        {/* <p className='text'>Servicios</p> */}
-        <img className='img' src={require('../../assets/galileozoe-02.png')} />
+        <p className='text'>Servicios</p>
+        <img className='img' src={require('../../assets/galileozoe-blue.png')} />
         {/* <p className='item'>24 horas</p> */}
         </div>
 
@@ -169,7 +166,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
 
 
         {service===0 ? <div>
-          <p className="navbaritem">Software</p>
+          <p className="paragraph">Software</p>
           <ul className='slider' onScroll={()=>changeFeed(4)}>
           <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Software Personalizado | Software Customizado | Software Hecho a Medida' onClick={() => changeService(1)}>
               <FaCode />
@@ -188,7 +185,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
               <p>APPS</p>
             </li>
    
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Aplicaciones Web | Páginas Web | Sitios Web' onClick={() => changeService(3)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Páginas Web | Sitios Web | Aplicaciones Web ' onClick={() => changeService(3)}>
               <FaGlobe />
               <p>Sitios Web</p>
             </li>
@@ -197,7 +194,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
               <p>Mantenimiento</p>
             </li>
 
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Instalaci´´on de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(8)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Instalación de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(8)}>
               <FaVideo />
               <p>Seguridad</p>
             </li>
@@ -225,7 +222,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
         
           </ul>
 
-          <p className="navbaritem">Publicidad</p>
+          {/* <p className="paragraph">Publicidad</p> */}
           <ul className='slider' onScroll={()=>changeFeed(4)}>
           
           <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(6)}>
@@ -256,17 +253,15 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
             <Services />
           </div>}
 
-        <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
-          {icons[iconIndex]}
-          <p className={'button'}>Contacto</p>
-        </a>
+          <div className='marginvertical'></div>
 
             <div className='marginvertical'></div>
+            <div className='marginvertical'></div>
 
-            <a className=' fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
+            {/* <a className=' fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
           {icons[iconIndex]}
           <p className={theme===0?'button':'buttonblack'}>Contacto</p>
-        </a>
+        </a> */}
 
       </div>
 

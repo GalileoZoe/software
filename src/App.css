@@ -56,7 +56,7 @@
   background-color: #f7e5e5;
   opacity: 0.9;
   background-image: radial-gradient(circle at center center, #ff6060, #ff585898),
-    repeating-radial-gradient(circle at center center, #fd5959, #FE0420e1, 1900px, transparent 800px, transparent 400px);
+    repeating-radial-gradient(circle at center center, #fd5959, #32cd32e1, 1900px, transparent 800px, transparent 400px);
   background-blend-mode: color-burn;
   display: flexbox;
   white-space: pre-line;
@@ -112,9 +112,11 @@
 /*  Button  */
 
 .button {
-  background-color: #FE0420;
-  color: #424242;
-  font-weight: 700;
+  background-color: #32cd32;
+  color: #272020;
+  font-weight: 900;
+  font-stretch:condensed ;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.1em;
   border: none;
   width: max-content;
@@ -127,7 +129,7 @@
 }
 
 .button:hover {
-  background-color: #FE0420;
+  background-color: #32cd32;
   color: 'transparent';
   border: none;
   width: max-content;
@@ -140,7 +142,7 @@
 }
 
 .buttonblack {
-  background-color: #FE0420;
+  background-color: #32cd32;
   color: black;
   font-weight: 100;
   font-size: 1em;
@@ -155,7 +157,7 @@
 }
 
 .buttonblack:hover {
-  background-color: #FE0420;
+  background-color: #32cd32;
   color: 'transparent';
   font-weight: 100;
   font-size: 1em;
@@ -171,7 +173,7 @@
 
 @media(max-width:700px){
 .button {
-  background-color: #FE0420;
+  background-color: #32cd32;
   color: #cecece;
   font-weight: 100;
   font-size: 1em;
@@ -186,7 +188,7 @@
 }
 
 .button:hover {
-  background-color: #FE0420;
+  background-color: #32cd32;
   color: 'transparent';
   font-weight: 100;
   font-size: 1em;
@@ -219,16 +221,16 @@
 }
 
 .card {
-  background-color: #FE0420;
-  border:none;
+  background-color: 'transparent';
+  border:#32cd32 solid 2px;
   /* Borde suave */
-  border-radius: 200px;
+  border-radius: 10px;
   /* Bordes redondeados */
   padding: 1em;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   /* Sombra suave */
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 150px;
   /* Ancho de las tarjetas */
 }
 
@@ -244,7 +246,7 @@
 }
 
 .cardblack {
-  background-color: #FE0420;
+  background-color: #32cd32;
   border:none;
   /* Borde suave */
   border-radius: 8px;
@@ -282,7 +284,7 @@
 /*  Circle  */
 
 .circle {
-  background-color: #FE0420;
+  background-color: #32cd32;
   height: 0.3em;
   width: 0.3em;
   border: white 2px;
@@ -368,7 +370,7 @@
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: #FE0420;
+  color: #32cd32;
   cursor: pointer;
   align-self: center;
 }
@@ -391,7 +393,7 @@
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: #FE0420;
+  color: #32cd32;
   cursor: pointer;
   align-self: center;
 }
@@ -434,13 +436,13 @@
 }
 
 .tableheader {
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   font-size: 1em;
 }
 
 .tableheader:hover {
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   font-size: 1em;
   cursor: pointer;
@@ -470,7 +472,7 @@
 }
 
 .textss:hover {
-  color: #FE0420;
+  color: #32cd32;
   /* font-weight: 100; */
   text-align: center;
   font-size: 0.7em;
@@ -535,14 +537,14 @@
   cursor: pointer;
 }
 .textred {
-  color: #FE0420;
+  color: #32cd32;
   font-weight: 100;
   text-align: center;
   font-size: 1em;
 }
 
 .textred:hover {
-  color: #FE0420;
+  color: #32cd32;
   font-weight: 100;
   text-align: center;
   font-size: 1em;
@@ -564,14 +566,14 @@
 }
 
 .textblue {
-  color: #0044ff;
+  color: #32cd32;
   font-weight: 100;
   text-align: center;
   font-size: 1em;
 }
 
 .textblue:hover {
-  color: #0044ff;
+  color: #32cd32;
   font-weight: 100;
   text-align: center;
   font-size: 1em;
@@ -603,6 +605,19 @@
   transition: color 0.5s ease;
   cursor: pointer;
 }
+.paragraphs {
+  color: w3;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.4em;
+  transition: color 0.5s ease;
+  cursor: pointer;
+  margin:20px;
+  padding:10px;
+  border-radius: 10px;
+  /* background-color: #555;
+  background-size: 500px; */
+}
 
 
 /*  Image  */
@@ -621,14 +636,14 @@
   width: 1.5em;
   height: 1.5em;
   transition: all 0.8s ease-in-out;
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
 
 .icon:hover {
   transform: scale(1.1);
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
@@ -655,7 +670,7 @@
   width: 4em;
   height: 4em;
   transition: all 0.8s ease-in-out;
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
@@ -664,7 +679,7 @@
   width: 4em;
   height: 4em;
   transform: scale(1.1);
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
@@ -673,7 +688,7 @@
   width: 1.2em;
   height: 1.2em;
   transition: all 0.8s ease-in-out;
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
@@ -682,7 +697,7 @@
   width: 1.2em;
   height: 1.2em;
   transform: scale(1.1);
-  color: #FE0420;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
@@ -745,7 +760,7 @@
   width: 1.2em;
   height: 1.2em;
   transition: all 0.8s ease-in-out;
-  color: #0044ff;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
@@ -754,7 +769,7 @@
   width: 1.2em;
   height: 1.2em;
   transform: scale(1.1);
-  color: #0044ff;
+  color: #32cd32;
   text-align: center;
   cursor: pointer;
 }
@@ -782,15 +797,15 @@
   color: #FFEBED;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
   font-size: 1.1em;
   text-decoration: none;
 }
 
 .item:hover {
-  color: #FE0420;
+  color: #32cd32;
+  text-shadow: 0 0 8px #32cd32, 0 0 16px #32cd32, 0 0 24px #32cd32;
 }
-
 
 /*  Logo  */
 
@@ -829,7 +844,7 @@
 .map:hover {
   width: 600px;
   height: 180px;
-  border: #FE0420 solid 2px;
+  border: #32cd32 solid 2px;
     transform: scale(1.5);
   /* border-radius: 10px; */
 }
@@ -859,7 +874,7 @@
 .form {
   background-color: transparent;
   border-radius: 10px;
-  border: solid 2px #FE0420;
+  border: solid 2px #32cd32;
   height: auto;
   width: auto;
   padding: 20px;
@@ -869,7 +884,7 @@
 .input {
   background-color: transparent;
   border: none;
-  border-bottom: solid 2px #FE0420;
+  border-bottom: solid 2px #32cd32;
   height: auto;
   width: auto;
 }
@@ -877,38 +892,39 @@
 .inputred {
   border-radius: 20px;
   background-color: transparent;
-  border: solid #FE0420;
-  color: #FE0420;
+  border: solid #32cd32;
+  color: #32cd32;
   height: auto;
   width: auto;
 }
 .inputred::placeholder {
 
-  color: #FE0420;
+  color: #32cd32;
 
 }
 
 .inputredlogin {
   border-radius: 20px;
   background-color: transparent;
-  border: solid #FE0420;
-  color: #FE0420;
+  border: solid #32cd32;
+  color: #32cd32;
   height: auto;
   width: auto;
   padding: 10px;
 }
 .inputredlogin::placeholder {
 
-  color: #FE0420;
+  color: #32cd32;
 
 }
 
 .inputs {
   background-color: transparent;
   border: none;
-  border-bottom: solid 2px #FE0420;
+  border-bottom: solid 2px #32cd32;
   height: auto;
   width: 3em;
+
 }
 
 
@@ -934,7 +950,7 @@
 /*  Title  */
 
 .title {
-  color: #FE0420;
+  color: #32cd32;
   font-weight: 100;
   font-size: 2em;
   text-align: center;
@@ -972,7 +988,7 @@
 }
 
 .titles {
-  color: #FE0420;
+  color: #32cd32;
   font-weight: 100;
   font-size: 1em;
   text-align: center;
@@ -995,7 +1011,7 @@
 
 
 .titleRed:hover {
-  color: #FE0420;
+  color: #32cd32;
   font-weight: 100;
   text-align: center;
   font-size: 2em;
@@ -1040,7 +1056,7 @@
 .footeritem {
   list-style: none;
   margin-left: 20px;
-  color: #FE0420;
+  color: #32cd32;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -1049,7 +1065,7 @@
 }
 
 .footeritem:hover {
-  color: #FE0420;
+  color: #32cd32;
 }
 
 .footeritemred {
@@ -1133,7 +1149,7 @@
 
 .navbaritem {
   margin-left: 20px;
-  color: #FE0420;
+  color: #32cd32;
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 20px;
@@ -1144,7 +1160,7 @@
 
 .navbaritem:hover {
   color: whitesmoke;
-
+  text-shadow: 0 0 8px #32cd32, 0 0 16px #32cd32, 0 0 24px #32cd32;
 }
 
 
@@ -1168,7 +1184,7 @@
 
 .navbaritemwhite {
   margin-left: 20px;
-  color: #FE0420;
+  color: #32cd32;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 1em;
@@ -1177,7 +1193,7 @@
 
 .navbaritemred {
   margin-left: 20px;
-  color: '#FE0420';
+  color: '#32cd32';
   text-transform: uppercase;
   cursor: pointer;
   font-size: 1em;
@@ -1242,7 +1258,7 @@
 }
 
 .windowbutton {
-  background-color: #FE0420;
+  background-color: #32cd32;
   color: #fd5959;
   font-weight: 100;
   font-size: 1em;
@@ -1257,7 +1273,7 @@
 }
 
 .windowbutton:hover {
-  background-color: #FE0420;
+  background-color: #32cd32;
   color: #fd5959;
   font-weight: 100;
   font-size: 1em;
@@ -1292,7 +1308,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #FE0420;
+  color: #32cd32;
 }
 
 /* Responsive styles */
@@ -1309,7 +1325,7 @@
     top: 50px;
     right: 10px;
     background-color:#000000d7;
-    border: 1px solid #FE0420;
+    border: 1px solid #32cd32;
     padding: 10px;
     border-radius: 4px;
   }
@@ -1326,7 +1342,7 @@
     top: 50px;
     right: 10px;
     background-color:#ffffffd7;
-    border: 1px solid #FE0420;
+    border: 1px solid #32cd32;
     padding: 10px;
     border-radius: 4px;
   }

@@ -17,27 +17,26 @@ export const Profile: React.FC = () => {
 
   const bgImages = [
 
-    require('../../assets/bg-19.png'),
-    require('../../assets/bg-13.png'),
-    require('../../assets/bg-12.png'),
-    require('../../assets/bg-00.png'),
-    require('../../assets/bg-10.png'),
+    // require('../../assets/bg-19.png'),
+    // require('../../assets/bg-13.png'),
+    // require('../../assets/bg-12.png'),
+    // require('../../assets/bg-00.png'),
+    // require('../../assets/bg-10.png'),
     require('../../assets/bg-11.png'),
     // require('../../assets/bg-15.png'),
 
   ];
 
-  const [bgIndex, setBgIndex] = useState(0);
+  const [bgIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
-    }, 3000);
+    }, 2000);
 
     // Cleanup al desmontar el componente
     return () => clearInterval(interval);
-  }, [icons.length, bgImages.length]);
+  }, [icons.length]);
 
   return (
     <section
@@ -67,7 +66,7 @@ export const Profile: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(7, 7, 7, 0.8)',
+          backgroundColor: 'rgba(7, 7, 7, 0.95)',
           zIndex: 1,
         }}
       />
@@ -83,7 +82,7 @@ export const Profile: React.FC = () => {
 
         <img
           className='logotype'
-          src={require('../../assets/galileozoe-02.png')}
+          src={require('../../assets/galileozoe-blue.png')}
           alt='Logo Galileo Zoe'
         />
         <p className='text fade-in-element'>'Creando el Futuro'</p>
@@ -91,7 +90,7 @@ export const Profile: React.FC = () => {
         <div className='center fade-in-element'>
           <img
             className='logo'
-            src={require('../../assets/gz-00.png')}
+            src={require('../../assets/GZX10000.png')}
             alt='Logo Galileo Zoe'
           />
 

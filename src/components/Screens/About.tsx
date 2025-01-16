@@ -39,12 +39,12 @@ export const About = () => {
     // Arreglo de imágenes de fondo
     const bgImages = [
 
-        require('../../assets/bg-10.png'),
+        require('../../assets/bg-22.png'),
 
     ];
 
     // Estado para manejar el índice de imagen de fondo
-    const [bgIndex, setBgIndex] = useState(0);
+    const [bgIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -80,8 +80,10 @@ export const About = () => {
                     top: 0,
                     left: 0,
                     width: '100%',
+                    minHeight: '100vh',
                     height: 'auto',
-                    backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
+                    backgroundColor: 'rgba(7, 7, 7, 0.95)',
+
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}
             >
@@ -93,7 +95,7 @@ export const About = () => {
 
                     <p className='text'>Nosotros</p>
 
-                    <img className='img' src={require('../../assets/galileozoe-02.png')} />
+                    <img className='img' src={require('../../assets/galileozoe-blue.png')} />
 
                 </div>
 
@@ -114,11 +116,11 @@ export const About = () => {
                         <p>Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
                             hardware, software, tecnologías de la información y asociados.</p>
 
-
+{/* 
                         <a onClick={() => changeRender()} className='fade-in-element' title='Contacto'>
                             <FaInfoCircle className='paragraph' />
                             <p className={'paragraph'}>Más Información</p>
-                        </a>
+                        </a> */}
 
                         {render === 1 &&
                             <p>Desarrollar soluciónes de software y hardware para abordar las distintas .</p>
@@ -132,13 +134,12 @@ export const About = () => {
                         }
                     </div>
                 </div>
-                <br />
+                <div className='marginvertical'></div>
 
-                <br />
 
-                <a onClick={() => changeRender()} className='icon fade-in-element' title='Contacto'>
+                <a onClick={() => changeRender()} className='icon fade-in-element' title='Más Información'>
                     <FaInfoCircle className='icon' />
-                    <p className={theme === 0 ? 'button' : 'buttonblack'}>Más Información</p>
+                    <p className={'button'}>Más Información</p>
                 </a>
 
                 <div className='marginvertical'></div>

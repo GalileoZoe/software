@@ -4,7 +4,8 @@ import { FaPhone, FaFacebook, FaWhatsapp, FaComment, FaEnvelope } from 'react-ic
 
 export const Feed: React.FC = () => {
   const { changeFeed } = useFeed();
-
+  const [textIndex, setTextIndex] = useState(0);
+  const [bgIndex, setBgIndex] = useState(0);
   const [iconIndex, setIconIndex] = useState(0);
 
   const icons = [
@@ -15,29 +16,48 @@ export const Feed: React.FC = () => {
     <FaEnvelope className='icon' />,
   ];
 
+  const texts = [
+    <code className="paragraphs">IA</code>,
+    <code className="paragraphs">Software</code>,
+    <code className="paragraphs">Aplicaciones Móviles</code>,
+    <code className="paragraphs">Videojuegos</code>,
+    <code className="paragraphs">Hardware</code>,
+    <code className="paragraphs">Sistemas Operativos</code>,
+    <code className="paragraphs">API´S</code>,
+
+  ];
+
   const bgImages = [
 
-    require('../../assets/bg-19.png'),
+    // require('../../assets/bg-19.png'),
+    // require('../../assets/bg-11.png'),
     require('../../assets/bg-13.png'),
     require('../../assets/bg-12.png'),
     require('../../assets/bg-00.png'),
     require('../../assets/bg-10.png'),
-    require('../../assets/bg-11.png'),
-    // require('../../assets/bg-15.png'),
 
   ];
 
-  const [bgIndex, setBgIndex] = useState(0);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length); // Cambia el fondo de imagen
+      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length);
     }, 3000);
 
     // Cleanup al desmontar el componente
     return () => clearInterval(interval);
   }, [icons.length, bgImages.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 1500);
+
+    // Cleanup al desmontar el componente
+    return () => clearInterval(interval);
+  }, [texts.length]);
 
   return (
     <section
@@ -67,7 +87,8 @@ export const Feed: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(7, 7, 7, 0.8)',
+          backgroundColor: 'rgba(7, 7, 7, 0.95)',
+
           zIndex: 1,
         }}
       />
@@ -83,21 +104,26 @@ export const Feed: React.FC = () => {
 
         <img
           className='logotype'
-          src={require('../../assets/galileozoe-02.png')}
+          src={require('../../assets/galileozoe-blue.png')}
           alt='Logo Galileo Zoe'
         />
+
+        <div>
+          {texts[textIndex]}
+        </div>
+
+
         <p className='text fade-in-element'>'Creando el Futuro'</p>
 
         <div className='center fade-in-element'>
           <img
             className='logo'
-            src={require('../../assets/gz-00.png')}
+            src={require('../../assets/GZX10000.png')}
             alt='Logo Galileo Zoe'
           />
 
-          <h2 className='paragraph' style={{ color: '#fff' }}>Programando Sueños. Creando el futuro.</h2>
+          <h2 className='paragraph' >Programando Sueños. Creando el futuro.</h2>
 
-          <div className='marginvertical'></div>
 
 
           <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>

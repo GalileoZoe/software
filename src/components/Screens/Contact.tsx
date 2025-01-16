@@ -35,7 +35,7 @@ export const Contact = () => {
     useEffect(() => {
       const interval = setInterval(() => {
           setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-      }, 2000);
+      }, 3000);
 
       // Cleanup al desmontar el componente
       return () => clearInterval(interval);
@@ -47,7 +47,7 @@ export const Contact = () => {
 
     <section     
     className='section'
-    onScroll={window.innerWidth > 700 ? () => changeFeed(5) : undefined}
+    onScroll={window.innerWidth > 700 ? () => changeFeed(11) : undefined}
     style={{
       position: 'relative',
       backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -71,7 +71,8 @@ export const Contact = () => {
               width: '100%',
               minHeight:'100%',
               height: 'auto',
-              backgroundColor: 'rgba(7, 7, 7, 0.8)', // Capa oscura con opacidad
+              backgroundColor: 'rgba(7, 7, 7, 0.9)',
+
               zIndex: 1, // Mantiene la capa detrás del contenido
             }}
       >
@@ -84,7 +85,7 @@ export const Contact = () => {
 
    
         <div className='item'>
-        <img className='img' src={require('../../assets/galileozoe-02.png')} onScroll={()=>changeFeed(5)} />
+        <img className='img' src={require('../../assets/galileozoe-blue.png')} onScroll={()=>changeFeed(5)} />
         {/* <p>24 horas</p> */}
       </div>
 

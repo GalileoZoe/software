@@ -16,7 +16,7 @@ export const NavBar: React.FC = () => {
       <div className='navbarlogo'>
         <a onClick={() => changeFeed(1)} >
           <img
-            src={require('../../assets/galileozoe-02.png')}
+            src={require('../../assets/galileozoe-blue.png')}
             alt='Logo'
           />
         </a>
@@ -37,18 +37,7 @@ export const NavBar: React.FC = () => {
               Inicio
             </a>
           </li>
-        <li>
-          <a
-            className={'navbaritem'}
-            style={feed === 6 ? { color:'white'} : undefined}
-            onClick={() => {
-              changeFeed(6);
-              setMenuOpen(false);
-            }}
-          >
-          Sobre Mí
-          </a>
-        </li>
+       
         <li>
           <a
             className={'navbaritem'}
@@ -97,7 +86,18 @@ export const NavBar: React.FC = () => {
             Contacto
           </a>
         </li>
-
+        <li>
+          <a
+            className={'navbaritem'}
+            style={feed === 6 ? { color:'white'} : undefined}
+            onClick={() => {
+              changeFeed(6);
+              setMenuOpen(false);
+            }}
+          >
+          Sobre Mí
+          </a>
+        </li>
         <li>
           <a
             className={'navbaritem'}

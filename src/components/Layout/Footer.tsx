@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../../App.css';
 import { useTheme } from '../../context/ThemeContext';
-import { FaRegUser, FaSignInAlt, FaStore, FaToggleOff, FaToggleOn, FaUser, FaWifi } from 'react-icons/fa';
+import {  FaToggleOff, FaToggleOn, FaWifi } from 'react-icons/fa';
 import { useFeed } from '../../context/FeedContext';
 import { AuthContext } from '../../context/AuthContext';
 
