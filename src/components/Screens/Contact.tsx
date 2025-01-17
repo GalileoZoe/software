@@ -71,7 +71,7 @@ export const Contact = () => {
               width: '100%',
               minHeight:'100%',
               height: 'auto',
-              backgroundColor: 'rgba(7, 7, 7, 0.9)',
+              backgroundColor: 'rgba(0, 0, 0, 0.96)',
 
               zIndex: 1, // Mantiene la capa detrás del contenido
             }}

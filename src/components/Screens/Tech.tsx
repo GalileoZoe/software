@@ -67,7 +67,7 @@ export const Tech = () => {
                     width: '100%',
                     minHeight: '100%',
                     height: 'auto',
-                    backgroundColor: 'rgba(7, 7, 7, 0.95)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.96)',
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}
             >
@@ -111,9 +111,7 @@ export const Tech = () => {
 
                     </li>
                 
-                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='TypeScript' >
-                        <a className='item' href='https://galileozoe.github.io/software'> <FaReact size={25} /><p>TypeScript</p></a>
-                    </li>
+               
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Phyton' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaPython size={25} /><p>Python</p></a>
                     </li>
@@ -131,9 +129,10 @@ export const Tech = () => {
                     </li>
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='CSS' >
                         <a className='item' href='sms:527298906600'> <FaCss3 size={25} /> <p>CSS</p></a>
-
                     </li>
-                 
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='TypeScript' >
+                        <a className='item' href='https://galileozoe.github.io/software'> <FaReact size={25} /><p>TypeScript</p></a>
+                    </li>
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Ubicación' >
                         <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMicrochip size={25} /><p>Arduino</p></a>
                     </li>

@@ -66,7 +66,7 @@ export const Profile: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(7, 7, 7, 0.95)',
+          backgroundColor: 'rgba(0, 0, 0, 0.96)',
           zIndex: 1,
         }}
       />

@@ -146,7 +146,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
             width: '100%',
             minHeight: '100vh',
             height: 'auto',
-            backgroundColor: 'rgba(7, 7, 7, 0.95)',
+            backgroundColor: 'rgba(0, 0, 0, 0.95)',
             zIndex: 1, // Mantiene la capa detrás del contenido
         }}
     >

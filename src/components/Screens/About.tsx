@@ -82,7 +82,7 @@ export const About = () => {
                     width: '100%',
                     minHeight: '100vh',
                     height: 'auto',
-                    backgroundColor: 'rgba(7, 7, 7, 0.95)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.95)',
 
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}
@@ -126,21 +126,22 @@ export const About = () => {
                             <p>Desarrollar soluciónes de software y hardware para abordar las distintas .</p>
                         }
                     </div>
+                </div>
+                <div className='cards-container' onScroll={() => changeFeed(3)}>
                     <div className={'card'} onScroll={() => changeFeed(3)}>
                         <h2 className='title'>Valores</h2>
-                        <p>Innovación{'\n'} Respeto {'\n'} Compañerismo .</p>
-                        {render === 1 &&
-                            <p>Desarrollar soluciónes de software y hardware para abordar las distintas .</p>
-                        }
+                        <p>Innovación, Respeto, Pasión, Empatía.</p>
+                    </div>
+                    <div className={'card'} onScroll={() => changeFeed(3)}>
+                        <h2 className='title'>Valores</h2>
+                        <p>Innovación, Respeto, Pasión, Empatía.</p>
                     </div>
                 </div>
-                <div className='marginvertical'></div>
-
-
+{/* 
                 <a onClick={() => changeRender()} className='icon fade-in-element' title='Más Información'>
                     <FaInfoCircle className='icon' />
                     <p className={'button'}>Más Información</p>
-                </a>
+                </a> */}
 
                 <div className='marginvertical'></div>
             </div>

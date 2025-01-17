@@ -65,7 +65,7 @@ export const Help = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(7, 7, 7, 0.95)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.95)',
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}
             >
@@ -88,22 +88,23 @@ export const Help = () => {
 
 
                 <br />
-                <p className='paragraph'>Tu apoyo contribuye a la conservación y recuperación de nuestros ecosistemas naturales.   </p>
+                <p className='paragraph'>Tu apoyo contribuye a la conservación y recuperación de nuestros ecosistemas naturales.</p>
                 <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
                 <p className='text'>Quiero Ayudar</p>
-
+                <FaHeart className={'button'} />
                 </a>
+                <br />
+                <br />
+                <br />
                 <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
                     <p className='button'>Más Información </p>
-
-                    <FaHeart className={'button'} />
                 </a>
-                <div className='marginvertical'></div>
-
+          
+{/* 
                 <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
                     <p className='text'>Quiero Ayudar </p>
                     <FaHeart className={'button'} />
-                </a>
+                </a> */}
 
             </div>
         </section>
