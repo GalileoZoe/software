@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/software/static/css/main.738266f2.css",
+    "main.js": "/software/static/js/main.df3400f1.js",
+    "static/js/453.742cb69d.chunk.js": "/software/static/js/453.742cb69d.chunk.js",
+    "static/media/bg-22.png": "/software/static/media/bg-22.1c90b45c6c5963bad1d2.png",
+    "static/media/bg-00.png": "/software/static/media/bg-00.5b27f1fa28df1dc1734d.png",
+    "static/media/bg-11.png": "/software/static/media/bg-11.0785089c8c89ba4c660b.png",
+    "static/media/bg-10.png": "/software/static/media/bg-10.9740ab02d820a6007ec6.png",
+    "static/media/bg-18.png": "/software/static/media/bg-18.71dba1d343b2e0a330b6.png",
+    "static/media/bg-13.png": "/software/static/media/bg-13.5f0a0dd4b268259f4a9b.png",
+    "static/media/bg-12.png": "/software/static/media/bg-12.23430868c884f98d2966.png",
+    "static/media/bg-15.png": "/software/static/media/bg-15.abccce2a8200269e20a1.png",
+    "static/media/galileozoe-blue.png": "/software/static/media/galileozoe-blue.221ad1eba7ba57a860a2.png",
+    "static/media/galileozoe-02.png": "/software/static/media/galileozoe-02.3bb3fb509140f653cd8b.png",
+    "static/media/GZX10000.png": "/software/static/media/GZX10000.bd7cc7e2368eff5d96df.png",
+    "static/media/gz.png": "/software/static/media/gz.d383258e27a189def932.png",
+    "index.html": "/software/index.html",
+    "main.738266f2.css.map": "/software/static/css/main.738266f2.css.map",
+    "main.df3400f1.js.map": "/software/static/js/main.df3400f1.js.map",
+    "453.742cb69d.chunk.js.map": "/software/static/js/453.742cb69d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.738266f2.css",
+    "static/js/main.df3400f1.js"
+  ]
+}
