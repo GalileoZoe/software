@@ -58,21 +58,22 @@ export const About = () => {
 
     return (
         <section
-            className='section'
-            onScroll={window.innerWidth > 700 ? () => changeFeed(3) : undefined}
-            style={{
-                position: 'relative',
-                backgroundImage: `url(${bgImages[bgIndex]})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                width: '100vw', // 100% del ancho de la ventana
-                height: '100vh', // 100% del alto de la ventana
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center', // Alinea el texto horizontalmente
-                backgroundColor: 'whitesmoke',
-            }}>
+        onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(3) : undefined}
+        className='section'
+        style={{
+          position: 'relative',
+          backgroundImage: `url(${bgImages[bgIndex]})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          width: '100vw', // 100% del ancho de la ventana
+          height: '100vh', // 100% del alto de la ventana
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center', // Alinea el texto horizontalmente
+          backgroundColor: 'whitesmoke',
+        }}
+      >
 
             <div
                 style={{
@@ -82,12 +83,12 @@ export const About = () => {
                     width: '100%',
                     minHeight: '100vh',
                     height: 'auto',
-                    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.93)',
 
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}
             >
-                <div className='about-header'>
+                   <div style={{ position: 'relative', zIndex: 2 }}>
 
                     <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
                         Información | Desarrollo de Software | Galileo Zoe
@@ -97,54 +98,39 @@ export const About = () => {
 
                     <img className='img' src={require('../../assets/galileozoe-blue.png')} />
 
-                </div>
+          
+                <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
-                <p className='texts'>Desarrollo de Software Multiplataforma</p>
 
-
-                <div className='cards-container' onScroll={() => changeFeed(3)}>
-                    <div className={'card'} onScroll={() => changeFeed(3)}>
-                        <h2 className='title'>Misión</h2>
-                        <p>Implememtar herramientas tecnológicas de vanguardia que empoderen a las industrias, les permitan
-                            aumentar su alcance, conectar con su público objetivo,  y ofrecer una mejor expereincia a sus clientes. .</p>
-                        {render === 1 &&
-                            <p>Desarrollar soluciónes de software y hardware para abordar las distintas .</p>
-                        }
+          
+                <div className="cards" style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    gap: '20px',
+                    margin: '40px auto',
+                    flexWrap: 'wrap',
+                    maxWidth: '900px'
+                }}>
+                    <div className="card red">
+                        <p className="tip">Misión</p>
+                        <p className="second-text">Revolucionar la industria con tecnología de vanguardia que potencie el alcance de tu negocio, te conecte con tu audiencia y transforme la experiencia de tus clientes.</p>
                     </div>
-                    <div className={'card'} onScroll={() => changeFeed(3)} >
-                        <h2 className='title'>Visión</h2>
-                        <p>Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
-                            hardware, software, tecnologías de la información y asociados.</p>
-
-{/* 
-                        <a onClick={() => changeRender()} className='fade-in-element' title='Contacto'>
-                            <FaInfoCircle className='paragraph' />
-                            <p className={'paragraph'}>Más Información</p>
-                        </a> */}
-
-                        {render === 1 &&
-                            <p>Desarrollar soluciónes de software y hardware para abordar las distintas .</p>
-                        }
+                    <div className="card blue">
+                        <p className="tip">Visión</p>
+                        <p className="second-text">Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
+                        hardware, software, tecnologías de la información y asociados.</p>
+                    </div>
+                    <div className="card green">
+                        <p className="tip">Valores</p>
+                        <p className="second-text">Innovación, Amor, Pasión, Respeto.</p>
                     </div>
                 </div>
-                <div className='cards-container' onScroll={() => changeFeed(3)}>
-                    <div className={'card'} onScroll={() => changeFeed(3)}>
-                        <h2 className='title'>Valores</h2>
-                        <p>Innovación, Respeto, Pasión, Empatía.</p>
-                    </div>
-                    <div className={'card'} onScroll={() => changeFeed(3)}>
-                        <h2 className='title'>Valores</h2>
-                        <p>Innovación, Respeto, Pasión, Empatía.</p>
-                    </div>
-                </div>
-{/* 
-                <a onClick={() => changeRender()} className='icon fade-in-element' title='Más Información'>
-                    <FaInfoCircle className='icon' />
-                    <p className={'button'}>Más Información</p>
-                </a> */}
 
                 <div className='marginvertical'></div>
+            </div>
             </div>
         </section>
     );
 }
+

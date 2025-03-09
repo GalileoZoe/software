@@ -1,5 +1,7 @@
 /* /////// App //////// */
 
+
+
 .App-header {
   overflow: hidden;
   min-height: 100vh;
@@ -63,7 +65,7 @@
 }
 
 .AppWhite {
-  background-color: #FFEBED;
+  background-color: whitesmoke;
   opacity: 0.9;
   display: flexbox;
   white-space: pre-line;
@@ -113,29 +115,48 @@
 
 .button {
   background-color: #32cd32;
-  color: #272020;
-  font-weight: 900;
-  font-stretch:condensed ;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #000000;
   font-size: 1.1em;
   border: none;
-  width: max-content;
-  margin: auto;
+  width: 10em;
   border-radius: 20px;
   padding: 5px;
   cursor: pointer;
   text-decoration: none;
   transition: transform 1s ease-in-out;
+  align-self: center;
+  align-items: center;
 }
 
 .button:hover {
   background-color: #32cd32;
   color: 'transparent';
   border: none;
-  width: max-content;
-  margin: auto;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+.buttonred {
+  background-color: #F35369;
+  color: whitesmoke;
+  font-size: 1.1em;
+  border: none;
+  width: 10em;
   border-radius: 20px;
   padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 1s ease-in-out;
+  align-self: center;
+  align-items: center;
+}
+
+.buttonred:hover {
+  background-color: #F35369;
+  color: 'transparent';
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
   text-decoration: none;
   transform: scale(1.1);
@@ -174,8 +195,7 @@
 @media(max-width:700px){
 .button {
   background-color: #32cd32;
-  color: #cecece;
-  font-weight: 100;
+  color: #000;
   font-size: 1em;
   border: none;
   width: max-content;
@@ -234,11 +254,11 @@
 }
 
 .card h2 {
-  color: #FFEBED ;
+  color: whitesmoke ;
 }
 
 .card p {
-  color: #FFEBED;
+  color: whitesmoke;
 }
 
 .cardblack {
@@ -265,16 +285,67 @@
   /* Color del texto de la tarjeta */
 }
 
+/* From Uiverse.io by kamehame-ha */ 
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
+.cards .red {
+  background-color: #32cd324d;
+}
+
+.cards .blue {
+  background-color: #32cd324d;
+}
+
+.cards .green {
+  background-color: #32cd324d;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 150px;
+  width: 380px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 400ms;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cards .card p.tip {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cards .card p.second-text {
+  font-size: 0.9em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9, 0.9);
+}
 
 
 /*  Circle  */
 
 .center {
-  display: 'flex';
-  flex-direction: 'column';
-  justify-content: 'center';
-  align-items: 'center';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*  Circle  */
@@ -309,10 +380,6 @@
   box-sizing: border-box;
 }
 
-.image {
-  width: 100%;
-  height: auto;
-}
 
 .label {
   position: absolute;
@@ -354,7 +421,7 @@
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  color: #FFEBED;
+  color: whitesmoke;
   cursor: pointer;
   align-self: center;
   font-size: 1em;
@@ -461,7 +528,7 @@
 }
 
 .textss {
-  color: #FFEBED;
+  color: whitesmoke;
   /* font-weight: 100; */
   text-align: center;
   font-size: 0.7em;
@@ -476,14 +543,14 @@
 }
 
 .texts {
-  color: #FFEBED;
+  color: whitesmoke;
   /* font-weight: 100; */
   text-align: center;
   font-size: 1em;
 }
 
 .texts:hover {
-  color: #FFEBED;
+  color: whitesmoke;
   /* font-weight: 100; */
   text-align: center;
   font-size: 1em;
@@ -547,14 +614,14 @@
   cursor: pointer;
 }
 .textwhite {
-  color: snow;
+  color: whitesmoke;
   font-weight: 100;
   text-align: center;
   font-size: 1em;
 }
 
 .textwhite:hover {
-  color: snow;
+  color: whitesmoke;
   font-weight: 100;
   text-align: center;
   font-size: 1em;
@@ -594,25 +661,46 @@
 
 /*  Paragraph  */
 .paragraph {
-  color: whitesmoke;
   font-weight: 600;
   text-align: center;
   font-size: 1.4em;
   transition: color 0.5s ease;
+  /* color: #32cd32; */
+  color: #32cd32;
+  text-align: center;
+  font-size: 1em;
   cursor: pointer;
 }
 .paragraphs {
-  color: w3;
   font-weight: 600;
   text-align: center;
   font-size: 1.4em;
   transition: color 0.5s ease;
+  color: #32cd32;
+  text-align: center;
+  font-size: 1em;
   cursor: pointer;
-  margin:20px;
-  padding:10px;
-  border-radius: 10px;
-  /* background-color: #555;
-  background-size: 500px; */
+}
+.paragraphwhite {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.4em;
+  transition: color 0.5s ease;
+  /* color: #32cd32; */
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+}
+.paragraphswhite {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.4em;
+  transition: color 0.5s ease;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 
@@ -641,6 +729,19 @@
   transform: scale(1.1);
   color: #32cd32;
   text-align: center;
+  cursor: pointer;
+}
+.iconclose {
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.8s ease-in-out;
+  color: #32cd32;
+  cursor: pointer;
+}
+
+.iconclose:hover {
+  transform: scale(1.1);
+  color: #32cd32;
   cursor: pointer;
 }
 
@@ -774,7 +875,7 @@
   width: 1.8;
   height: 1.8;
   transition: all 0.8s ease-in-out;
-  color: snow;
+  color: whitesmoke;
   text-align: center;
 }
 
@@ -782,7 +883,7 @@
   width: 1.8;
   height: 1.8;
   transform: scale(1.1);
-  color: snow;
+  color: whitesmoke;
   text-align: center;
 }
 
@@ -790,7 +891,7 @@
 /*  Item  */
 .item {
   list-style: none;
-  color: #FFEBED;
+  color: whitesmoke;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.5s ease, text-shadow 0.5s ease;
@@ -833,7 +934,7 @@
 .map {
   width: 600px;
   height: 180px;
-  border: #FFEBED solid 2px;
+  border: whitesmoke solid 2px;
     transition: transform 1s ease-in-out;
   /* border-radius: 10px; */
 }
@@ -960,7 +1061,7 @@
   cursor: pointer;
 } */
 .titlewhite {
-  color: #FFEBED;
+  color: whitesmoke;
   font-weight: 100;
   font-size: 2em;
   text-align: center;
@@ -999,7 +1100,7 @@
 }
 
 .titleRed {
-  color: #FFEBED;
+  color: whitesmoke;
   font-weight: 100;
   font-size: 2em;
   text-align: center;
@@ -1067,7 +1168,7 @@
 .footeritemred {
   list-style: none;
   margin-left: 20px;
-  color: #FFEBED;
+  color: whitesmoke;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -1234,7 +1335,9 @@
 /*  Window  */
 
 .window {
-  background-color: #fd59591c;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   width: 1000px;
   height: auto;
   margin: auto;
@@ -1243,7 +1346,7 @@
 }
 
 .windowdetail{
-    background: '#ffffff';
+    background: 'whitesmoke';
     border-radius: 15px;
     padding: 30px;
     width: 500px;
@@ -1307,6 +1410,13 @@
   color: #32cd32;
 }
 
+
+.image {
+  height:8em;
+  width: 8em;
+  border-radius:200px;
+}
+
 /* Responsive styles */
 @media (max-width: 700px) {
   .hamburger {
@@ -1337,7 +1447,7 @@
     position: absolute;
     top: 50px;
     right: 10px;
-    background-color:#ffffffd7;
+    background-color:whitesmoked7;
     border: 1px solid #32cd32;
     padding: 10px;
     border-radius: 4px;
@@ -1417,7 +1527,7 @@
   }
 
   .navbar{
-    background-color: #FFEBED;
+    background-color: whitesmoke;
   }
 
   .input-group {
@@ -1427,6 +1537,7 @@
 .inputred {
     width: calc(50% - 10px);
 }
+
 
   }
 

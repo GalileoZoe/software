@@ -70,7 +70,7 @@ export const Location: React.FC = () => {
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundColor: 'rgba(7, 7, 7, 0.5)',
+            backgroundColor: 'rgba(0, 0, 0, 0.93)',
             // Capa oscura con opacidad
             zIndex: 1, // Mantiene la capa detrás del contenido
           }}

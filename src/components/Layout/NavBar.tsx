@@ -86,18 +86,7 @@ export const NavBar: React.FC = () => {
             Contacto
           </a>
         </li>
-        <li>
-          <a
-            className={'navbaritem'}
-            style={feed === 6 ? { color:'white'} : undefined}
-            onClick={() => {
-              changeFeed(6);
-              setMenuOpen(false);
-            }}
-          >
-          Sobre Mí
-          </a>
-        </li>
+      
         <li>
           <a
             className={'navbaritem'}
@@ -108,6 +97,18 @@ export const NavBar: React.FC = () => {
             }}
           >
             Ayuda
+          </a>
+        </li>
+        <li>
+          <a
+            className={'navbaritem'}
+            style={feed === 6 ? { color:'white'} : undefined}
+            onClick={() => {
+              changeFeed(6);
+              setMenuOpen(false);
+            }}
+          >
+          Sobre Mí
           </a>
         </li>
       </ul>

@@ -19,20 +19,23 @@ export const Feed: React.FC = () => {
   const texts = [
     <code className="paragraphs">IA</code>,
     <code className="paragraphs">Software</code>,
+    <code className="paragraphs">Tecnología</code>,
     <code className="paragraphs">Aplicaciones Móviles</code>,
     <code className="paragraphs">Videojuegos</code>,
-    <code className="paragraphs">Hardware</code>,
     <code className="paragraphs">Sistemas Operativos</code>,
     <code className="paragraphs">API´S</code>,
+    <code className="paragraphs">Hardware</code>,
+    <code className="paragraphs">Mantenimiento</code>,
+    <code className="paragraphs">Automatización</code>,
+    <code className="paragraphs">IoT</code>,
 
   ];
 
   const bgImages = [
 
-    // require('../../assets/bg-19.png'),
-    // require('../../assets/bg-11.png'),
     require('../../assets/bg-13.png'),
     require('../../assets/bg-12.png'),
+    require('../../assets/bg-11.png'),
     require('../../assets/bg-00.png'),
     require('../../assets/bg-10.png'),
 
@@ -43,12 +46,20 @@ export const Feed: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length);
-    }, 3000);
+    }, 2000);
 
     // Cleanup al desmontar el componente
     return () => clearInterval(interval);
-  }, [icons.length, bgImages.length]);
+  }, [icons.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length);
+    },3000);
+
+    // Cleanup al desmontar el componente
+    return () => clearInterval(interval);
+  }, [bgImages.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,8 +72,9 @@ export const Feed: React.FC = () => {
 
   return (
     <section
-      onScroll={window.innerWidth > 700 ? () => changeFeed(6) : undefined}
+      
       className='section'
+      onScroll={ () => changeFeed(2) }
       style={{
         position: 'relative',
         backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -75,45 +87,45 @@ export const Feed: React.FC = () => {
         alignItems: 'center',
         textAlign: 'center', // Alinea el texto horizontalmente
         backgroundColor: 'whitesmoke',
+        overflow: 'auto', // Ensure scrolling is enabled
       }}
     >
 
 
 
       <div
+            onScroll={ () => changeFeed(2)}
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.95)',
-
+          backgroundColor: 'rgba(0, 0, 0, 0.93)',
           zIndex: 1,
         }}
       />
 
-      <div style={{ position: 'relative', zIndex: 2 }}>
+      <div style={{ position: 'relative', zIndex: 2 }} >
+     <div >
         <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
           Desarrollo de Software | Galileo Zoe
         </h1>
-
-        <div className='marginvertical'></div>
-
-
-
         <img
           className='logotype'
           src={require('../../assets/galileozoe-blue.png')}
           alt='Logo Galileo Zoe'
         />
+                <p className='paragraphs'>Desarrollo de Software Multiplataforma</p>
 
-        <div>
+             <div>
           {texts[textIndex]}
         </div>
 
+   
+        <div className="marginVertical"></div>
 
-        <p className='text fade-in-element'>'Creando el Futuro'</p>
+        <p className='text fade-in-element'>'Programando el Futuro'</p>
 
         <div className='center fade-in-element'>
           <img
@@ -122,19 +134,14 @@ export const Feed: React.FC = () => {
             alt='Logo Galileo Zoe'
           />
 
-          <h2 className='paragraph' >Programando Sueños. Creando el futuro.</h2>
-
-
-
+          <h2 className='paragraphwhite' >Creando Sueños. Programando el futuro.</h2>
           <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>
             {icons[iconIndex]}
 
-            <p className={'button'}>Contacto</p>
           </a>
+          <a href='https://wa.me/527294899630' className={'button'}>Contacto</a>
         </div>
-
-
-        <div className='marginvertical'></div>
+        </div>
       </div>
     </section>
   );

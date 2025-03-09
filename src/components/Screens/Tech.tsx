@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import { FaAngular, FaBatteryEmpty, FaBootstrap, FaCode, FaComment, FaCompass, FaCpanel, FaCss3, FaEnvelope, FaFacebook, FaGithub, FaGithubAlt, FaGlobe, FaHtml5, FaJs, FaLeaf, FaLinux, FaMapPin, FaMicrochip, FaNode, FaNodeJs, FaNpm, FaPhone, FaPhp, FaPython, FaReact, FaReacteurope, FaRedRiver, FaRobot, FaTiktok, FaTypo3, FaUsb, FaWhatsapp } from 'react-icons/fa';
+import { FaAngular, FaApple, FaBatteryEmpty, FaBootstrap, FaCode, FaComment, FaCompass, FaCpanel, FaCss3, FaDatabase, FaEnvelope, FaFacebook, FaGit, FaGithub, FaGithubAlt, FaGlobe, FaHtml5, FaJs, FaLaravel, FaLeaf, FaLinux, FaMapPin, FaMicrochip, FaMicrosoft, FaNode, FaNodeJs, FaNpm, FaPhone, FaPhp, FaPython, FaRaspberryPi, FaReact, FaReacteurope, FaRedRiver, FaRobot, FaTiktok, FaTypo3, FaUsb, FaWhatsapp } from 'react-icons/fa';
 
 export const Tech = () => {
 
@@ -11,29 +11,7 @@ export const Tech = () => {
     const [bgIndex] = useState(0);
 
 
-    // Estado para manejar el icono actual
-    const [iconIndex, setIconIndex] = useState(0);
 
-    // Array de íconos
-    const icons = [
-        <FaPhone className='icon' />,
-        <FaComment className='icon' />,
-        <FaWhatsapp className='icon' />,
-        <FaFacebook className='icon' />,
-        <FaEnvelope className='icon' />,
-    ];
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIconIndex((prevIndex) => (prevIndex + 1) % icons.length);
-        }, 3000);
-
-        // Cleanup al desmontar el componente
-        return () => clearInterval(interval);
-    }, [icons.length]);
-
-
-    // Arreglo de imágenes de fondo
     const bgImages = [
         require('../../assets/bg-12.png'),
     ];
@@ -67,7 +45,7 @@ export const Tech = () => {
                     width: '100%',
                     minHeight: '100%',
                     height: 'auto',
-                    backgroundColor: 'rgba(0, 0, 0, 0.96)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.93)',
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}
             >
@@ -81,8 +59,9 @@ export const Tech = () => {
 
                 <div className='item'>
                     <img className='img' src={require('../../assets/galileozoe-blue.png')} />
-                    {/* <p>24 horas</p> */}
                 </div>
+                <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
+
                 <div className='marginvertical'></div>
                 <div className='marginvertical'></div>
 
@@ -99,8 +78,8 @@ export const Tech = () => {
                     </li>
              
         
-                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Node JS' >
-                        <a className='item' href='https://wa.me/527298906600'> <FaNodeJs size={25} /><p>Node JS</p></a>
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='PHP' >
+                        <a className='item' href='https://galileozoe.github.io/software'> <FaGit size={25} /><p>Git</p></a>
                     </li>
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Facebook' >
                         <a className='item' href='https://www.facebook.com/profile.php?id=61565903937768'> <FaGithub size={25} /><p>GitHub</p></a>
@@ -111,6 +90,13 @@ export const Tech = () => {
 
                     </li>
                 
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Windows' >
+                        <a className='item' href='https://galileozoe.github.io/software'> <FaMicrosoft size={25} /><p>Windows</p></a>
+                    </li>
+
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='IOS' >
+                        <a className='item' href='https://galileozoe.github.io/software'> <FaApple size={25} /><p>IOS</p></a>
+                    </li>
                
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Phyton' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaPython size={25} /><p>Python</p></a>
@@ -133,44 +119,32 @@ export const Tech = () => {
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='TypeScript' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaReact size={25} /><p>TypeScript</p></a>
                     </li>
-                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Ubicación' >
-                        <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMicrochip size={25} /><p>Arduino</p></a>
-                    </li>
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Bootstrap' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaBootstrap size={25} /><p>Bootstrap</p></a>
+                    </li>
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Arduino' >
+                        <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMicrochip size={25} /><p>Arduino</p></a>
+                    </li>
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='RaspBerryPi' >
+                        <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaRaspberryPi size={25} /><p>RaspberryPi</p></a>
                     </li>
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Bootstrap' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaCompass size={25} /><p>Mongo DB</p></a>
                     </li>
-                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Bootstrap' >
-                        <a className='item' href='https://galileozoe.github.io/software'> <FaNode size={25} /><p>Mongo DB</p></a>
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Node JS' >
+                        <a className='item' href='https://wa.me/527298906600'> <FaNodeJs size={25} /><p>Node JS</p></a>
                     </li>
-                    {/* <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Angular' >
-                        <a className='item' href='https://galileozoe.github.io/software'> <FaAngular size={25} /><p>Angular</p></a>
-                    </li> */}
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='CPanel' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaCpanel size={25} /><p>C Panel</p></a>
                     </li>
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='PHP' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaPhp size={25} /><p>PHP</p></a>
                     </li>
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Laravel' >
+                        <a className='item' href='https://galileozoe.github.io/software'> <FaLaravel size={25} /><p>Laravel</p></a>
+                    </li>
                 </ul>
 
-                <div className='marginvertical'></div>
-
-                <a className='fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
-                    {icons[iconIndex]}
-                    <p className={theme === 0 ? 'button' : 'buttonblack'}>Contacto</p>
-                </a>
-
-                <div className='marginvertical'></div>
-                <div className='marginvertical'></div>
-
-
-                <a className='fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
-                    {icons[iconIndex]}
-                    <p className={theme === 0 ? 'button' : 'buttonblack'}>Contacto</p>
-                </a>
                 <div className='marginvertical'></div>
 
 

@@ -40,7 +40,7 @@ export const Help = () => {
     return (
         <section
             className='section'
-            onScroll={window.innerWidth > 700 ? () => changeFeed(1) : undefined}
+            onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(6) : undefined}
             style={{
                 position: 'relative',
                 backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -65,7 +65,7 @@ export const Help = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.93)',
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}
             >
@@ -81,30 +81,28 @@ export const Help = () => {
 
 
                 <p className='paragraph'>Gracias por formar parte de   </p>
-
+                <img
+          className='logotype'
+          src={require('../../assets/galileozoe-blue.png')}
+          alt='Logo Galileo Zoe'
+        />
                 <div className='item'>
                     <img className='logo' src={require('../../assets/GZX10000.png')} />
                 </div>
 
 
                 <br />
-                <p className='paragraph'>Tu apoyo contribuye a la conservación y recuperación de nuestros ecosistemas naturales.</p>
-                <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
-                <p className='text'>Quiero Ayudar</p>
-                <FaHeart className={'button'} />
+                <p className='paragraphwhite'>Tu apoyo contribuye a la conservación y recuperación de nuestros ecosistemas naturales.</p>
+                <a className='icon fade-in-element' href='https://wa.me/527294899630' title='Contacto' >
+                <p className='paragraph'>Quiero Ayudar</p>
+                <FaHeart className={'buttonred'} />
                 </a>
                 <br />
                 <br />
-                <br />
-                <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
-                    <p className='button'>Más Información </p>
-                </a>
-          
-{/* 
-                <a className='icon fade-in-element' href='https://wa.me/527298906600' title='Contacto' >
-                    <p className='text'>Quiero Ayudar </p>
-                    <FaHeart className={'button'} />
-                </a> */}
+                <a href='https://wa.me/527294899630' className={'button'}>Más Información</a>
+
+            
+             
 
             </div>
         </section>

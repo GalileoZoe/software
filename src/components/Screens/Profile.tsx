@@ -40,38 +40,39 @@ export const Profile: React.FC = () => {
 
   return (
     <section
-      onScroll={window.innerWidth > 700 ? () => changeFeed(2) : undefined}
-      className='section'
+    onScroll={ () => changeFeed(1)}
+    className='section'
+    style={{
+      position: 'relative',
+      backgroundImage: `url(${bgImages[bgIndex]})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      width: '100vw', // 100% del ancho de la ventana
+      height: '100vh', // 100% del alto de la ventana
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center', // Alinea el texto horizontalmente
+      backgroundColor: 'whitesmoke',
+    }}
+  >
+
+
+
+    <div
+    onScroll={ () => changeFeed(1)}
       style={{
-        position: 'relative',
-        backgroundImage: `url(${bgImages[bgIndex]})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        width: '100vw', // 100% del ancho de la ventana
-        height: '100vh', // 100% del alto de la ventana
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center', // Alinea el texto horizontalmente
-        backgroundColor: 'whitesmoke',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.93)',
+        zIndex: 1,
       }}
-    >
+    />
 
-
-
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.96)',
-          zIndex: 1,
-        }}
-      />
-
-      <div style={{ position: 'relative', zIndex: 2 }}>
+    <div style={{ position: 'relative', zIndex: 2 }}>
         <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
           Desarrollo de Software | Galileo Zoe
         </h1>
@@ -85,28 +86,29 @@ export const Profile: React.FC = () => {
           src={require('../../assets/galileozoe-blue.png')}
           alt='Logo Galileo Zoe'
         />
-        <p className='text fade-in-element'>'Creando el Futuro'</p>
+        <br />
+        <img
+          className='image'
+          src={require('../../assets/gz.png')}
+          alt='Logo Galileo Zoe'
+        />
+        <p className='text fade-in-element'>Galileo Zoe Romero Gaytán</p>
 
         <div className='center fade-in-element'>
+      
+
+          <h2 className='paragraph' style={{ color: '#fff' }}>Ingeniero en Desarrollo de Software, programador Full Stack y C.E.O. de Galix {'\n'}
+             (StartUp de Tecnologías de la Información y Desarrollo de Aplicaciones Multiplataforma) </h2>
+
           <img
             className='logo'
             src={require('../../assets/GZX10000.png')}
             alt='Logo Galileo Zoe'
           />
-
-          <h2 className='paragraph' style={{ color: '#fff' }}>Programando Sueños. Creando el futuro.</h2>
-
-          <div className='marginvertical'></div>
-
-
-          <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>
-            {icons[iconIndex]}
-
-            <p className={'button'}>Contacto</p>
-          </a>
+               <a href='https://wa.me/527298906600' className={'button'}>Curriculum</a>
+               <a href='https://wa.me/527298906600' className={'button'}>Contacto</a>
+               <a href='https://wa.me/527298906600' className={'button'}>WhatsApp</a>
         </div>
-
-
         <div className='marginvertical'></div>
       </div>
     </section>

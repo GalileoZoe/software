@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect,  useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import { FaAppleAlt, FaBroadcastTower, FaCloud, FaCode, FaCog, FaComment, FaDatabase, FaDeskpro, FaDesktop, FaEnvelope, FaExchangeAlt, FaFacebook, FaFutbol, FaGamepad, FaGlobe, FaHandshake, FaHeart, FaIgloo, FaImage, FaImages, FaLaptopCode, FaMobile, FaMobileAlt, FaMusic, FaNetworkWired, FaPaintBrush, FaPeopleArrows, FaPeopleCarry, FaPhone, FaProjectDiagram, FaRobot, FaServer, FaThumbsUp, FaUser, FaUserFriends, FaUserMd, FaUsers, FaVideo, FaWhatsapp, FaWifi } from 'react-icons/fa';
+import { FaCloud, FaCode,  FaComment, FaDatabase,  FaEnvelope,  FaFacebook, FaGamepad, FaGlobe,  FaHeart, FaImages, FaLaptopCode, FaMobile,FaPhone, FaProjectDiagram, FaRobot, FaServer, FaThumbsUp, FaUsers, FaVideo, FaWhatsapp, FaWifi } from 'react-icons/fa';
 import { Window } from '../Components/Window';
 import { useService } from '../../context/ServiceContext';
 
@@ -18,63 +18,105 @@ export const Services = () => {
       case 1:
         return <Window
           tittle='Software personalizado'
-          description='Desarrollo de Sistemas de Software Adaptados a las necesidades específicas de tu negocio u organización.
-           Implementación de sistemas robustos acccesiebles agilicen los procesos  .'
-          button='Más Información'
+          description='Desarrollo de Sistemas de Software Adaptados a las necesidades específicas de tu negocio.
+           Implementación de sistemas robustos acccesiebles agilicen los procesos y aumenten el alcance de tu organización. .'
+          // button='Más Información'
         />;
-      case 2:
-        return <Window
-          tittle='Aplicaciones Móviles'
-          description='de aplicaciones móviles para la gestion y manejo de procesoscomo venta, transporte, producción, etc.'
-          button='Más Información'
-        />;
-      case 3:
-        return <Window
-          tittle='Sitios Web'
-          description='Immplementación de páginas web personalizadas que permiten gestionar los procesos de tu empresa y conectar con tus clientes'
-          button='Más Información'
-        />;
+        case 2:
+          return <Window
+            tittle='Base de Datos'
+            description='Diseño de Bases de Datos adaptadas a las necesidades de tu organización. Permi un acceder y gestionar seguros,Sin Perder Dtos ni Exponer Información ni procesoso confidenciales de tu empresa .'
+            // button='Más Información'
+          />;
+          case 3:
+            return <Window
+              tittle='API´S'
+              description='Desarrollo de APIs RESTful a medida y sistemas Back-End escalables que garantizan el acceso seguro y eficiente a la(s) bases(s) de datos, facilitando la integración segura entre aplicaciones.'
+    
+              // button='Más Información'
+            />;
       case 4:
         return <Window
-          tittle='API´S'
-          description='Despliegue de API´S RestFull y Applicaciones Back-End escalables  que permiten el acceso seguro y eficiente a la Base de Dtos  '
-          button='Más Información'
+          tittle='Aplicaciones Móviles'
+          description='Implementación de aplicaciones móviles para la gestion y manejo de procesos como venta, transporte, producción, envíos, etc.'
+          // button='Más Información'
         />;
       case 5:
         return <Window
-          tittle='Desintoxicación'
-          description='Temazcal, Activación Física, Sesiones de Psicología,  Juntas de Recuperación y una Dieta Saludable para desintoxicar el cuerpo, el alma y la mente.'
-          button='Más Información'
+          tittle='Sitios Web'
+          description='Immplementación de tu sitio web personalizado, permitiendo facilitar y monoitorear los procesos de tu empresa, optimizando tu trabajo y mejorando la experiencia del cliente.'
+          // button='Más Información'
         />;
       case 6:
         return <Window
-          tittle='Desarrollo Humano'
-          description='Se impulsa a los usuarios a alcanzar su máximo potencial, cultivando una personalidad feliz y libre de adicciones mediante el desarrollo de hábitos saludables y una mentalidad positiva.'
-          button='Más Información'
+          tittle='Mantenimiento'
+          description='Mantenimiento preventivo y correctivo de sistemas de cómputo (hardware y software).'
         />;
       case 7:
         return <Window
-          tittle='Activación Física'
-          description='Favorece a la salud física y mental, al proceso de desintoxicación y la creación de habitos saludables.'
-          button='Más Información'
+          tittle='Seguridad'
+          description='Sistemas de seguridad y monitoreo avanzado. Automatización de procesos de seguridad.'
+          // button='Más Información'
         />;
       case 8:
         return <Window
-          tittle='ArteTerapia'
-          description='Fomentamos actividades artisticas para estimular la creatividad y la expresión asertiva de emociones .'
-          button='Más Información'
+          tittle='Internet de las Cosas'
+          description='Implementación de sistemas automatizados y dispositivos inteligentes, (robótica y domótica).'
+          // button='Más Información'
         />;
       case 9:
         return <Window
-          tittle='Eventos Culturales'
-          description='
-Organizamos sesiones de arte, pintura, música en vivo y excursiones para fomentar el desarrollo de una personalidad libre de adicciones y promover el aprecio por la cultura y el arte. Recibimos visitas de artistas, conferencistas y profesionales que comparten su experiencia con el fin de impartir formas de recreación saludables'
-          button='Más Información'
+          tittle='Videojuegos'
+          description='Desarrollo e implentación de videojuegos, animación, ambientación, doblaje, audio, sonido, etc'
+          // button='Más Información'
+        />
+      case 10:
+        return <Window
+          tittle='Deploy'
+          description='Despliegue y configuración de aplicaciones en entornos de producción. Configuración de servidores y optimización de procesos de despliegue para garantizar la disponibilidad y escalabilidad de tus sistemas.'
+          // button='Más Información'
+        />
+      case 11:
+        return <Window
+          tittle='Dirección de Proyectos'
+          description='Gestión integral de proyectos tecnológicos: planificación, seguimiento y control de recursos, tiempos y presupuestos. Implementación de metodologías ágiles y tradicionales para garantizar la entrega exitosa de proyectos de desarrollo de software.'
+          // button='Más Información'
+        />
+      case 12:
+        return <Window
+          tittle='Diseño Gráfico'
+          description='Maquetado de recursos de marca (paleta de colores, logotipos, make up, vieos, imágenes, etc) personalizadodos'
+          // button='Más Información'
+        />
+      case 13:
+        return <Window
+          tittle='Redes Digitales'
+          description='Diseño e implementación de infraestructuras de red seguras y escalables. Configuración de sistemas de monitoreo y protección contra amenazas digitales, garantizando la continuidad operativa de tu organización.'
+          // button='Más Información'
+        />
+      case 14:
+        return <Window
+          tittle='Marketing Digital'
+          description='Estrategias de marketing digital personalizadas que maximizan tu presencia online. Análisis de mercado, campañas publicitarias y métricas de rendimiento para optimizar tu alcance y conversiones.'
+          // button='Más Información'
+        />
+      case 15:
+        return <Window
+          tittle='Redes Sociales'
+          description='Gestión profesional de redes sociales: creación de contenido, programación de publicaciones, interacción con audiencia y análisis de métricas para potenciar tu marca en plataformas digitales.'
+          // button='Más Información'
+        />
+      case 16:
+        return <Window
+          tittle='Servicios en la nube'
+          description='Implementación de soluciones en la nube para almacenamiento, procesamiento y gestión de datos. Migración segura de sistemas y optimización de recursos tecnológicos en entornos cloud.'
+          // button='Más Información'
         />
       default:
         return null;
     }
   };
+
 
   // Estado para manejar el icono actual
   const [iconIndex, setIconIndex] = useState(0);
@@ -123,7 +165,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
 
     <section
     className='section'
-    onScroll={window.innerWidth > 700 ? () => changeFeed(4) : undefined}
+    onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(4) : undefined}
     style={{
         position: 'relative',
         backgroundImage: `url(${bgImages[bgIndex]})`,
@@ -139,6 +181,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
     }}>
 
     <div
+      onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(4) : undefined}
         style={{
             position: 'absolute',
             top: 0,
@@ -146,7 +189,7 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
             width: '100%',
             minHeight: '100vh',
             height: 'auto',
-            backgroundColor: 'rgba(0, 0, 0, 0.95)',
+            backgroundColor: 'rgba(0, 0, 0, 0.93)',
             zIndex: 1, // Mantiene la capa detrás del contenido
         }}
     >
@@ -156,17 +199,19 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
        Servicios | Desarrollo de Software | Galileo Zoe
         </h1>
 
-          <div className="fade-in-element">
+          <div>
         <p className='text'>Servicios</p>
         <img className='img' src={require('../../assets/galileozoe-blue.png')} />
-        {/* <p className='item'>24 horas</p> */}
         </div>
+        <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
-        <div className='marginVertical'></div>
+
+        <div className='marginvertical'></div>
 
 
-        {service===0 ? <div>
-          <p className="paragraph">Software</p>
+        {service===0 ? 
+        
+        <div>
           <ul className='slider' onScroll={()=>changeFeed(4)}>
           <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Software Personalizado | Software Customizado | Software Hecho a Medida' onClick={() => changeService(1)}>
               <FaCode />
@@ -176,30 +221,30 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
               <FaDatabase />
               <p>Base de Datos</p>
             </li>
-              <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='API´s RestFull ' onClick={() => changeService(4)}>
+              <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='API´s RestFull ' onClick={() => changeService(3)}>
               <FaProjectDiagram />
               <p>API´s</p>
             </li>
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Aplicaciones Móviles' onClick={() => changeService(2)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Aplicaciones Móviles' onClick={() => changeService(4)}>
               <FaMobile />
               <p>APPS</p>
             </li>
    
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Páginas Web | Sitios Web | Aplicaciones Web ' onClick={() => changeService(3)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Páginas Web | Sitios Web | Aplicaciones Web ' onClick={() => changeService(5)}>
               <FaGlobe />
               <p>Sitios Web</p>
             </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Mantenimiento Preventivo y Correctivo de Software y Hardware' onClick={() => changeService(7)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Mantenimiento Preventivo y Correctivo de Software y Hardware' onClick={() => changeService(6)}>
               <FaLaptopCode />
               <p>Mantenimiento</p>
             </li>
 
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Instalación de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(8)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Instalación de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(7)}>
               <FaVideo />
               <p>Seguridad</p>
             </li>
             
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='IoT | Internet de las Cosas' onClick={() => changeService(5)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='IoT | Internet de las Cosas' onClick={() => changeService(8)}>
               <FaRobot />
               <p>IOT</p>
             </li>
@@ -211,38 +256,31 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
               <FaServer />
               <p>Deploy</p>
             </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño y Dirección de Proyectos.' onClick={() => changeService(15)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño y Dirección de Proyectos.' onClick={() => changeService(11)}>
               <FaUsers />
               <p>Dirección {'\n'}
                 de Proyectos</p>
             </li>
-         
-         
-        
-        
           </ul>
-
-          {/* <p className="paragraph">Publicidad</p> */}
           <ul className='slider' onScroll={()=>changeFeed(4)}>
-          
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(6)}>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(12)}>
               <FaImages />
               <p>Diseño{'\n'} Gráfico</p>
             </li>
            
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Ciberseguridad | Infrestructura de Redes | Integración de Sistemas de Red' onClick={() => changeService(11)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Ciberseguridad | Infrestructura de Redes | Integración de Sistemas de Red' onClick={() => changeService(13)}>
             <FaWifi />
               <p>Redes {'\n'} Digitales</p>
             </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Marketing Dígital | Publicidad | Difusión | Redes Sociales' onClick={() => changeService(12)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Marketing Dígital | Publicidad | Difusión | Redes Sociales' onClick={() => changeService(14)}>
               <FaHeart />
               <p>Marketing {'\n'} Dígital</p>
             </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Redes Sociales | Communnity Managger' onClick={() => changeService(12)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Redes Sociales | Communnity Managger' onClick={() => changeService(15)}>
               <FaThumbsUp />
               <p>Redes {'\n'} Sociales</p>
             </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Gestión de Servicios en la Nube' onClick={() => changeService(14)}>
+            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Gestión de Servicios en la Nube' onClick={() => changeService(16)}>
               <FaCloud />
               <p>Servicios {'\n'}en la Nube</p>
             </li>
@@ -252,16 +290,6 @@ Organizamos sesiones de arte, pintura, música en vivo y excursiones para foment
 
             <Services />
           </div>}
-
-          <div className='marginvertical'></div>
-
-            <div className='marginvertical'></div>
-            <div className='marginvertical'></div>
-
-            {/* <a className=' fade-in-element' title='Contacto' onClick={() => changeFeed(6)}>
-          {icons[iconIndex]}
-          <p className={theme===0?'button':'buttonblack'}>Contacto</p>
-        </a> */}
 
       </div>
 
