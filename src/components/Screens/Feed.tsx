@@ -20,7 +20,12 @@ export const Feed: React.FC = () => {
     <code className="paragraphs">IA</code>,
     <code className="paragraphs">Software</code>,
     <code className="paragraphs">Tecnología</code>,
+    <code className="paragraphs">Redes Sociales</code>,
     <code className="paragraphs">Aplicaciones Móviles</code>,
+    <code className="paragraphs">Diseño Gráfico</code>,
+    <code className="paragraphs">Publicidad</code>,
+    <code className="paragraphs">Programación</code>,
+    <code className="paragraphs">Marketing</code>,
     <code className="paragraphs">Videojuegos</code>,
     <code className="paragraphs">Sistemas Operativos</code>,
     <code className="paragraphs">API´S</code>,
@@ -28,6 +33,10 @@ export const Feed: React.FC = () => {
     <code className="paragraphs">Mantenimiento</code>,
     <code className="paragraphs">Automatización</code>,
     <code className="paragraphs">IoT</code>,
+    <code className="paragraphs">Seguridad</code>,
+    <code className="paragraphs">Desarrollo Web</code>,
+    <code className="paragraphs">Servidores</code>,
+
 
   ];
 
@@ -35,7 +44,6 @@ export const Feed: React.FC = () => {
 
     require('../../assets/bg-13.png'),
     require('../../assets/bg-12.png'),
-    require('../../assets/bg-11.png'),
     require('../../assets/bg-00.png'),
     require('../../assets/bg-10.png'),
 
@@ -101,7 +109,7 @@ export const Feed: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.93)',
+          backgroundColor: 'rgba(0, 0, 0)',
           zIndex: 1,
         }}
       />
@@ -113,31 +121,69 @@ export const Feed: React.FC = () => {
         </h1>
         <img
           className='logotype'
-          src={require('../../assets/galileozoe-blue.png')}
+          src={require('../../assets/galileozoe-00.png')}
           alt='Logo Galileo Zoe'
         />
-                <p className='paragraphs'>Desarrollo de Software Multiplataforma</p>
+                <p className='paragraphs'>Tecnología e Innovación</p>
 
              <div>
-          {texts[textIndex]}
         </div>
 
-   
-        <div className="marginVertical"></div>
+    
+        <div>
+  
+        < img
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '10%',
+            height: 'auto',
+            marginLeft: '600px',
+            zIndex: 1,
+          }}
+          src={require('../../assets/GalixxxBG.png')}
+          alt='Logo Galileo Zoe'
+        />
 
-        <p className='text fade-in-element'>'Programando el Futuro'</p>
-
+        < img
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            height: 'auto',
+            marginLeft: '600px',
+            zIndex: 1,
+          }}
+          src={require('../../assets/GalixxxBG.png')}
+          alt='Logo Galileo Zoe'
+        />
+        </div>
         <div className='center fade-in-element'>
+        < img
+          style={{
+     
+      
+            width: '20%',
+            height: 'auto',
+            zIndex: 1,
+          }}
+          src={require('../../assets/GalixxxBG.png')}
+          alt='Logo Galileo Zoe'
+        />
           <img
             className='logo'
-            src={require('../../assets/GZX10000.png')}
+            src={require('../../assets/gzgz.png')}
             alt='Logo Galileo Zoe'
           />
+          {texts[textIndex]}
+          <br />
+          <br />
 
-          <h2 className='paragraphwhite' >Creando Sueños. Programando el futuro.</h2>
+          {/* <h2 className='paragraphwhite' >Creando Sueños. Programando el futuro.</h2> */}
           <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>
             {icons[iconIndex]}
-
           </a>
           <a href='https://wa.me/527294899630' className={'button'}>Contacto</a>
         </div>

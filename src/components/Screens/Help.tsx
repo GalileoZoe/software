@@ -70,35 +70,30 @@ export const Help = () => {
                 }}
             >
 
-                <div className='marginvertical' ></div>
-
-
-                <h1 className='text'>Ayuda</h1>
-                {/* <div className='item'>
-                    <img className='img' src={require('../../assets/galileozoe-02.png')} />
-                    <p>24 horas</p>
-                </div> */}
-
+                <div className="marginVertical"></div>
+              <br />
+                <div className="marginVertical"></div>
 
                 <p className='paragraph'>Gracias por formar parte de   </p>
                 <img
           className='logotype'
-          src={require('../../assets/galileozoe-blue.png')}
+          src={require('../../assets/galileozoe-00.png')}
           alt='Logo Galileo Zoe'
         />
                 <div className='item'>
-                    <img className='logo' src={require('../../assets/GZX10000.png')} />
+                    <img className='logo' src={require('../../assets/gzgz.png')} />
                 </div>
 
 
                 <br />
                 <p className='paragraphwhite'>Tu apoyo contribuye a la conservación y recuperación de nuestros ecosistemas naturales.</p>
+                <div className="marginVertical"></div>
                 <a className='icon fade-in-element' href='https://wa.me/527294899630' title='Contacto' >
-                <p className='paragraph'>Quiero Ayudar</p>
+                {/* <p className='paragraph'>Quiero Ayudar</p> */}
                 <FaHeart className={'buttonred'} />
                 </a>
-                <br />
-                <br />
+                   < br />
+                   < br />
                 <a href='https://wa.me/527294899630' className={'button'}>Más Información</a>
 
             

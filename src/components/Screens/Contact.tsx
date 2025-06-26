@@ -84,7 +84,7 @@ export const Contact = () => {
 
    
         <div className='item'>
-        <img className='img' src={require('../../assets/galileozoe-blue.png')} onScroll={()=>changeFeed(11)} />
+        <img className='img' src={require('../../assets/galileozoe-00.png')} onScroll={()=>changeFeed(11)} />
       </div>
       <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
@@ -97,37 +97,37 @@ export const Contact = () => {
         <ul className='slider' onScroll={()=>changeFeed(11)}>
 
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Llamada' >
-            <a className='item' href='tel:7294899630'><FaPhone size={25} /><p>Teléfono</p></a>
+            <a className='item' target="_blank" rel="noopener noreferrer" href='tel:7204329082'><FaPhone size={25} /><p>Teléfono</p></a>
             
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Mensaje' >
-          <a className='item' href='sms:527294899630'> <FaComment size={25} /> <p>Mensaje</p></a> 
+          <a className='item' target="_blank" rel="noopener noreferrer" href='sms:527204329082'> <FaComment size={25} /> <p>Mensaje</p></a> 
            
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Correo Electrónico' >
-           <a className='item' href='mailto:al222210067@gmail.com'><FaEnvelope size={25} /> <p>Correo Electrónico</p></a> 
+           <a className='item' target="_blank" rel="noopener noreferrer" href='mailto:al222210067@gmail.com'><FaEnvelope size={25} /> <p>Correo Electrónico</p></a> 
            
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='WhatsApp' >
-           <a className='item' href='https://wa.me/527294899630'> <FaWhatsapp size={25} /><p>WhatsApp</p></a>
+           <a className='item' target="_blank" rel="noopener noreferrer" href='https://wa.me/527204329082'> <FaWhatsapp size={25} /><p>WhatsApp</p></a>
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Facebook' >
-           <a className='item' href='https://www.facebook.com/profile.php?id=61565903937768'> <FaFacebook size={25} /><p>FaceBook</p></a>
+           <a className='item' target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/profile.php?id=61565903937768'> <FaFacebook size={25} /><p>FaceBook</p></a>
             
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='TikTok' >
-            <a className='item' ><FaTiktok size={25} /> <p>TikTok</p></a>
+            <a className='item' target="_blank" rel="noopener noreferrer" ><FaTiktok size={25} /> <p>TikTok</p></a>
            
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Ubicación' >
-           <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMapPin size={25} /><p>Ubicación</p></a>
+           <a className='item' target="_blank" rel="noopener noreferrer" href='https://maps.app.goo.gl/BbAamPhpYbJFzwyJ8'> <FaMapPin size={25} /><p>Ubicación</p></a>
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Software' >
-            <a className='item' href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>SITIO WEB</p></a>
+            <a className='item' target="_blank" rel="noopener noreferrer" href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>SITIO WEB</p></a>
           </li>
         </ul>
 
-        <div className='marginvertical'></div>
+        {/* <div className='marginvertical'></div> */}
 
     
         <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)} onScroll={()=>changeFeed(11)}>

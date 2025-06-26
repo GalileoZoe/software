@@ -201,7 +201,7 @@ export const Services = () => {
 
           <div>
         <p className='text'>Servicios</p>
-        <img className='img' src={require('../../assets/galileozoe-blue.png')} />
+        <img className='img' src={require('../../assets/galileozoe-00.png')} />
         </div>
         <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 

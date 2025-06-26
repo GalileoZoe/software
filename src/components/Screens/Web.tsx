@@ -4,7 +4,7 @@ import { FaInfoCircle } from 'react-icons/fa';
 import { useTheme } from '../../context/ThemeContext';
 import { useFeed } from '../../context/FeedContext';
 
-export const About = () => {
+export const Web = () => {
 
     const [render, setRender] = useState<number>(0);
 
@@ -94,7 +94,7 @@ export const About = () => {
                         Información | Desarrollo de Software | Galileo Zoe
                     </h1>
 
-                    <p className='text'>Nosotros</p>
+                    <p className='text'>Sitios Web</p>
 
                     <img className='img' src={require('../../assets/galileozoe-00.png')} />
 
@@ -113,16 +113,21 @@ export const About = () => {
                     maxWidth: '900px'
                 }}>
                     <div className="card red">
-                        <p className="tip">Misión</p>
+                        <p className="tip">Pizzería Sorrella</p>
                         <p className="second-text">Innovar en la industria implementando tecnologías de vanguardia que optimizacen los procesos de tu organización, así como el alcance y la experiencia de usuario.</p>
                     </div>
                     <div className="card blue">
-                        <p className="tip">Visión</p>
+                        <p className="tip">Tierra Prometida</p>
+                        <p className="second-text">Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
+                        hardware, software y tecnologías de la información y asociados.</p>
+                    </div>
+                    <div className="card blue">
+                        <p className="tip">Kaspas</p>
                         <p className="second-text">Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
                         hardware, software y tecnologías de la información y asociados.</p>
                     </div>
                     <div className="card green">
-                        <p className="tip">Valores</p>
+                        <p className="tip">Panadería Bernal</p>
                         <p className="second-text">Innovación, Amor, Pasión, Respeto.</p>
                     </div>
                 </div>

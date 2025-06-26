@@ -83,7 +83,7 @@ export const Profile: React.FC = () => {
 
         <img
           className='logotype'
-          src={require('../../assets/galileozoe-blue.png')}
+          src={require('../../assets/galileozoe-00.png')}
           alt='Logo Galileo Zoe'
         />
         <br />
@@ -97,17 +97,19 @@ export const Profile: React.FC = () => {
         <div className='center fade-in-element'>
       
 
-          <h2 className='paragraph' style={{ color: '#fff' }}>Ingeniero en Desarrollo de Software, programador Full Stack y C.E.O. de Galix {'\n'}
-             (StartUp de Tecnologías de la Información y Desarrollo de Aplicaciones Multiplataforma) </h2>
+          <h2 className='paragraph' style={{ color: '#fff' }}>Ingeniero en Desarrollo de Software, programador Full Stack y C.E.O. de Galix </h2>
 
           <img
             className='logo'
-            src={require('../../assets/GZX10000.png')}
+            src={require('../../assets/gzgz.png')}
             alt='Logo Galileo Zoe'
           />
-               <a href='https://wa.me/527298906600' className={'button'}>Curriculum</a>
-               <a href='https://wa.me/527298906600' className={'button'}>Contacto</a>
-               <a href='https://wa.me/527298906600' className={'button'}>WhatsApp</a>
+   <div className="button-row">
+  <a href="https://wa.me/527298906600" className="button">Curriculum</a>
+  <a href="https://wa.me/527298906600" className="button">Contacto</a>
+  <a href="https://wa.me/527298906600" className="button">WhatsApp</a>
+</div>
+
         </div>
         <div className='marginvertical'></div>
       </div>

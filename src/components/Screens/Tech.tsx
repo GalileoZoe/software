@@ -58,15 +58,67 @@ export const Tech = () => {
 
 
                 <div className='item'>
-                    <img className='img' src={require('../../assets/galileozoe-blue.png')} />
+                    <img className='img' src={require('../../assets/galileozoe-00.png')} />
                 </div>
                 <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
                 <div className='marginvertical'></div>
                 <div className='marginvertical'></div>
 
+                <div className='tech-grid'>
 
-                <ul className='slider' onScroll={() => changeFeed(5)}>
+  <div className='tech-block'>
+    <h3>Frontend</h3>
+    <div className='tech-icons'>
+      <a className='item'><FaHtml5 size={25} /><p>HTML</p></a>
+      <a className='item'><FaCss3 size={25} /><p>CSS</p></a>
+      <a className='item'><FaJs size={25} /><p>JavaScript</p></a>
+      <a className='item'><FaReact size={25} /><p>React</p></a>
+      <a className='item'><FaBootstrap size={25} /><p>Bootstrap</p></a>
+      <a className='item'><FaReact size={25} /><p>TypeScript</p></a>
+    </div>
+  </div>
+
+  <div className='tech-block'>
+    <h3>Backend</h3>
+    <div className='tech-icons'>
+      <a className='item'><FaPhp size={25} /><p>PHP</p></a>
+      <a className='item'><FaLaravel size={25} /><p>Laravel</p></a>
+      <a className='item'><FaNodeJs size={25} /><p>NodeJS</p></a>
+      <a className='item'><FaNpm size={25} /><p>NPM</p></a>
+      <a className='item'><FaDatabase size={25} /><p>MySQL</p></a>
+      <a className='item'><FaCompass size={25} /><p>MongoDB</p></a>
+    </div>
+  </div>
+
+  <div className='tech-block'>
+    <h3>Sistemas Operativos</h3>
+    <div className='tech-icons'>
+      <a className='item'><FaLinux size={25} /><p>Linux</p></a>
+      <a className='item'><FaMicrosoft size={25} /><p>Windows</p></a>
+      <a className='item'><FaApple size={25} /><p>iOS</p></a>
+      <a className='item'><FaCpanel size={25} /><p>CPanel</p></a>
+    </div>
+  </div>
+
+  <div className='tech-block'>
+    <h3>Otros</h3>
+    <div className='tech-icons'>
+      <a className='item'><FaGit size={25} /><p>Git</p></a>
+      <a className='item'><FaGithub size={25} /><p>GitHub</p></a>
+      <a className='item'><FaPython size={25} /><p>Python</p></a>
+      <a className='item'><FaMicrochip size={25} /><p>Arduino</p></a>
+      <a className='item'><FaGlobe size={25} /><p>AWS</p></a>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+                {/* <ul className='slider' onScroll={() => changeFeed(5)}>
 
              
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='GitHub' >
@@ -125,10 +177,13 @@ export const Tech = () => {
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Arduino' >
                         <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaMicrochip size={25} /><p>Arduino</p></a>
                     </li>
-                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='RaspBerryPi' >
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Amazon Web Services' >
+                        <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaGlobe size={25} /><p>AWS</p></a>
+                    </li> */}
+                    {/* <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='RaspBerryPi' >
                         <a className='item' href='https://maps.app.goo.gl/qg6mNeMVLKEW3vDY7'> <FaRaspberryPi size={25} /><p>RaspberryPi</p></a>
-                    </li>
-                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Bootstrap' >
+                    </li> */}
+                    {/* <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Bootstrap' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaCompass size={25} /><p>Mongo DB</p></a>
                     </li>
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Node JS' >
@@ -143,7 +198,10 @@ export const Tech = () => {
                     <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='Laravel' >
                         <a className='item' href='https://galileozoe.github.io/software'> <FaLaravel size={25} /><p>Laravel</p></a>
                     </li>
-                </ul>
+                    <li className='item fade-in-element' onScroll={() => changeFeed(5)} title='MySQL' >
+                        <a className='item' href='https://galileozoe.github.io/software'> <FaDatabase size={25} /><p>MySQL</p></a>
+                    </li>
+                </ul> */}
 
                 <div className='marginvertical'></div>
 
