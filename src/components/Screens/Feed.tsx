@@ -109,7 +109,7 @@ export const Feed: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 0, 0)',
+          backgroundColor: 'rgba(0, 0, 0, 0.97)',
           zIndex: 1,
         }}
       />
