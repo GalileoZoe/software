@@ -112,19 +112,27 @@ export const About = () => {
                     flexWrap: 'wrap',
                     maxWidth: '900px'
                 }}>
-                    <div className="card red">
-                        <p className="tip">Misión</p>
-                        <p className="second-text">Innovar en la industria implementando tecnologías de vanguardia que optimizacen los procesos de tu organización, así como el alcance y la experiencia de usuario.</p>
-                    </div>
-                    <div className="card blue">
-                        <p className="tip">Visión</p>
-                        <p className="second-text">Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
-                        hardware, software y tecnologías de la información y asociados.</p>
-                    </div>
-                    <div className="card green">
-                        <p className="tip">Valores</p>
-                        <p className="second-text">Innovación, Amor, Pasión, Respeto.</p>
-                    </div>
+                   <div>
+  <div className="card">
+    <p className="tip">Misión</p>
+    <p>Crear soluciones de software, hardware y asociados para usuarios y organizaciones.</p>
+  </div>
+</div>
+
+<div>
+  <div className="card">
+    <p className="tip">Visión</p>
+    <p>Convertirnos en la StartUp referente en servicios tecnológicos inteligentes, accesibles y escalables.</p>
+  </div>
+</div>
+
+<div>
+  <div className="card">
+    <p className="tip">Valores</p>
+    <p>Pasión, Respeto, Amor, Fé, Innovación.</p>
+  </div>
+</div>
+
                 </div>
 
                 <div className='marginvertical'></div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import { FaAngular, FaApple, FaBatteryEmpty, FaBootstrap, FaCode, FaComment, FaCompass, FaCpanel, FaCss3, FaDatabase, FaEnvelope, FaFacebook, FaGit, FaGithub, FaGithubAlt, FaGlobe, FaHtml5, FaJs, FaLaravel, FaLeaf, FaLinux, FaMapPin, FaMicrochip, FaMicrosoft, FaNode, FaNodeJs, FaNpm, FaPhone, FaPhp, FaPython, FaRaspberryPi, FaReact, FaReacteurope, FaRedRiver, FaRobot, FaTiktok, FaTypo3, FaUsb, FaWhatsapp } from 'react-icons/fa';
+import { FaAngular, FaApple, FaBatteryEmpty, FaBootstrap, FaCode, FaComment, FaCompass, FaCpanel, FaCss3, FaDatabase, FaEnvelope, FaFacebook, FaGit, FaGithub, FaGithubAlt, FaGlobe, FaHtml5, FaJs, FaLaravel, FaLeaf, FaLinux, FaMapPin, FaMicrochip, FaMicrosoft, FaNode, FaNodeJs, FaNpm, FaPaintBrush, FaPhone, FaPhp, FaPython, FaRaspberryPi, FaReact, FaReacteurope, FaRedRiver, FaRobot, FaTiktok, FaTypo3, FaUsb, FaWhatsapp } from 'react-icons/fa';
 
 export const Tech = () => {
 
@@ -63,52 +63,62 @@ export const Tech = () => {
                 <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
                 <div className='marginvertical'></div>
-                <div className='marginvertical'></div>
 
                 <div className='tech-grid'>
 
   <div className='tech-block'>
     <h3>Frontend</h3>
     <div className='tech-icons'>
-      <a className='item'><FaHtml5 size={25} /><p>HTML</p></a>
-      <a className='item'><FaCss3 size={25} /><p>CSS</p></a>
-      <a className='item'><FaJs size={25} /><p>JavaScript</p></a>
-      <a className='item'><FaReact size={25} /><p>React</p></a>
-      <a className='item'><FaBootstrap size={25} /><p>Bootstrap</p></a>
-      <a className='item'><FaReact size={25} /><p>TypeScript</p></a>
+      <a className='item' href='https://html.spec.whatwg.org/'><FaHtml5 size={25} /><p>HTML</p></a>
+      <a className='item' href='https://www.w3.org/Style/CSS/'><FaCss3 size={25} /><p>CSS</p></a>
+      <a className='item' href='https://developer.mozilla.org/es/docs/Web/JavaScript'><FaJs size={25} /><p>JavaScript</p></a>
+      <a className='item' href='https://react.dev/'><FaReact size={25} /><p>React</p></a>
+      <a className='item' href='https://getbootstrap.com/'><FaBootstrap size={25} /><p>Bootstrap</p></a>
+      <a className='item' href='https://www.typescriptlang.org/'><FaReact size={25} /><p>TypeScript</p></a>
     </div>
   </div>
 
   <div className='tech-block'>
     <h3>Backend</h3>
     <div className='tech-icons'>
-      <a className='item'><FaPhp size={25} /><p>PHP</p></a>
-      <a className='item'><FaLaravel size={25} /><p>Laravel</p></a>
-      <a className='item'><FaNodeJs size={25} /><p>NodeJS</p></a>
-      <a className='item'><FaNpm size={25} /><p>NPM</p></a>
-      <a className='item'><FaDatabase size={25} /><p>MySQL</p></a>
-      <a className='item'><FaCompass size={25} /><p>MongoDB</p></a>
+      <a className='item' href='https://www.php.net/'><FaPhp size={25} /><p>PHP</p></a>
+      <a className='item' href='https://laravel.com/'><FaLaravel size={25} /><p>Laravel</p></a>
+      <a className='item' href='https://nodejs.org/'><FaNodeJs size={25} /><p>NodeJS</p></a>
+      <a className='item' href='https://www.npmjs.com/'><FaNpm size={25} /><p>NPM</p></a>
+      <a className='item' href='https://www.mysql.com/'><FaDatabase size={25} /><p>MySQL</p></a>
+      <a className='item' href='https://www.mongodb.com/'><FaCompass size={25} /><p>MongoDB</p></a>
     </div>
   </div>
 
   <div className='tech-block'>
     <h3>Sistemas Operativos</h3>
     <div className='tech-icons'>
-      <a className='item'><FaLinux size={25} /><p>Linux</p></a>
-      <a className='item'><FaMicrosoft size={25} /><p>Windows</p></a>
-      <a className='item'><FaApple size={25} /><p>iOS</p></a>
-      <a className='item'><FaCpanel size={25} /><p>CPanel</p></a>
+      <a className='item' href=''><FaLinux size={25} href='https://www.kernel.org/' /><p>Linux</p></a>
+      <a className='item'><FaMicrosoft size={25} href='https://www.microsoft.com/windows'/><p>Windows</p></a>
+      <a className='item'><FaApple size={25} href='https://www.apple.com/ios/'/><p>iOS</p></a>
     </div>
   </div>
+{/* 
+  <div className='tech-block'>
+    <h3>Diseño</h3>
+    <div className='tech-icons'>
+      <a className='item'><FaPaintBrush size={25} /><p>Git</p></a>
+      <a className='item'><FaGithub size={25} /><p>GitHub</p></a>
+      <a className='item'><FaPython size={25} /><p>Python</p></a>
+      <a className='item'><FaMicrochip size={25} /><p>Arduino</p></a>
+      <a className='item'><FaGlobe size={25} /><p>AWS</p></a>
+    </div>
+  </div> */}
 
   <div className='tech-block'>
     <h3>Otros</h3>
     <div className='tech-icons'>
       <a className='item'><FaGit size={25} /><p>Git</p></a>
       <a className='item'><FaGithub size={25} /><p>GitHub</p></a>
-      <a className='item'><FaPython size={25} /><p>Python</p></a>
       <a className='item'><FaMicrochip size={25} /><p>Arduino</p></a>
       <a className='item'><FaGlobe size={25} /><p>AWS</p></a>
+      <a className='item'><FaCpanel size={25} /><p>CPanel</p></a>
+
     </div>
   </div>
 

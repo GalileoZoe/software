@@ -94,7 +94,7 @@ export const Web = () => {
                         Información | Desarrollo de Software | Galileo Zoe
                     </h1>
 
-                    <p className='text'>Sitios Web</p>
+                    <p className='text'>Proyectos</p>
 
                     <img className='img' src={require('../../assets/galileozoe-00.png')} />
 
@@ -112,25 +112,48 @@ export const Web = () => {
                     flexWrap: 'wrap',
                     maxWidth: '900px'
                 }}>
-                    <div className="card red">
-                        <p className="tip">Pizzería Sorrella</p>
-                        <p className="second-text">Innovar en la industria implementando tecnologías de vanguardia que optimizacen los procesos de tu organización, así como el alcance y la experiencia de usuario.</p>
-                    </div>
-                    <div className="card blue">
-                        <p className="tip">Tierra Prometida</p>
-                        <p className="second-text">Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
-                        hardware, software y tecnologías de la información y asociados.</p>
-                    </div>
-                    <div className="card blue">
-                        <p className="tip">Kaspas</p>
-                        <p className="second-text">Ser el StartUp líder en el diseño, desarollo, implementación y mantenimiento de soluciones que implican
-                        hardware, software y tecnologías de la información y asociados.</p>
-                    </div>
-                    <div className="card green">
-                        <p className="tip">Panadería Bernal</p>
-                        <p className="second-text">Innovación, Amor, Pasión, Respeto.</p>
-                    </div>
+
+                    <a href="https://galileozoe.github.io/tierraprometidawebsite">
+                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/tp.png')})` }}>
+                 <div className="card-overlay">
+                <p className="tip">Tierra Prometida</p>
+                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
                 </div>
+                </div>
+                </a>
+                <a href="https://galileozoe.github.io/pizzas">
+                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                 <div className="card-overlay">
+                <p className="tip">Pizzería Sorella</p>
+                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                </div>
+                </div>
+                </a>
+                  {/* <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                 <div className="card-overlay">
+                <p className="tip">Pizzería Sorella</p>
+                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                </div>
+                </div> */}
+                <a href="https://galileozoe.github.io/kaspas">
+                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                 <div className="card-overlay">
+                <p className="tip">Kaspas</p>
+                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                </div>
+                </div>
+                </a>
+                <a href="https://galileozoe.github.io/panaderia">
+                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                 <div className="card-overlay">
+                <p className="tip">Panadería Bernal</p>
+                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                </div>
+                </div>
+                </a>
+                </div>
+
+
 
                 <div className='marginvertical'></div>
             </div>

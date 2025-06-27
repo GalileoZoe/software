@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://galileozoe.github.io/sitemap.xml
