@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "/software/static/css/main.4664ab6a.css",
-    "main.js": "/software/static/js/main.720e31a5.js",
+    "main.css": "/software/static/css/main.0f5ca7c7.css",
+    "main.js": "/software/static/js/main.365f08e4.js",
     "static/js/453.742cb69d.chunk.js": "/software/static/js/453.742cb69d.chunk.js",
     "static/media/bg-22.png": "/software/static/media/bg-22.1c90b45c6c5963bad1d2.png",
     "static/media/bg-00.png": "/software/static/media/bg-00.5b27f1fa28df1dc1734d.png",
     "static/media/bg-10.png": "/software/static/media/bg-10.9740ab02d820a6007ec6.png",
     "static/media/GalixxxBG.png": "/software/static/media/GalixxxBG.9505cb62a79ac05d59e0.png",
     "static/media/bg-18.png": "/software/static/media/bg-18.71dba1d343b2e0a330b6.png",
+    "static/media/19.png": "/software/static/media/19.ac8713ac25044748813c.png",
     "static/media/bg-13.png": "/software/static/media/bg-13.5f0a0dd4b268259f4a9b.png",
     "static/media/bg-12.png": "/software/static/media/bg-12.23430868c884f98d2966.png",
     "static/media/bg-15.png": "/software/static/media/bg-15.abccce2a8200269e20a1.png",
+    "static/media/tp.png": "/software/static/media/tp.b0208707f9c1d5d3c5b9.png",
     "static/media/bg-11.png": "/software/static/media/bg-11.1ad02fd2d97dcd78897f.png",
     "static/media/galileozoe-02.png": "/software/static/media/galileozoe-02.3bb3fb509140f653cd8b.png",
     "static/media/galileozoe-00.png": "/software/static/media/galileozoe-00.2389f346a2443bcfbda9.png",
     "static/media/gzgz.png": "/software/static/media/gzgz.aa7a2fdb215cf1ae568f.png",
     "static/media/gz.png": "/software/static/media/gz.d383258e27a189def932.png",
     "index.html": "/software/index.html",
-    "main.4664ab6a.css.map": "/software/static/css/main.4664ab6a.css.map",
-    "main.720e31a5.js.map": "/software/static/js/main.720e31a5.js.map",
+    "main.0f5ca7c7.css.map": "/software/static/css/main.0f5ca7c7.css.map",
+    "main.365f08e4.js.map": "/software/static/js/main.365f08e4.js.map",
     "453.742cb69d.chunk.js.map": "/software/static/js/453.742cb69d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4664ab6a.css",
-    "static/js/main.720e31a5.js"
+    "static/css/main.0f5ca7c7.css",
+    "static/js/main.365f08e4.js"
   ]
 }
