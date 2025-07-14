@@ -115,21 +115,21 @@ export const About = () => {
                    <div>
   <div className="card">
     <p className="tip">Misión</p>
-    <p>Crear soluciones de software, hardware y asociados para usuarios y organizaciones.</p>
+    <p>"Desarrollar soluciones innovadoras de software, hardware y asociados."</p>
   </div>
 </div>
 
 <div>
   <div className="card">
     <p className="tip">Visión</p>
-    <p>Convertirnos en la StartUp referente en servicios tecnológicos inteligentes, accesibles y escalables.</p>
+    <p>"Ser la StartUp líder en servicios tecnológicos personalizados para usuarios y organizaciones."</p>
   </div>
 </div>
 
 <div>
   <div className="card">
     <p className="tip">Valores</p>
-    <p>Pasión, Respeto, Amor, Fé, Innovación.</p>
+    <p>"Pasión, Respeto, Amor, Fé, Innovación."</p>
   </div>
 </div>
 

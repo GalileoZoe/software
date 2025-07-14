@@ -160,7 +160,10 @@ export const Feed: React.FC = () => {
         />
            </a>
         </div>
+
         <div className='center fade-in-element'>
+        <a onClick={()=>changeFeed(7)}>
+
         < img
           style={{
      
@@ -172,12 +175,20 @@ export const Feed: React.FC = () => {
           src={require('../../assets/GalixxxBG.png')}
           alt='Logo Galileo Zoe'
         />
+           </a>
+
+        <a onClick={()=>changeFeed(6)}>
           <img
             className='logo'
             src={require('../../assets/gzgz.png')}
             alt='Logo Galileo Zoe'
           />
+           </a>
+
+        <a onClick={()=>changeFeed(3)}>
           {texts[textIndex]}
+        </a>
+
           <br />
           <br />
 
@@ -187,6 +198,7 @@ export const Feed: React.FC = () => {
           </a>
           <a onClick={()=>changeFeed(5)} className={'button'}>Contacto</a>
         </div>
+
         </div>
       </div>
     </section>

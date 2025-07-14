@@ -19,20 +19,21 @@ export const Services = () => {
         return <Window
           tittle='Software personalizado'
           description='Desarrollo de Sistemas de Software Adaptados a las necesidades específicas de tu negocio.
-           Implementación de sistemas robustos acccesiebles agilicen los procesos y aumenten el alcance de tu organización. .'
+           Implementación de sistemas robustos y acccesiebles agilicen los procesos y aumenten el alcance de tu organización. .'
           // button='Más Información'
         />;
         case 2:
           return <Window
             tittle='Base de Datos'
-            description='Diseño de Bases de Datos adaptadas a las necesidades de tu organización. Permi un acceder y gestionar seguros,Sin Perder Dtos ni Exponer Información ni procesoso confidenciales de tu empresa .'
+            description='Diseño de Bases de Datos adaptadas a las necesidades de tu organización. Permitiendo acceder y gestionar información de manera segura,
+             sin perder registros ni exponer información ni procesos confidenciales de tu empresa .'
             // button='Más Información'
           />;
           case 3:
             return <Window
               tittle='API´S'
-              description='Desarrollo de APIs RESTful a medida y sistemas Back-End escalables que garantizan el acceso seguro y eficiente a la(s) bases(s) de datos, facilitando la integración segura entre aplicaciones.'
-    
+              description='Desarrollo de APIs RESTful a medida y sistemas Back-End escalables que garantizan el acceso seguro y eficiente a la(s) base(s) de datos,
+               facilitando la integración segura entre aplicaciones.'
               // button='Más Información'
             />;
       case 4:
@@ -44,13 +45,14 @@ export const Services = () => {
       case 5:
         return <Window
           tittle='Sitios Web'
-          description='Immplementación de tu sitio web personalizado, permitiendo facilitar y monoitorear los procesos de tu empresa, optimizando tu trabajo y mejorando la experiencia del cliente.'
+          description='Immplementación de tu sitio web personalizado, permitiendo facilitar y monitorear los procesos de tu empresa,
+           optimizando tu trabajo y mejorando la experiencia del cliente.'
           // button='Más Información'
         />;
       case 6:
         return <Window
           tittle='Mantenimiento'
-          description='Mantenimiento preventivo y correctivo de sistemas de cómputo (hardware y software).'
+          description='Mantenimiento preventivo y correctivo de sistemas de hardware y software.'
         />;
       case 7:
         return <Window
@@ -61,55 +63,61 @@ export const Services = () => {
       case 8:
         return <Window
           tittle='Internet de las Cosas'
-          description='Implementación de sistemas automatizados y dispositivos inteligentes, (robótica y domótica).'
+          description='Implementación de sistemas automatizados y dispositivos inteligentes, robótica y domótica.'
           // button='Más Información'
         />;
       case 9:
         return <Window
           tittle='Videojuegos'
-          description='Desarrollo e implentación de videojuegos, animación, ambientación, doblaje, audio, sonido, etc'
+          description='Desarrollo e implentación de videojuegos, animación, ambientación, doblaje, audio, sonido, efectos visuales, etc.'
           // button='Más Información'
         />
       case 10:
         return <Window
           tittle='Deploy'
-          description='Despliegue y configuración de aplicaciones en entornos de producción. Configuración de servidores y optimización de procesos de despliegue para garantizar la disponibilidad y escalabilidad de tus sistemas.'
+          description='Despliegue y configuración de aplicaciones en entornos de producción. Configuración de servidores y
+           optimización de procesos de despliegue para garantizar la disponibilidad y escalabilidad de tus sistemas.'
           // button='Más Información'
         />
       case 11:
         return <Window
           tittle='Dirección de Proyectos'
-          description='Gestión integral de proyectos tecnológicos: planificación, seguimiento y control de recursos, tiempos y presupuestos. Implementación de metodologías ágiles y tradicionales para garantizar la entrega exitosa de proyectos de desarrollo de software.'
+          description='Gestión integral de proyectos: planificación, seguimiento y control de recursos, tiempos y presupuestos.
+           Implementación de metodologías ágiles y tradicionales para garantizar la entrega exitosa de proyectos.'
           // button='Más Información'
         />
       case 12:
         return <Window
           tittle='Diseño Gráfico'
-          description='Maquetado de recursos de marca (paleta de colores, logotipos, make up, vieos, imágenes, etc) personalizadodos'
+          description='Maquetado de recursos de marca (paleta de colores, logotipos, make up, videos, imágenes, anuncios etc) personalizadodos'
           // button='Más Información'
         />
       case 13:
         return <Window
           tittle='Redes Digitales'
-          description='Diseño e implementación de infraestructuras de red seguras y escalables. Configuración de sistemas de monitoreo y protección contra amenazas digitales, garantizando la continuidad operativa de tu organización.'
+          description='Diseño e implementación de infraestructuras de red seguras y escalables. 
+          Configuración de sistemas de monitoreo y protección contra amenazas digitales, garantizando la continuidad operativa de tu organización.'
           // button='Más Información'
         />
       case 14:
         return <Window
           tittle='Marketing Digital'
-          description='Estrategias de marketing digital personalizadas que maximizan tu presencia online. Análisis de mercado, campañas publicitarias y métricas de rendimiento para optimizar tu alcance y conversiones.'
+          description='Estrategias de marketing digital personalizadas que maximizan tu presencia online. 
+          Análisis de mercado, campañas publicitarias y métricas de rendimiento para optimizar tu alcance y conversiones.'
           // button='Más Información'
         />
       case 15:
         return <Window
           tittle='Redes Sociales'
-          description='Gestión profesional de redes sociales: creación de contenido, programación de publicaciones, interacción con audiencia y análisis de métricas para potenciar tu marca en plataformas digitales.'
+          description='Gestión profesional de redes sociales: creación de contenido, programación de publicaciones, interacción con audiencia y
+           análisis de métricas para potenciar tu marca en plataformas digitales.'
           // button='Más Información'
         />
       case 16:
         return <Window
           tittle='Servicios en la nube'
-          description='Implementación de soluciones en la nube para almacenamiento, procesamiento y gestión de datos. Migración segura de sistemas y optimización de recursos tecnológicos en entornos cloud.'
+          description='Implementación de soluciones en la nube para almacenamiento, procesamiento y gestión de datos.
+           Migración segura de sistemas y optimización de recursos tecnológicos en entornos cloud.'
           // button='Más Información'
         />
       default:
@@ -206,7 +214,6 @@ export const Services = () => {
         <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
 
-        {/* <div className='marginvertical'></div> */}
 
 
         {service===0 ? 

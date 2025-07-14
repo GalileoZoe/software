@@ -12,6 +12,7 @@ import { Help } from '../Screens/Help';
 import { Error } from '../Screens/Error';
 import { Profile } from '../Screens/Profile';
 import { Web } from '../Screens/Web';
+import { CV } from '../Screens/CV';
 
 export const Layout: React.FC = () => {
     const { feed, changeFeed } = useFeed();
@@ -42,6 +43,8 @@ export const Layout: React.FC = () => {
             return <Profile/>;
         case 7:
             return <Web/>;
+        case 8:
+            return <CV/>;
         case 11:
             return <Help />;
         default:

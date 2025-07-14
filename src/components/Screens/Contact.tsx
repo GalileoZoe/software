@@ -97,11 +97,11 @@ export const Contact = () => {
         <ul className='slider' onScroll={()=>changeFeed(11)}>
 
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Llamada' >
-            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='tel:7204329082'><FaPhone size={25} /><p>Teléfono</p></a>
+            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='tel:7224995219'><FaPhone size={25} /><p>Teléfono</p></a>
             
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Mensaje' >
-          <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='sms:527204329082'> <FaComment size={25} /> <p>Mensaje</p></a> 
+          <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='sms:527224995219'> <FaComment size={25} /> <p>Mensaje</p></a> 
            
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Correo Electrónico' >
@@ -109,21 +109,20 @@ export const Contact = () => {
            
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='WhatsApp' >
-           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://wa.me/527204329082'> <FaWhatsapp size={25} /><p>WhatsApp</p></a>
+           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://wa.me/527224995219'> <FaWhatsapp size={25} /><p>WhatsApp</p></a>
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Facebook' >
-           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/profile.php?id=61565903937768'> <FaFacebook size={25} /><p>FaceBook</p></a>
+           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://www.facebook.com/galileozoe'> <FaFacebook size={25} /><p>FaceBook</p></a>
             
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='TikTok' >
-            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" ><FaTiktok size={25} /> <p>TikTok</p></a>
-           
+            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://www.tiktok.com/@galileozoe'><FaTiktok size={25} /> <p>TikTok</p></a>
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Ubicación' >
            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://maps.app.goo.gl/BbAamPhpYbJFzwyJ8'> <FaMapPin size={25} /><p>Ubicación</p></a>
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Software' >
-            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>SITIO WEB</p></a>
+            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>Sitio Web</p></a>
           </li>
         </ul>
 

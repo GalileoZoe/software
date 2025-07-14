@@ -24,7 +24,7 @@ export const NavBar: React.FC = () => {
 
   return (
     <nav className={'navbartransparent'} style={{
-      backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.99)' : 'transparent',
+      backgroundColor: 'transparent',
       transition: 'background-color 0.3s ease'
     }}>
       <div className='navbarlogo'>

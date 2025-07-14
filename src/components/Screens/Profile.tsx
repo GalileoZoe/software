@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useFeed } from '../../context/FeedContext';
-import { FaPhone, FaFacebook, FaWhatsapp, FaComment, FaEnvelope } from 'react-icons/fa';
+import { FaPhone, FaFacebook, FaWhatsapp, FaComment, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 
 export const Profile: React.FC = () => {
   const { changeFeed } = useFeed();
-
   const [iconIndex, setIconIndex] = useState(0);
+    const [show, setShow]=useState(false);
+
+  const showCV =()=>{
+    setShow(!show);
+  }
 
   const icons = [
     <FaPhone className='icon' />,
@@ -40,7 +44,7 @@ export const Profile: React.FC = () => {
 
   return (
     <section
-    onScroll={ () => changeFeed(1)}
+    // onScroll={ () => changeFeed(1)}
     className='section'
     style={{
       position: 'relative',
@@ -58,17 +62,18 @@ export const Profile: React.FC = () => {
   >
 
 
-
     <div
-    onScroll={ () => changeFeed(1)}
+    // onScroll={ () => changeFeed(1)}
       style={{
         position: 'absolute',
         top: 0,
         left: 0,
         width: '100%',
-        height: '100%',
+        height: '200%',
+         backgroundAttachment: 'fixed',
         backgroundColor: 'rgba(0, 0, 0, 0.93)',
         zIndex: 1,
+        backgroundSize: 'cover',
       }}
     />
 
@@ -86,17 +91,19 @@ export const Profile: React.FC = () => {
           src={require('../../assets/galileozoe-00.png')}
           alt='Logo Galileo Zoe'
         />
+
+
         <br />
+
+        {!show?
+        <>
         <img
           className='image'
           src={require('../../assets/gz.png')}
           alt='Logo Galileo Zoe'
         />
         <p className='text fade-in-element'>Galileo Zoe Romero Gaytán</p>
-
         <div className='center fade-in-element'>
-      
-
           <h2 className='paragraph' style={{ color: '#fff' }}>Ingeniero en Desarrollo de Software Multiplataforma, programador Full Stack y C.E.O. de Galix.</h2>
 
           <img
@@ -105,12 +112,52 @@ export const Profile: React.FC = () => {
             alt='Logo Galileo Zoe'
           />
    <div className="button-row">
-  <a href="https://wa.me/527298906600" className="button">Curriculum</a>
+  <a onClick={showCV} className="button" style={{cursor: 'pointer'}}>Curriculum</a>
   <a href="https://wa.me/527298906600" className="button">Contacto</a>
   <a href="https://wa.me/527298906600" className="button">WhatsApp</a>
 </div>
 
         </div>
+        </>:
+        <>
+               
+            <a onClick={showCV}>
+            <FaFileAlt 
+              style={{ 
+                fontSize: '3rem', 
+                color: '#fff', 
+                marginBottom: '15px',
+                filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
+              }} 
+            />
+            </a>
+         
+
+          <h3 style={{ color: 'white', marginBottom: '15px', fontSize: '1.3em' }}>
+            Ingeniero en Desarrollo de Software Multiplataforma
+          </h3>
+          
+          <p style={{ color: '#ccc', marginBottom: '20px', lineHeight: '1.6' }}>
+            Programador Full Stack y C.E.O. de Galix. Especializado en desarrollo web, 
+            aplicaciones móviles y soluciones tecnológicas innovadoras.
+          </p>
+   
+{/*             
+          <iframe
+            src={require('../../assets/GalileoZoe .pdf')}
+            width="700px"
+            height="950px"
+            style={{
+              border: 'none',
+              borderRadius: '15px'
+            }}
+            title="CV Galileo Zoe Romero Gaytán"
+            name="cvFrame"
+            loading="lazy"
+          /> */}
+        
+        </>
+        }
         <div className='marginvertical'></div>
       </div>
     </section>
