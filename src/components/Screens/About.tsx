@@ -99,7 +99,7 @@ export const About = () => {
                     <img className='img' src={require('../../assets/galileozoe-00.png')} />
 
           
-                {/* <p className='paragraph'>Desarrollo de Software Multiplataforma</p> */}
+                <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
 
           

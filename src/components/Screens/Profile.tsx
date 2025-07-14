@@ -97,7 +97,7 @@ export const Profile: React.FC = () => {
         <div className='center fade-in-element'>
       
 
-          <h2 className='paragraph' style={{ color: '#fff' }}>Ingeniero en Desarrollo de Software, programador Full Stack y C.E.O. de Galix </h2>
+          <h2 className='paragraph' style={{ color: '#fff' }}>Ingeniero en Desarrollo de Software Multiplataforma, programador Full Stack y C.E.O. de Galix.</h2>
 
           <img
             className='logo'

@@ -2,7 +2,7 @@ import React, { useEffect,  useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import { FaCloud, FaCode,  FaComment, FaDatabase,  FaEnvelope,  FaFacebook, FaGamepad, FaGlobe,  FaHeart, FaImages, FaLaptopCode, FaMobile,FaPhone, FaProjectDiagram, FaRobot, FaServer, FaThumbsUp, FaUsers, FaVideo, FaWhatsapp, FaWifi } from 'react-icons/fa';
+import { FaCloud, FaCode,  FaComment, FaDatabase,  FaEnvelope,  FaFacebook, FaGamepad, FaGlobe,  FaHeart, FaImages, FaLaptopCode, FaMobile,FaPhone, FaProjectDiagram, FaRobot, FaServer, FaThumbsUp, FaUsers, FaVideo, FaWhatsapp, FaWifi, FaArrowLeft, FaStar } from 'react-icons/fa';
 import { Window } from '../Components/Window';
 import { useService } from '../../context/ServiceContext';
 
@@ -165,18 +165,18 @@ export const Services = () => {
 
     <section
     className='section'
-    onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(4) : undefined}
+    // onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(4) : undefined}
     style={{
         position: 'relative',
         backgroundImage: `url(${bgImages[bgIndex]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        width: '100vw', // 100% del ancho de la ventana
-        height: '100vh', // 100% del alto de la ventana
+        width: '100vw',
+        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        textAlign: 'center', // Alinea el texto horizontalmente
+        textAlign: 'center',
         backgroundColor: 'whitesmoke',
     }}>
 
@@ -190,7 +190,7 @@ export const Services = () => {
             minHeight: '100vh',
             height: 'auto',
             backgroundColor: 'rgba(0, 0, 0, 0.93)',
-            zIndex: 1, // Mantiene la capa detrás del contenido
+            zIndex: 1,
         }}
     >
 
@@ -206,88 +206,137 @@ export const Services = () => {
         <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
 
-        <div className='marginvertical'></div>
+        {/* <div className='marginvertical'></div> */}
 
 
         {service===0 ? 
         
         <div>
-          <ul className='slider' onScroll={()=>changeFeed(4)}>
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Software Personalizado | Software Customizado | Software Hecho a Medida' onClick={() => changeService(1)}>
-              <FaCode />
-              <p>Software {'\n'} Personalizado</p>
-            </li>
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Bases de Datos' onClick={() => changeService(2)}>
-              <FaDatabase />
-              <p>Base de Datos</p>
-            </li>
-              <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='API´s RestFull ' onClick={() => changeService(3)}>
-              <FaProjectDiagram />
-              <p>API´s</p>
-            </li>
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Aplicaciones Móviles' onClick={() => changeService(4)}>
-              <FaMobile />
-              <p>APPS</p>
-            </li>
-   
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Páginas Web | Sitios Web | Aplicaciones Web ' onClick={() => changeService(5)}>
-              <FaGlobe />
-              <p>Sitios Web</p>
-            </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Mantenimiento Preventivo y Correctivo de Software y Hardware' onClick={() => changeService(6)}>
-              <FaLaptopCode />
-              <p>Mantenimiento</p>
-            </li>
-
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Instalación de Sistemas de Monitoreo y Seguridad.' onClick={() => changeService(7)}>
-              <FaVideo />
-              <p>Seguridad</p>
-            </li>
-            
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='IoT | Internet de las Cosas' onClick={() => changeService(8)}>
-              <FaRobot />
-              <p>IOT</p>
-            </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño, Desarrollo, Implementación y Mantenimiento de Videojuegos' onClick={() => changeService(9)}>
-              <FaGamepad />
-              <p>VideoJuegos</p>
-            </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Despliegue y Mantenimiento de Aplicaciones Back-End y Front-End' onClick={() => changeService(10)}>
-              <FaServer />
-              <p>Deploy</p>
-            </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño y Dirección de Proyectos.' onClick={() => changeService(11)}>
-              <FaUsers />
-              <p>Dirección {'\n'}
-                de Proyectos</p>
-            </li>
-          </ul>
-          <ul className='slider' onScroll={()=>changeFeed(4)}>
-          <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Diseño Gráfico | Recursos de Marca | Publicidad' onClick={() => changeService(12)}>
-              <FaImages />
-              <p>Diseño{'\n'} Gráfico</p>
-            </li>
-           
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Ciberseguridad | Infrestructura de Redes | Integración de Sistemas de Red' onClick={() => changeService(13)}>
-            <FaWifi />
-              <p>Redes {'\n'} Digitales</p>
-            </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Marketing Dígital | Publicidad | Difusión | Redes Sociales' onClick={() => changeService(14)}>
-              <FaHeart />
-              <p>Marketing {'\n'} Dígital</p>
-            </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Redes Sociales | Communnity Managger' onClick={() => changeService(15)}>
-              <FaThumbsUp />
-              <p>Redes {'\n'} Sociales</p>
-            </li>
-            <li className='item fade-in-element' onScroll={()=>changeFeed(4)} title='Gestión de Servicios en la Nube' onClick={() => changeService(16)}>
-              <FaCloud />
-              <p>Servicios {'\n'}en la Nube</p>
-            </li>
-          </ul>
+          {/* Grid de servicios mejorado */}
+          <div className="services-grid" style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+              gap: '1rem',
+              padding: '1rem',
+              marginBottom: '1rem',
+              maxWidth: '1200px',
+              margin: '0 auto'
+            }}>
+            {/* Fila 1 */}
+            {[
+              { icon: <FaCode />, title: 'Software Personalizado', desc: 'Software Customizado | Software Hecho a Medida', service: 1 },
+              { icon: <FaDatabase />, title: 'Base de Datos', desc: 'Bases de Datos', service: 2 },
+              { icon: <FaProjectDiagram />, title: 'API´s', desc: 'API´s RestFull', service: 3 },
+              { icon: <FaMobile />, title: 'APPS', desc: 'Aplicaciones Móviles', service: 4 },
+              { icon: <FaGlobe />, title: 'Sitios Web', desc: 'Páginas Web | Sitios Web | Aplicaciones Web', service: 5 },
+              { icon: <FaLaptopCode />, title: 'Mantenimiento', desc: 'Mantenimiento Preventivo y Correctivo de Software y Hardware', service: 6 },
+              { icon: <FaVideo />, title: 'Seguridad', desc: 'Instalación de Sistemas de Monitoreo y Seguridad', service: 7 },
+              { icon: <FaRobot />, title: 'IOT', desc: 'IoT | Internet de las Cosas', service: 8 },
+              { icon: <FaGamepad />, title: 'VideoJuegos', desc: 'Diseño, Desarrollo, Implementación y Mantenimiento de Videojuegos', service: 9 },
+              { icon: <FaServer />, title: 'Deploy', desc: 'Despliegue y Mantenimiento de Aplicaciones Back-End y Front-End', service: 10 },
+              { icon: <FaImages />, title: 'Diseño Gráfico', desc: 'Diseño Gráfico | Recursos de Marca | Publicidad', service: 12 },
+              { icon: <FaWifi />, title: 'Redes Digitales', desc: 'Ciberseguridad | Infraestructura de Redes | Integración de Sistemas de Red', service: 13 },
+              { icon: <FaHeart />, title: 'Marketing Digital', desc: 'Marketing Digital | Publicidad | Difusión | Redes Sociales', service: 14 },
+              { icon: <FaThumbsUp />, title: 'Redes Sociales', desc: 'Redes Sociales | Community Manager', service: 15 },
+              { icon: <FaUsers />, title: 'Dirección de Proyectos', desc: 'Diseño y Dirección de Proyectos', service: 11 },
+              { icon: <FaCloud />, title: 'Servicios en la Nube', desc: 'Gestión de Servicios en la Nube', service: 16 }
+            ].map((item, index) => (
+              <div
+                key={index}
+                onClick={() => changeService(item.service)}
+                title={item.desc}
+                style={{
+                  background: 'rgba(255,255,255,0.05)',
+                  borderRadius: '15px',
+                  padding: '1.5rem',
+                  textAlign: 'center',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                  transform: 'translateY(0)',
+                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-10px) scale(1.05)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(255, 255, 255, 0.3)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)';
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                }}
+              >
+                <div style={{
+                  fontSize: '2.5rem',
+                  color: 'white',
+                  marginBottom: '0.8rem',
+                  filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))'
+                }}>
+                  {item.icon}
+                </div>
+                <h3 style={{
+                  color: '#fff',
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  margin: '0',
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.7)',
+                  whiteSpace: 'pre-line'
+                }}>
+                  {item.title}
+                </h3>
+                <div style={{
+                  marginTop: '0.8rem',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  gap: '0.3rem'
+                }}>
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} style={{ color: '#ffd700', fontSize: '0.7rem' }} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div> :
-          <div>
-
+          <div style={{
+            position: 'relative'
+          }}>
+            {/* Botón de regreso */}
+            <button
+              onClick={() => changeService(0)}
+              style={{
+                position: 'relative',
+                margin: '20px auto',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                background: 'rgba(255,255,255,0.05)',
+                border: 'none',
+                borderRadius: '15px',
+                padding: '12px 24px',
+                color: '#fff',
+                fontSize: '1rem',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                backdropFilter: 'blur(20px)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(255, 255, 255, 0.3)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)';
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+              }}
+            >
+              <FaArrowLeft /> Volver
+            </button>
             <Services />
           </div>}
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -8,11 +8,25 @@ export const NavBar: React.FC = () => {
   const { feed, changeFeed } = useFeed();
   const { theme } = useTheme();
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className={'navbartransparent'}>
+    <nav className={'navbartransparent'} style={{
+      backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.99)' : 'transparent',
+      transition: 'background-color 0.3s ease'
+    }}>
       <div className='navbarlogo'>
         <a onClick={() => changeFeed(1)} >
           <img

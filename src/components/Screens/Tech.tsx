@@ -86,7 +86,7 @@ export const Tech = () => {
       <a className='item' href='https://nodejs.org/'><FaNodeJs size={25} /><p>NodeJS</p></a>
       <a className='item' href='https://www.npmjs.com/'><FaNpm size={25} /><p>NPM</p></a>
       <a className='item' href='https://www.mysql.com/'><FaDatabase size={25} /><p>MySQL</p></a>
-      <a className='item' href='https://www.mongodb.com/'><FaCompass size={25} /><p>MongoDB</p></a>
+      <a className='item' href='https://www.mongodb.com/'  ><FaCompass size={25} /><p>MongoDB</p></a>
     </div>
   </div>
 

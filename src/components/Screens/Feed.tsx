@@ -119,19 +119,18 @@ export const Feed: React.FC = () => {
         <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
           Desarrollo de Software | Galileo Zoe
         </h1>
+        <a onClick={()=>changeFeed(2)}>
         <img
           className='logotype'
           src={require('../../assets/galileozoe-00.png')}
           alt='Logo Galileo Zoe'
         />
                 <p className='paragraphs'>Tecnología e Innovación</p>
-
-             <div>
-        </div>
-
+                </a>
     
         <div>
-  
+        
+        <a onClick={()=>changeFeed(7)}>
         < img
           style={{
             position: 'absolute',
@@ -145,7 +144,7 @@ export const Feed: React.FC = () => {
           src={require('../../assets/GalixxxBG.png')}
           alt='Logo Galileo Zoe'
         />
-
+     
         < img
           style={{
             position: 'absolute',
@@ -159,6 +158,7 @@ export const Feed: React.FC = () => {
           src={require('../../assets/GalixxxBG.png')}
           alt='Logo Galileo Zoe'
         />
+           </a>
         </div>
         <div className='center fade-in-element'>
         < img
@@ -185,7 +185,7 @@ export const Feed: React.FC = () => {
           <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>
             {icons[iconIndex]}
           </a>
-          <a href='https://wa.me/527294899630' className={'button'}>Contacto</a>
+          <a onClick={()=>changeFeed(5)} className={'button'}>Contacto</a>
         </div>
         </div>
       </div>
