@@ -83,7 +83,7 @@ export const Web = () => {
                     width: '100%',
                     minHeight: '100vh',
                     height: 'auto',
-                    backgroundColor: 'rgba(0, 0, 0, 0.93)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.85)',
 
                     zIndex: 1, // Mantiene la capa detrás del contenido
                 }}

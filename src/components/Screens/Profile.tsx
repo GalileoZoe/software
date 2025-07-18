@@ -5,11 +5,6 @@ import { FaPhone, FaFacebook, FaWhatsapp, FaComment, FaEnvelope, FaFileAlt } fro
 export const Profile: React.FC = () => {
   const { changeFeed } = useFeed();
   const [iconIndex, setIconIndex] = useState(0);
-    const [show, setShow]=useState(false);
-
-  const showCV =()=>{
-    setShow(!show);
-  }
 
   const icons = [
     <FaPhone className='icon' />,
@@ -71,7 +66,7 @@ export const Profile: React.FC = () => {
         width: '100%',
         height: '200%',
          backgroundAttachment: 'fixed',
-        backgroundColor: 'rgba(0, 0, 0, 0.93)',
+        backgroundColor: 'rgba(0, 0, 0, 0.85)',
         zIndex: 1,
         backgroundSize: 'cover',
       }}
@@ -94,8 +89,6 @@ export const Profile: React.FC = () => {
 
 
         <br />
-
-        {!show?
         <>
         <img
           className='image'
@@ -112,16 +105,16 @@ export const Profile: React.FC = () => {
             alt='Logo Galileo Zoe'
           />
    <div className="button-row">
-  <a onClick={showCV} className="button" style={{cursor: 'pointer'}}>Curriculum</a>
-  <a href="https://wa.me/527298906600" className="button">Contacto</a>
-  <a href="https://wa.me/527298906600" className="button">WhatsApp</a>
+  <a onClick={()=>changeFeed(8)} className="button" style={{cursor: 'pointer'}}>Curriculum</a>
+  <a href="https://wa.me/527224995219" className="button">Contacto</a>
+  <a href="https://wa.me/527224995219" className="button">WhatsApp</a>
 </div>
 
         </div>
-        </>:
-        <>
+        </>
+        {/* <>
                
-            <a onClick={showCV}>
+            <a onClick={()=>changeFeed(8)}>
             <FaFileAlt 
               style={{ 
                 fontSize: '3rem', 
@@ -130,6 +123,7 @@ export const Profile: React.FC = () => {
                 filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
               }} 
             />
+            Mostrar CV
             </a>
          
 
@@ -142,7 +136,7 @@ export const Profile: React.FC = () => {
             aplicaciones móviles y soluciones tecnológicas innovadoras.
           </p>
    
-{/*             
+            
           <iframe
             src={require('../../assets/GalileoZoe .pdf')}
             width="700px"
@@ -154,10 +148,10 @@ export const Profile: React.FC = () => {
             title="CV Galileo Zoe Romero Gaytán"
             name="cvFrame"
             loading="lazy"
-          /> */}
+          />
         
-        </>
-        }
+        </> */}
+        
         <div className='marginvertical'></div>
       </div>
     </section>
