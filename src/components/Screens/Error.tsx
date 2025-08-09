@@ -37,6 +37,7 @@ export const Error = () => {
 
     return (
         <section
+            id='error'
             className='feed'
             style={{
                 position: 'relative',

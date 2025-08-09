@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import {  FaCode,  FaComment,  FaEnvelope, FaFacebook,  FaGlobe,  FaMapPin,FaPhone,  FaTiktok, FaWhatsapp } from 'react-icons/fa';
+import {  FaCode,  FaComment,  FaEnvelope, FaFacebook,  FaGlobe,  FaInstagram,  FaMapPin,FaPhone,  FaTiktok, FaWhatsapp } from 'react-icons/fa';
 
 export const Contact = () => {
 
@@ -46,40 +46,38 @@ export const Contact = () => {
   return (
 
     <section     
+    id='contact'
     className='section'
-    onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(11) : undefined}
+    // onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(11) : undefined}
     style={{
       position: 'relative',
       backgroundImage: `url(${bgImages[bgIndex]})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      width: '100vw', // 100% del ancho de la ventana
-      height: '100vh', // 100% del alto de la ventana
+      width: '100vw',
+      height: '100vh',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      textAlign: 'center', // Alinea el texto horizontalmente
-      backgroundColor:'whitesmoke',
+      textAlign: 'center',
     }}>
 
       <div
              style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
               width: '100%',
-              minHeight:'100%',
-              height: 'auto',
+              height:'100%',
               backgroundColor: 'rgba(0, 0, 0, 0.85)',
+              zIndex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
 
-              zIndex: 1, // Mantiene la capa detrás del contenido
             }}
       >
 
       <h1 className='title fade-in-element' style={{color:'transparent'}} onScroll={()=>changeFeed(11)}>
        Contacto | Desarrollo de Software | Galileo  Zoe
         </h1>
-
         <p className={'text'}>Contacto</p>
 
    
@@ -93,8 +91,25 @@ export const Contact = () => {
       <div className='marginvertical'></div>
 
 
+<ul
+  {...(!navigator.userAgent.toLowerCase().includes('mobi')
+    ? { className: 'slider' }
+    : {
+        style: {
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridTemplateRows: 'repeat(4, auto)',
+          gap: '1rem', 
+          justifyContent: 'center',
+          alignItems: 'center',
+          alignContent: 'center',
+          padding: '1rem',
 
-        <ul className='slider' onScroll={()=>changeFeed(11)}>
+
+        },
+      })}
+  onScroll={() => changeFeed(11)}
+>
 
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Llamada' >
             <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='tel:7224995219'><FaPhone size={25} /><p>Teléfono</p></a>
@@ -105,7 +120,7 @@ export const Contact = () => {
            
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Correo Electrónico' >
-           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='mailto:al222210067@gmail.com'><FaEnvelope size={25} /> <p>Correo Electrónico</p></a> 
+           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='mailto:al222210067@gmail.com'><FaEnvelope size={25} /> <p>CORREO</p></a> 
            
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='WhatsApp' >
@@ -118,17 +133,15 @@ export const Contact = () => {
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='TikTok' >
             <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://www.tiktok.com/@galileozoe'><FaTiktok size={25} /> <p>TikTok</p></a>
           </li>
-          <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Ubicación' >
-           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://maps.app.goo.gl/BbAamPhpYbJFzwyJ8'> <FaMapPin size={25} /><p>Ubicación</p></a>
+          <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Instagram' >
+
+           <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://maps.app.goo.gl/BbAamPhpYbJFzwyJ8'> <FaInstagram size={25} /><p>Instagram</p></a>
           </li>
           <li className='item fade-in-element' onScroll={()=>changeFeed(11)} title='Software' >
-            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" href='https://galileozoe.github.io/software'> <FaGlobe size={25} /><p>Sitio Web</p></a>
+            <a className='item fade-in-element' target="_blank" rel="noopener noreferrer" onClick={()=>changeFeed(1)}> <FaGlobe size={25} /><p>Sitio Web</p></a>
+
           </li>
         </ul>
-
-        {/* <div className='marginvertical'></div> */}
-
-    
         <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(6)} onScroll={()=>changeFeed(11)}>
           {icons[iconIndex]}
           <p className={theme===0?'button':'buttonblack'}>Contacto</p>

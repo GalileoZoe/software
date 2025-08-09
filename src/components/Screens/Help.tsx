@@ -39,6 +39,7 @@ export const Help = () => {
 
     return (
         <section
+            id='help'
             className='section'
             onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(6) : undefined}
             style={{

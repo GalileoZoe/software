@@ -46,7 +46,8 @@ export const CV = () => {
 
   return (
 
-    <section     
+    <section 
+    id='cv'    
     className='section'
     // onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(11) : undefined}
     style={{

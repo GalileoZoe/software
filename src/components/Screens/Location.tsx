@@ -48,6 +48,7 @@ export const Location: React.FC = () => {
   return (
 
     <section
+    id='location'
     className='section'
     onScroll={window.innerWidth > 700 ? () => changeFeed(11) : undefined}
     style={{

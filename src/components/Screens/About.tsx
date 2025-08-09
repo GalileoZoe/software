@@ -58,7 +58,8 @@ export const About = () => {
 
     return (
         <section
-        onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(3) : undefined}
+        id='about'
+        // onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(3) : undefined}
         className='section'
         style={{
           position: 'relative',
@@ -66,7 +67,7 @@ export const About = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           width: '100vw', // 100% del ancho de la ventana
-          height: '100vh', // 100% del alto de la ventana
+          height: '100vh', // 100% del alto de la ventana   
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -103,39 +104,33 @@ export const About = () => {
 
 
           
-                <div className="cards" style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    gap: '20px',
-                    margin: '40px auto',
-                    flexWrap: 'wrap',
-                    maxWidth: '900px'
-                }}>
+                <div className='cards-container'>
                    <div>
-  <div className="card">
-    <p className="tip">Misión</p>
-    <p>"Desarrollar soluciones innovadoras de software, hardware y asociados."</p>
+  <div className='card'>
+    <p className='tip'>Misión</p>
+    <p>Desarrollar soluciones innovadoras de software, hardware y asociados.</p>
   </div>
 </div>
 
 <div>
-  <div className="card">
-    <p className="tip">Visión</p>
-    <p>"Ser la StartUp líder en servicios tecnológicos personalizados para usuarios y organizaciones."</p>
+  <div className='card'>
+    <p className='tip'>Visión</p>
+    <p>Ser la StartUp líder en servicios tecnológicos personalizados para usuarios y organizaciones.</p>
   </div>
 </div>
 
 <div>
-  <div className="card">
-    <p className="tip">Valores</p>
-    <p>"Pasión, Respeto, Amor, Fé, Innovación."</p>
+  <div className='card'>
+    <p className='tip'>Valores</p>
+    <p>Pasión, Respeto, Amor, Fé, Innovación.</p>
   </div>
 </div>
-
-                </div>
-
-                <div className='marginvertical'></div>
+</div>
+<br />
+   <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>{icons[iconIndex]}</a>
+          <br />
+          <br />
+          <a onClick={()=>changeFeed(5)} className={'button'}>Contacto</a>
             </div>
             </div>
         </section>

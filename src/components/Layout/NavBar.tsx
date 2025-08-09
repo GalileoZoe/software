@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import { FaHome, FaInfoCircle, FaCog, FaCode, FaProjectDiagram, FaEnvelope, FaUser } from 'react-icons/fa';
-
+import { FaHome, FaInfoCircle, FaCog, FaCode, FaProjectDiagram, FaEnvelope, FaUser, FaFileAlt } from 'react-icons/fa';
 
 export const NavBar: React.FC = () => {
   const { feed, changeFeed } = useFeed();
@@ -34,15 +33,21 @@ export const NavBar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems = [
+  // Menu items base
+  const baseMenuItems = [
     { id: 1, label: 'Inicio', icon: <FaHome />, show: feed !== 1 },
     { id: 2, label: 'Nosotros', icon: <FaInfoCircle />, show: true },
     { id: 3, label: 'Servicios', icon: <FaCog />, show: true },
     { id: 4, label: 'Tecnologías', icon: <FaCode />, show: true },
     { id: 7, label: 'Proyectos', icon: <FaProjectDiagram />, show: true },
     { id: 5, label: 'Contacto', icon: <FaEnvelope />, show: true },
-    { id: 6, label: 'Sobre Mí', icon: <FaUser />, show: true }
+    { id: 6, label: 'Perfil', icon: <FaUser />, show: true }
   ];
+
+  // En móvil, añadimos el ítem "CV" con icono y feed 8
+  const menuItems = isMobile
+    ? [...baseMenuItems, { id: 8, label: 'CV', icon: <FaFileAlt />, show: true }]
+    : baseMenuItems;
 
   return (
     <>

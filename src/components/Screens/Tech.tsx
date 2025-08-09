@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import { useFeed } from '../../context/FeedContext';
 import { useTheme } from '../../context/ThemeContext';
-import { FaAngular, FaApple, FaBatteryEmpty, FaBootstrap, FaCode, FaComment, FaCompass, FaCpanel, FaCss3, FaDatabase, FaEnvelope, FaFacebook, FaGit, FaGithub, FaGithubAlt, FaGlobe, FaHtml5, FaJs, FaLaravel, FaLeaf, FaLinux, FaMapPin, FaMicrochip, FaMicrosoft, FaNode, FaNodeJs, FaNpm, FaPaintBrush, FaPhone, FaPhp, FaPython, FaRaspberryPi, FaReact, FaReacteurope, FaRedRiver, FaRobot, FaTiktok, FaTypo3, FaUsb, FaWhatsapp } from 'react-icons/fa';
+import { FaAngular, FaApple, FaBatteryEmpty, FaBootstrap, FaCode, FaComment, FaCompass, FaCss3, FaDatabase, FaEnvelope, FaFacebook, FaGit, FaGithub, FaGithubAlt, FaGlobe, FaHtml5, FaJs, FaLaravel, FaLeaf, FaLinux, FaMapPin, FaMicrochip, FaMicrosoft, FaNode, FaNodeJs, FaNpm, FaPaintBrush, FaPhone, FaPhp, FaPython, FaRaspberryPi, FaReact, FaReacteurope, FaRedRiver, FaRobot, FaTiktok, FaTypo3, FaUsb, FaWhatsapp, FaServer } from 'react-icons/fa';
 
 export const Tech = () => {
 
@@ -21,6 +21,7 @@ export const Tech = () => {
     return (
 
         <section
+            id='tech'
             className='section'
             onScroll={window.innerWidth > 700 ? () => changeFeed(5) : undefined}
             style={{
@@ -62,7 +63,7 @@ export const Tech = () => {
                 </div>
                 <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
 
-                <div className='marginvertical'></div>
+                {!navigator.userAgent.toLowerCase().includes('mobi') && <div className='marginvertical'></div>}
 
                 <div className='tech-grid'>
 
@@ -117,7 +118,7 @@ export const Tech = () => {
       <a className='item'><FaGithub size={25} /><p>GitHub</p></a>
       <a className='item'><FaMicrochip size={25} /><p>Arduino</p></a>
       <a className='item'><FaGlobe size={25} /><p>AWS</p></a>
-      <a className='item'><FaCpanel size={25} /><p>CPanel</p></a>
+      <a className='item'><FaServer size={25} /><p>CPanel</p></a>
 
     </div>
   </div>

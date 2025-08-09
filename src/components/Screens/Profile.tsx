@@ -15,15 +15,7 @@ export const Profile: React.FC = () => {
   ];
 
   const bgImages = [
-
-    // require('../../assets/bg-19.png'),
-    // require('../../assets/bg-13.png'),
-    // require('../../assets/bg-12.png'),
-    // require('../../assets/bg-00.png'),
-    // require('../../assets/bg-10.png'),
-    require('../../assets/bg-11.png'),
-    // require('../../assets/bg-15.png'),
-
+    require('../../assets/bg-15.png'),
   ];
 
   const [bgIndex] = useState(0);
@@ -39,7 +31,7 @@ export const Profile: React.FC = () => {
 
   return (
     <section
-    // onScroll={ () => changeFeed(1)}
+    id='profile'
     className='section'
     style={{
       position: 'relative',
@@ -64,7 +56,7 @@ export const Profile: React.FC = () => {
         top: 0,
         left: 0,
         width: '100%',
-        height: '200%',
+        height: '100%',
          backgroundAttachment: 'fixed',
         backgroundColor: 'rgba(0, 0, 0, 0.85)',
         zIndex: 1,
@@ -76,10 +68,7 @@ export const Profile: React.FC = () => {
         <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
           Desarrollo de Software | Galileo Zoe
         </h1>
-
-        <div className='marginvertical'></div>
-
-
+        <p className={'text'}>Acerca de mí</p>
 
         <img
           className='logotype'

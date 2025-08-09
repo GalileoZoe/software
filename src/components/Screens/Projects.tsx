@@ -4,7 +4,7 @@ import { FaInfoCircle } from 'react-icons/fa';
 import { useTheme } from '../../context/ThemeContext';
 import { useFeed } from '../../context/FeedContext';
 
-export const Web = () => {
+export const Projects = () => {
 
     const [render, setRender] = useState<number>(0);
 
@@ -39,7 +39,7 @@ export const Web = () => {
     // Arreglo de imágenes de fondo
     const bgImages = [
 
-        require('../../assets/bg-22.png'),
+        require('../../assets/bg-08.png'),
 
     ];
 
@@ -58,6 +58,7 @@ export const Web = () => {
 
     return (
         <section
+        id='web'
         onScroll={!navigator.userAgent.toLowerCase().includes('mobi') ? () => changeFeed(3) : undefined}
         className='section'
         style={{
@@ -114,7 +115,7 @@ export const Web = () => {
                 }}>
 
                     <a href="https://galileozoe.github.io/tierraprometidawebsite">
-                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/tp.png')})` }}>
+                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/tp.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Tierra Prometida</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>
@@ -122,21 +123,21 @@ export const Web = () => {
                 </div>
                 </a>
                 <a href="https://galileozoe.github.io/pizzas">
-                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Pizzería Sorella</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div>
                 </a>
-                  {/* <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  {/* <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Pizzería Sorella</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div> */}
                 <a href="https://galileozoe.github.io/kaspas">
-                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Kaspas</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>
@@ -144,7 +145,7 @@ export const Web = () => {
                 </div>
                 </a>
                 <a href="https://galileozoe.github.io/panaderia">
-                  <div className="card" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Panadería Bernal</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>

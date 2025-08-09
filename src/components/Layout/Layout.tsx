@@ -11,7 +11,7 @@ import { Tech } from '../Screens/Tech';
 import { Help } from '../Screens/Help';
 import { Error } from '../Screens/Error';
 import { Profile } from '../Screens/Profile';
-import { Web } from '../Screens/Web';
+import { Projects } from '../Screens/Projects';
 import { CV } from '../Screens/CV';
 
 export const Layout: React.FC = () => {
@@ -42,7 +42,7 @@ export const Layout: React.FC = () => {
         case 6:
             return <Profile/>;
         case 7:
-            return <Web/>;
+            return <Projects/>;
         case 8:
             return <CV/>;
         case 11:

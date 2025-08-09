@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useFeed } from '../../context/FeedContext';
-import { FaPhone, FaFacebook, FaWhatsapp, FaComment, FaEnvelope } from 'react-icons/fa';
+import { FaPhone, FaFacebook, FaWhatsapp, FaComment, FaEnvelope, FaCode, FaLaptop } from 'react-icons/fa';
 
 export const Feed: React.FC = () => {
   const { changeFeed } = useFeed();
@@ -9,16 +9,20 @@ export const Feed: React.FC = () => {
   const [iconIndex, setIconIndex] = useState(0);
 
   const icons = [
+    <FaCode className='icon' />,
+    <FaLaptop className='icon' />,
     <FaPhone className='icon' />,
     <FaComment className='icon' />,
     <FaWhatsapp className='icon' />,
     <FaFacebook className='icon' />,
     <FaEnvelope className='icon' />,
+
   ];
 
   const texts = [
     <code className="paragraphs">IA</code>,
     <code className="paragraphs">Software</code>,
+    <code className="paragraphs">Bases de Datos</code>,
     <code className="paragraphs">Tecnología</code>,
     <code className="paragraphs">Redes Sociales</code>,
     <code className="paragraphs">Aplicaciones Móviles</code>,
@@ -43,9 +47,10 @@ export const Feed: React.FC = () => {
   const bgImages = [
 
     require('../../assets/bg-13.png'),
-    require('../../assets/bg-12.png'),
-    require('../../assets/bg-00.png'),
+    // require('../../assets/3d.png'),
+    require('../../assets/bg-23.png'),
     require('../../assets/bg-10.png'),
+    // require('../../assets/bg-11.png'),
 
   ];
 
@@ -80,7 +85,7 @@ export const Feed: React.FC = () => {
 
   return (
     <section
-      
+      id='feed'
       className='section'
       onScroll={ () => changeFeed(2) }
       style={{
@@ -102,7 +107,7 @@ export const Feed: React.FC = () => {
 
 
       <div
-            onScroll={ () => changeFeed(2)}
+        // onScroll={ () => changeFeed(2)}
         style={{
           position: 'absolute',
           top: 0,
@@ -119,15 +124,27 @@ export const Feed: React.FC = () => {
         <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
           Desarrollo de Software | Galileo Zoe
         </h1>
+         <a style={{fontSize:'25px'}} onClick={()=>changeFeed(3)}>
+          {texts[textIndex]}
+        </a>
+        {navigator.userAgent.toLowerCase().includes('mobi') && <div className='marginVertical'></div>}
+
         <a onClick={()=>changeFeed(2)}>
         <img
           className='logotype'
           src={require('../../assets/galileozoe-00.png')}
           alt='Logo Galileo Zoe'
         />
-                <p className='paragraphs'>Tecnología e Innovación</p>
-                </a>
-    
+        </a>
+       <br />
+
+         <a onClick={()=>changeFeed(6)}>
+        <code className='paragraphs'>Ing. Galileo Zoe Romero Gaytán</code>
+        </a>
+        <a onClick={()=>changeFeed(3)}>
+        <p className='paragraphs'>Tecnología e Innovación</p>
+        </a>
+
         <div>
         
         <a onClick={()=>changeFeed(7)}>
@@ -165,9 +182,7 @@ export const Feed: React.FC = () => {
         <a onClick={()=>changeFeed(7)}>
 
         < img
-          style={{
-     
-      
+          style={{ 
             width: '20%',
             height: 'auto',
             zIndex: 1,
@@ -176,7 +191,7 @@ export const Feed: React.FC = () => {
           alt='Logo Galileo Zoe'
         />
            </a>
-
+        {navigator.userAgent.toLowerCase().includes('mobi') && <> <br/> <br/> <br /> </>}
         <a onClick={()=>changeFeed(6)}>
           <img
             className='logo'
@@ -185,17 +200,10 @@ export const Feed: React.FC = () => {
           />
            </a>
 
-        <a onClick={()=>changeFeed(3)}>
-          {texts[textIndex]}
-        </a>
-
-          <br />
-          <br />
-
-          {/* <h2 className='paragraphwhite' >Creando Sueños. Programando el futuro.</h2> */}
           <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>
             {icons[iconIndex]}
           </a>
+          <br />
           <a onClick={()=>changeFeed(5)} className={'button'}>Contacto</a>
         </div>
 
