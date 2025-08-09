@@ -127,7 +127,7 @@ export const Feed: React.FC = () => {
          <a style={{fontSize:'25px'}} onClick={()=>changeFeed(3)}>
           {texts[textIndex]}
         </a>
-        {navigator.userAgent.toLowerCase().includes('mobi') && <div className='marginVertical'></div>}
+        <div className='marginVertical'></div>
 
         <a onClick={()=>changeFeed(2)}>
         <img
