@@ -117,8 +117,8 @@ export const Projects = () => {
                     <a href="https://galileozoe.github.io/tierraprometidawebsite">
                   <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/tp.png')})` }}>
                  <div className="card-overlay">
-                <p className="tip">Tierra Prometida</p>
-                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                <p className="paragraphs">Tierra Prometida</p>
+                <p className="paragraphs">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div>
                 </a>
@@ -126,21 +126,21 @@ export const Projects = () => {
                   <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/under.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Pizzería Sorella</p>
-                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                <p className="paragraphs">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div>
                 </a>
                   {/* <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/pc.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Pizzería Sorella</p>
-                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                <p className="paragraphs">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div> */}
                 <a href="https://galileozoe.github.io/kaspas">
                   <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/pc.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Kaspas</p>
-                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                <p className="paragraphs">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div>
                 </a>
@@ -148,7 +148,7 @@ export const Projects = () => {
                   <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/pc.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Panadería Bernal</p>
-                <p className="second-text">Descripción breve y atractiva del proyecto.</p>
+                <p className="paragraphs">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div>
                 </a>

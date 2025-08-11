@@ -26,6 +26,7 @@ export const Feed: React.FC = () => {
     <img style={{'width':'8rem', 'height':'5em'}} src={require('../../assets/gzgzgz.png')} alt='Logo GalileoZoe' />,
     <img style={{'width':'8rem', 'height':'5em'}} src={require('../../assets/logokaspasbg.png')} alt='Logo Kaspas' />,
     <img style={{'width':'8rem', 'height':'5em'}} src={require('../../assets/strawberry.png')} alt='Logo Strawberry' />,
+    <img style={{'width':'5em', 'height':'1em'}} src={require('../../assets/GALIXGAMES.png')} alt='Logo Galix' />,
   ]
 
 

@@ -105,40 +105,40 @@ export const About = () => {
 
 
           
-                <div className='cards-container'>
-                   <div>
+               <div className='cards-container' style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
+  
+  {/* Primera card */}
   <div className='card'>
     <p className='tip'>Misión</p>
     <p>Desarrollar soluciones innovadoras de software, hardware y asociados.</p>
   </div>
-</div>
 
-<div>
+  {/* Segunda card */}
   <div className='card'>
     <p className='tip'>Visión</p>
     <p>Ser la StartUp líder en servicios tecnológicos personalizados para usuarios y organizaciones.</p>
-  </div>
-</div>
 
-<div>
+  </div>
+
+  {/* Tercera card */}
   <div className='card'>
     <p className='tip'>Valores</p>
-    <p>Pasión, Respeto, Amor, Fé, Innovación.</p>
+    <p>Innovación, Fé, Pasión, Respeto, Amor.</p>
   </div>
-</div>
+
+  {/* Cuarta card centrada */}
+  <div style={{ flexBasis: '100%', display: 'flex', justifyContent: 'center' }}>
+    <div className='card'>
+      <p className='tip'>Objetivo</p>
+      <p>
+         Ofrecer soluciones tecnológicas personalizadas, adaptadas a las necesidades y desafíos de la industria.
+      </p>
+    </div>
+  </div>
+
 </div>
 <br />
    <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>{icons[iconIndex]}</a>
-          <br />
-          < img
-          style={{ 
-            width: '10%',
-            height: 'auto',
-            zIndex: 1,
-          }}
-          src={require('../../assets/gzgz.png')}
-          alt='Logo Galileo Zoe'
-        />
           <br />
           <a onClick={()=>changeFeed(5)} className={'button'}>Contacto</a>
             </div>

@@ -15,7 +15,7 @@ export const Profile: React.FC = () => {
   ];
 
   const bgImages = [
-    require('../../assets/bg-10.png'),
+    require('../../assets/earphone.png'),
   ];
 
   const [bgIndex] = useState(0);
