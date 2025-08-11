@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/software/static/css/main.a07f5b28.css",
-    "main.js": "/software/static/js/main.c49edf2d.js",
+    "main.css": "/software/static/css/main.9ddde849.css",
+    "main.js": "/software/static/js/main.bb5ebf74.js",
     "static/js/902.087fefb0.chunk.js": "/software/static/js/902.087fefb0.chunk.js",
     "static/media/GalileoZoe .pdf": "/software/static/media/GalileoZoe .12837c65739ae210aad4.pdf",
     "static/media/GalixxxBG.png": "/software/static/media/GalixxxBG.9505cb62a79ac05d59e0.png",
@@ -11,7 +11,6 @@
     "static/media/under.png": "/software/static/media/under.6cb1ac4e472dc674fc70.png",
     "static/media/logokaspasbg.png": "/software/static/media/logokaspasbg.333b1d7e892055200fe0.png",
     "static/media/etherneth.png": "/software/static/media/etherneth.66bbeddd6131911bcc90.png",
-    "static/media/bg-10.png": "/software/static/media/bg-10.bddc5894f4c64eeaf327.png",
     "static/media/pc.png": "/software/static/media/pc.db0b5ef8cd896aef4d10.png",
     "static/media/phones.png": "/software/static/media/phones.ec7cdc1e7548a67a59ab.png",
     "static/media/galileozoe-02.png": "/software/static/media/galileozoe-02.3bb3fb509140f653cd8b.png",
@@ -20,18 +19,19 @@
     "static/media/bg-24.png": "/software/static/media/bg-24.48e923e6aa7387602a46.png",
     "static/media/city.png": "/software/static/media/city.39873d00dad372d125a8.png",
     "static/media/strawberry.png": "/software/static/media/strawberry.6af5be884fb9de9c35d9.png",
+    "static/media/earphone.png": "/software/static/media/earphone.1539ceb93fb32af63a93.png",
     "static/media/bg-20.png": "/software/static/media/bg-20.4f0d3aed2b46a0aa661d.png",
     "static/media/game.png": "/software/static/media/game.63197945ca8c28efee7b.png",
     "static/media/gzgz.png": "/software/static/media/gzgz.aa7a2fdb215cf1ae568f.png",
     "static/media/gzgzgz.png": "/software/static/media/gzgzgz.c0dc2a3eb0c87a27332f.png",
     "static/media/gz.png": "/software/static/media/gz.d383258e27a189def932.png",
     "index.html": "/software/index.html",
-    "main.a07f5b28.css.map": "/software/static/css/main.a07f5b28.css.map",
-    "main.c49edf2d.js.map": "/software/static/js/main.c49edf2d.js.map",
+    "main.9ddde849.css.map": "/software/static/css/main.9ddde849.css.map",
+    "main.bb5ebf74.js.map": "/software/static/js/main.bb5ebf74.js.map",
     "902.087fefb0.chunk.js.map": "/software/static/js/902.087fefb0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a07f5b28.css",
-    "static/js/main.c49edf2d.js"
+    "static/css/main.9ddde849.css",
+    "static/js/main.bb5ebf74.js"
   ]
 }
