@@ -25,7 +25,7 @@ export const Contact = () => {
 
     // Arreglo de imágenes de fondo
     const bgImages = [
-      require('../../assets/bg-00.png'),
+      require('../../assets/phones.png'),
     ];
   
     // Estado para manejar el índice de imagen de fondo

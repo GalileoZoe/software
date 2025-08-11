@@ -13,7 +13,7 @@ export const Tech = () => {
 
 
     const bgImages = [
-        require('../../assets/bg-12.png'),
+        require('../../assets/bg-24.png'),
     ];
 
 

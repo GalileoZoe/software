@@ -7,6 +7,8 @@ export const Feed: React.FC = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [bgIndex, setBgIndex] = useState(0);
   const [iconIndex, setIconIndex] = useState(0);
+  const [logoIndex, setLogoIndex] = useState(0);
+
 
   const icons = [
     <FaCode className='icon' />,
@@ -18,6 +20,14 @@ export const Feed: React.FC = () => {
     <FaEnvelope className='icon' />,
 
   ];
+
+  const logos = [
+    <img style={{'width':'8rem', 'height':'5em'}} src={require('../../assets/logotipo-000.png')} alt='Logo Tierra Prometida' />,
+    <img style={{'width':'8rem', 'height':'5em'}} src={require('../../assets/gzgzgz.png')} alt='Logo GalileoZoe' />,
+    <img style={{'width':'8rem', 'height':'5em'}} src={require('../../assets/logokaspasbg.png')} alt='Logo Kaspas' />,
+    <img style={{'width':'8rem', 'height':'5em'}} src={require('../../assets/strawberry.png')} alt='Logo Strawberry' />,
+  ]
+
 
   const texts = [
     <code className="paragraphs">IA</code>,
@@ -46,14 +56,15 @@ export const Feed: React.FC = () => {
 
   const bgImages = [
 
-    require('../../assets/bg-13.png'),
-    // require('../../assets/3d.png'),
-    require('../../assets/bg-23.png'),
-    require('../../assets/bg-10.png'),
-    // require('../../assets/bg-11.png'),
+    require('../../assets/bg-24.png'),
+    require('../../assets/bg-20.png'),
+    require('../../assets/city.png'),
+    require('../../assets/game.png'),
+    // require('../../assets/vga.png'),
 
   ];
 
+  
 
 
   useEffect(() => {
@@ -64,6 +75,15 @@ export const Feed: React.FC = () => {
     // Cleanup al desmontar el componente
     return () => clearInterval(interval);
   }, [icons.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLogoIndex((prevIndex) => (prevIndex + 1) % logos.length);
+    }, 2000);
+
+    // Cleanup al desmontar el componente
+    return () => clearInterval(interval);
+  }, [logos.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -181,7 +201,7 @@ export const Feed: React.FC = () => {
         <div className='center fade-in-element'>
         <a onClick={()=>changeFeed(7)}>
 
-        < img
+        {/* < img
           style={{ 
             width: '20%',
             height: 'auto',
@@ -189,7 +209,22 @@ export const Feed: React.FC = () => {
           }}
           src={require('../../assets/GalixxxBG.png')}
           alt='Logo Galileo Zoe'
-        />
+        /> */}
+
+        <div style={{
+          backgroundColor:'white',
+          borderRadius:'50%',
+          width:'5em',
+          height:'5em',
+          alignSelf:'center',
+          display:'flex',
+          justifyContent:'center',
+          alignItems:'center'
+        }}>
+           {logos[logoIndex]}
+
+        </div>
+
            </a>
         {navigator.userAgent.toLowerCase().includes('mobi') && <> <br/> <br/> <br /> </>}
         <a onClick={()=>changeFeed(6)}>

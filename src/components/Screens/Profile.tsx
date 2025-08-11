@@ -15,7 +15,7 @@ export const Profile: React.FC = () => {
   ];
 
   const bgImages = [
-    require('../../assets/bg-15.png'),
+    require('../../assets/bg-10.png'),
   ];
 
   const [bgIndex] = useState(0);
@@ -68,7 +68,7 @@ export const Profile: React.FC = () => {
         <h1 className='title fade-in-element' style={{ color: 'transparent' }} >
           Desarrollo de Software | Galileo Zoe
         </h1>
-        <p className={'text'}>Acerca de mí</p>
+        <p className={'text'}>Perfil</p>
 
         <img
           className='logotype'

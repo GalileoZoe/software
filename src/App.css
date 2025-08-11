@@ -230,7 +230,7 @@
   align-items: 'center';
   text-align: center;
   grid-auto-rows: auto;
-  gap: 1re;
+  gap: 1rem;
 }
 
 .card {

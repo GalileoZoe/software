@@ -19,7 +19,7 @@ export const Services = () => {
   // Definición de servicios en un array para escalabilidad
   const servicesData = [
     { service: 1, icon: <FaCode />, title: 'Software', desc: 'Software Customizado | Software Hecho a Medida', details: 'Desarrollo de Sistemas de Software Adaptados a las necesidades específicas de tu negocio.' },
-    { service: 2, icon: <FaDatabase />, title: 'Base de Datos', desc: 'Bases de Datos', details: 'Diseño de Bases de Datos adaptadas a las necesidades de tu organización.' },
+    { service: 2, icon: <FaDatabase />, title: 'Bases de Datos', desc: 'Bases de Datos', details: 'Diseño de Bases de Datos adaptadas a las necesidades de tu organización.' },
     { service: 3, icon: <FaProjectDiagram />, title: 'API´s', desc: 'API´s RestFull', details: 'Desarrollo de APIs RESTful a medida y sistemas Back-End escalables.' },
     { service: 4, icon: <FaMobile />, title: 'APPS', desc: 'Aplicaciones Móviles', details: 'Implementación de aplicaciones móviles para la gestión y manejo de procesos.' },
     { service: 5, icon: <FaGlobe />, title: 'Sitios Web', desc: 'Páginas Web | Sitios Web | Aplicaciones Web', details: 'Implementación de tu sitio web personalizado, optimizando tu trabajo.' },
@@ -76,7 +76,7 @@ export const Services = () => {
   }, [servicesData.length]);
 
   // Imagenes de fondo (un solo fondo en tu código original)
-  const bgImages = [require('../../assets/bg-13.png')];
+  const bgImages = [require('../../assets/bg-20.png')];
   const [bgIndex] = useState(0);
 
   return (
@@ -119,7 +119,6 @@ export const Services = () => {
         </div>
         <p className='paragraph'>Desarrollo de Software Multiplataforma</p>
         {!navigator.userAgent.toLowerCase().includes('mobi') && <div className='marginvertical'></div>}
-
 
         {service === 0 ? (
           <div>

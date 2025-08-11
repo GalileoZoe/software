@@ -39,7 +39,8 @@ export const About = () => {
     // Arreglo de imágenes de fondo
     const bgImages = [
 
-        require('../../assets/bg-22.png'),
+        require('../../assets/game.png'),
+
 
     ];
 
@@ -129,6 +130,15 @@ export const About = () => {
 <br />
    <a className='icon fade-in-element' title='Contacto' onClick={() => changeFeed(5)}>{icons[iconIndex]}</a>
           <br />
+          < img
+          style={{ 
+            width: '10%',
+            height: 'auto',
+            zIndex: 1,
+          }}
+          src={require('../../assets/gzgz.png')}
+          alt='Logo Galileo Zoe'
+        />
           <br />
           <a onClick={()=>changeFeed(5)} className={'button'}>Contacto</a>
             </div>

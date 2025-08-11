@@ -18,7 +18,7 @@ export const Error = () => {
 
     // Arreglo de imágenes de fondo
     const bgImages = [
-        require('../../assets/bg-15.png'),
+        require('../../assets/sound.png'),
 
     ];
 

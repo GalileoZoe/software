@@ -39,7 +39,7 @@ export const Projects = () => {
     // Arreglo de imágenes de fondo
     const bgImages = [
 
-        require('../../assets/bg-08.png'),
+        require('../../assets/city.png'),
 
     ];
 
@@ -123,21 +123,21 @@ export const Projects = () => {
                 </div>
                 </a>
                 <a href="https://galileozoe.github.io/pizzas">
-                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/under.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Pizzería Sorella</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div>
                 </a>
-                  {/* <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  {/* <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/pc.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Pizzería Sorella</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>
                 </div>
                 </div> */}
                 <a href="https://galileozoe.github.io/kaspas">
-                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/pc.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Kaspas</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>
@@ -145,7 +145,7 @@ export const Projects = () => {
                 </div>
                 </a>
                 <a href="https://galileozoe.github.io/panaderia">
-                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/19.png')})` }}>
+                  <div className="cardimage" style={{ backgroundImage: `url(${require('../../assets/pc.png')})` }}>
                  <div className="card-overlay">
                 <p className="tip">Panadería Bernal</p>
                 <p className="second-text">Descripción breve y atractiva del proyecto.</p>

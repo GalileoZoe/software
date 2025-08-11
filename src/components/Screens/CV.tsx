@@ -27,7 +27,7 @@ export const CV = () => {
   ];
 
     const bgImages = [
-      require('../../assets/bg-00.png'),
+      require('../../assets/etherneth.png'),
     ];
 
     const [bgIndex] = useState(0);
